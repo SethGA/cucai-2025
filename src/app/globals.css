@@ -22,10 +22,20 @@ body {
 
 .header {
   background: rgb(41, 41, 42);
+  justify-content: space-between;
+  padding: 8px 80px 8px 80px;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.header .menuList {
+  font-size: 14px;
+  align-self: center;
+  font-weight: 400;
+  font: Inter;
+  color: rgb(255, 255, 255);
 }
