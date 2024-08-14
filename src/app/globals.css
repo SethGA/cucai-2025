@@ -21,21 +21,44 @@ body {
 }
 
 .header {
+  display: flex;
   background: rgb(41, 41, 42);
   justify-content: space-between;
   padding: 8px 80px 8px 80px;
+  gap: 8px;
+}
+
+.header .menu-list {
+  display: table;
+  justify-content: space-between;
+  font-size: 14px;
+  align-self: center;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  gap: 16px;
+}
+
+.menu-list .menu-option {
+  display: table-cell;
+  width: 60px;
+  height: 37px;
+  padding: 10px;
+}
+
+.menu-list .menu-toggle {
+  display: table-cell;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  vertical-align: text-bottom;
+}
+
+.header .cucai-logo {
+  padding: 12px 0px 12px 0px;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
-
-.header .menuList {
-  font-size: 14px;
-  align-self: center;
-  font-weight: 400;
-  font: Inter;
-  color: rgb(255, 255, 255);
 }
