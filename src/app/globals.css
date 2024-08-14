@@ -43,18 +43,23 @@ body {
   width: 60px;
   height: 37px;
   padding: 10px;
+  vertical-align: middle;
 }
 
 .menu-list .menu-toggle {
   display: table-cell;
-  width: 40px;
-  height: 40px;
   padding: 10px;
-  vertical-align: text-bottom;
+  vertical-align: middle;
 }
 
 .header .cucai-logo {
   padding: 12px 0px 12px 0px;
+}
+
+.header .contact-us {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 12px 10px 14px 10px;
 }
 
 @layer utilities {
