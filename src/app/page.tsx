@@ -1,10 +1,17 @@
+"use client";
+
 import Header from "./Header";
+import { useState } from "react";
 
 export default function Home() {
+const [isDark, setDark] = useState<boolean>(true);
+
   return (
     <div>
-      <Header />
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Header isDark={isDark} setDark={setDark} />
+      <div className='first-section'>
+        <h1 className="big-text">Join the Future of AI at CUCAI 2025</h1>
+      </div>
     </div>
   );
 }
