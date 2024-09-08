@@ -3,10 +3,10 @@ import { SetStateAction, useState } from "react";
 import { useSpring, animated } from "react-spring";
 
 let buttons = [
-    { name: "About", link: "/" },
-    { name: "Speakers", link: "/" },
-    { name: "Schedule", link: "/" },
-    { name: "Sponsors", link: "/" },
+    { name: "About", link: "#about" },
+    { name: "Speakers", link: "#speakers" },
+    { name: "Schedule", link: "#schedule" },
+    { name: "Sponsors", link: "#sponsors" },
     { name: "Register", link: "/" },
   ];
   
