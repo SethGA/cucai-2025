@@ -22,7 +22,7 @@ body {
 
 .header {
   display: flex;
-  background: rgb(41, 41, 42);
+  background: rgb(115, 100, 255);
   justify-content: space-between;
   padding: 8px 80px 8px 80px;
   gap: 8px;
@@ -70,15 +70,107 @@ body {
 }
 
 .first-section {
-  width: 711px;
-  height: 275px;
-  gap: 16px;
+  display: flex;
+  background: linear-gradient(rgba(115, 100, 255, 1), rgba(162,216,235, 1) 15%);
+  justify-content: center;
+  align-items: center;
 }
 
-.first-section .big-text {
-  font: IBM Plex Sans;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 76.8px;
+.first-section .toronto-skyline {
+  background-image: url("/bg-day.png");
+  width: 100vw;
+  height: 100vh;
   justify-content: center;
+  align-items: center;
+  padding-top: 146px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  box-sizing: border-box;
 }
+
+.first-section .white-box { 
+  width: 783px;
+  height: 379px;
+  align-self: center;
+  margin: auto;
+  border-radius: 24px;
+  padding: 44px 36px 44px 36px;
+  gap: 24px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-box .title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 76.8px;
+  text-align: center;
+}
+
+.white-box .subtext {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 39.2px;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.white-box .register-button {
+  padding: 14px 32px 14px 32px;
+  border-radius: 50px;
+  background-color: rgba(71, 5, 210, 1);
+  color: white;
+  margin-left: 39%;
+  line-height: 100px;
+  text-align: center;
+}
+
+.second-section {
+  display: flex;
+  background: linear-gradient(rgba(77, 136, 255, 1), rgba(162, 216, 235, 1) 20%);
+  /* Remove height when adding elements */
+  height: 1020px;
+}
+
+.second-section .web-video {
+  border-radius: 8px;
+  border-color: rgba(23, 20, 86, 1);
+  width: 401px;
+  height: 701px;
+}
+
+.second-section .main-text {
+  width: 600px;
+  height: 431px;
+  gap: 24px;
+}
+
+.third-section {
+ display: flex; 
+ background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 136, 255, 1));
+ /* Remove height when adding elements */
+ height: 859px;
+}
+
+.fourth-section {
+  display: flex; 
+  background: linear-gradient(rgba(77, 136, 255, 1), rgba(163, 217, 236, 1));
+  /* May need to remove height when adding elements */
+  height: 1856px; 
+}
+ 
+.fifth-section {
+  display: flex; 
+  background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 135, 255, 1));
+  /* May clash with elements CSS */
+  height: 574px;
+ }
+ 
+.sixth-section {
+  display: flex; 
+  background: rgba(77, 136, 255, 1);
+  /* May clash with element CSS */
+  height: 649px;
+ }
