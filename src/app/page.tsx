@@ -26,6 +26,19 @@ let student_partners = [
   { name: "UTMIST", logo: "/logos/utmist-logo.png", university:"University of Toronto", website: "https://watai.ca/", insta: "https://www.instagram.com/wataiteam/", width: 297, height: 100},
 ]
 
+// TODO: Add CUCAI staff once the carousel works
+
+let leaders = [
+  { name: "Organizer Name", role: "Role Name", linkedin: "linkedin", hs: "/image.png" },
+  { name: "Organizer Name", role: "Role Name", linkedin: "linkedin", hs: "/image.png" },
+  { name: "Organizer Name", role: "Role Name", linkedin: "linkedin", hs: "/image.png" },
+  { name: "Organizer Name", role: "Role Name", linkedin: "linkedin", hs: "/image.png" },
+  { name: "Organizer Name", role: "Role Name", linkedin: "linkedin", hs: "/image.png" },
+  { name: "Organizer Name", role: "Role Name", linkedin: "linkedin", hs: "/image.png" },
+  { name: "Organizer Name", role: "Role Name", linkedin: "linkedin", hs: "/image.png" },
+  { name: "Organizer Name", role: "Role Name", linkedin: "linkedin", hs: "/image.png" },
+]
+
 const chunk_array = (array: {}[], size: number) => {
   let result = []
   for(let i = 0; i < array.length; i+=size){
@@ -189,8 +202,8 @@ export default function Home() {
             <div className="text-part">
               <p>Have questions or want to get involved?</p>
               <p>Get in touch with us and join the CUCAI Community!</p>
+              <a href="/" className="contact-button">Contact Us</a>
             </div>
-            <a href="/" className="contact-button">Contact Us</a>
           </div>
         </div>
         <Image 
@@ -205,6 +218,31 @@ export default function Home() {
         {/* 
           Leaders Behind the Vision
         */}
+        {/* TODO: Implement Carousel Version - Check CUCAI 2024 Repo for more */}
+        <div className="team-title">
+          <p className="small-text">MEET OUR TEAM</p>
+          <h1 className="big-text">Leaders Behind the Vision</h1>
+        </div>
+        <div className="the-team">
+          {leaders.map((leader) => (
+            <div className="carousel-item" key={leader.name}>
+                <Image
+                  src={leader.hs}
+                  alt={leader.name}
+                  width={400}
+                  height={250}
+                  className="leader-img"
+                />
+                <div className="leader-text">
+                  <p className="leader-name">{leader.name}</p>
+                  <p className="leader-role">{leader.role}</p>
+                </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="Footer">
+
       </div>
     </div>
   );

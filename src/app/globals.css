@@ -424,16 +424,17 @@ body {
 
 .fifth-section .join-us-pic {
   border-radius: 24px;
-  width: 574px;
+  width: 540px;
   height: 374px;
+  margin-left: 10%;
 }
  
 .fifth-section .text-part {
   display: block;
   width: 590px;
   height: 323px;
-  gap: 20px;
 }
+
 
 .text-part .title {
   height: 161px;
@@ -445,6 +446,7 @@ body {
   font-weight: 500;
   line-height: 28.8px;
   text-align: left;
+  margin-bottom: 3%;
 }
 
 .title .big-text {
@@ -454,6 +456,7 @@ body {
   line-height: 62.4px;
   text-align: left;
   color: rgba(23, 20, 86, 1);
+  margin-bottom: 3%;
 }
 
 .text-part p {
@@ -474,11 +477,98 @@ body {
   font-size: 18px;
   font-weight: 500;
   margin-left: 0%;
+  margin-top: 3%;
 }
 
 .sixth-section {
-  display: flex; 
+  display: block; 
   background: rgba(77, 136, 255, 1);
   /* May clash with element CSS */
   height: 649px;
+  padding: 80px;
+  gap: 36px;
  }
+
+.sixth-section .team-title {
+  width: 1280px;
+  height: 99px;
+  gap: 8px;
+  opacity: 0px;
+}
+
+.team-title .small-text {
+  height: 29px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: left;
+  margin-bottom: 2%;
+}
+
+.team-title .big-text {
+  height: 124px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 62.4px;
+  text-align: left;
+  color: rgba(23, 20, 86, 1);
+  /* margin-bottom: 3%; */
+}
+
+.sixth-section .the-team {
+  display: flex;
+  height: 524px;
+  gap: 36px;
+  margin-top: 2%;
+}
+
+.the-team .carousel-item {
+  display: block;
+  width: 277px;
+  height: 354px;
+  padding: 38px 36px 38px 36px;
+  gap: 20px;
+  align-content: center;
+}
+
+.carousel-item .leader-img {
+  width: 150px;
+  height: 150px;
+  /* padding: 103px 18px 103px 18px; */
+  margin-left: 23%;
+  justify-self: center;
+  gap: 10px;
+  border-radius: 200px;
+  background: linear-gradient(rgba(0, 43, 92, 1), rgba(84, 113, 146, 1));
+}
+
+.carousel-item .leader-text{
+  width: 205px;
+  height: 56px;
+  gap: 8px;
+  opacity: 0px;
+}
+
+.leader-text .leader-name {
+  width: 250px;
+  height: 34px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.6px;
+  text-align: center;
+  margin-top: 7%;
+}
+
+.leader-text .leader-role {
+  width: 250px;
+  height: 19px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: center;
+  margin-top: 3%;
+}
+
+.leader-elem .linkedin-logo {
+  margin-top: 7%;
+}
