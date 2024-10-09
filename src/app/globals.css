@@ -241,8 +241,8 @@ body {
 }
 
 .speaker-elem .speaker-name {
-  width: 250px;
-  height: 34px;
+  /* width: 250px;
+  height: 34px; */
   font-size: 28px;
   font-weight: 700;
   line-height: 33.6px;
