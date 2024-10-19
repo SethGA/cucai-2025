@@ -16,6 +16,12 @@
   }
 }
 
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb))
@@ -78,7 +84,7 @@ body {
 }
 
 .first-section .toronto-skyline {
-  background-image: url("/bg-day.png");
+  background-image: url("/toronto-skyline-day.png");
   width: 100vw;
   height: 100vh;
   justify-content: center;
@@ -86,6 +92,7 @@ body {
   padding-top: 146px;
   background-repeat: no-repeat;
   background-position: bottom;
+  background-size: cover;
   box-sizing: border-box;
 }
 

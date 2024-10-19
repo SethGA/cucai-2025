@@ -17,3 +17,13 @@ export default function FirstSection() {
     </div>
   );
 }
+
+/*
+Fixes:
+ landing page Toronto backdrop 
+- 1. fix so that it covers entire screen (left and right edges aren't covered)
+- 2. remove thin blue line between Toronto backdrop and starting fade of section 2 (about cucai)
+
+- 1. Fixed using background-size: cover
+- 2. png has the thin line, adjust the png and we'll be ok
+*/
