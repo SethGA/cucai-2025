@@ -238,19 +238,33 @@ body {
   height: 490px;
   padding: 38px 36px 38px 36px;
   gap: 24px;
+  align-content: center;
+  justify-content: center;
 }
 
 .speaker-elem .speaker-img {
-  width: 250px;
+  margin-top: 17%;
+  margin-left: 12%;
+  /* width: 250px;
   height: 250px;
-  border-radius: 200px;
-  background: linear-gradient(rgba(0, 43, 92, 1), rgba(84, 113, 146, 1));
+  border-radius: 200px; */
+  /* background: linear-gradient(rgba(0, 43, 92, 1), rgba(84, 113, 146, 1)); */
 }
 
 .speaker-elem .speaker-name {
   /* width: 250px;
   height: 34px; */
   font-size: 28px;
+  font-weight: 700;
+  line-height: 33.6px;
+  text-align: center;
+  margin-top: 7%;
+}
+
+.speaker-elem .speaker-name-long {
+  /* width: 250px;
+  height: 34px; */
+  font-size: 20px;
   font-weight: 700;
   line-height: 33.6px;
   text-align: center;
