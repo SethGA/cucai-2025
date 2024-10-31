@@ -105,7 +105,7 @@ export function SixthSection() {
       </div>
     {/* Main has some trailing bottom space - delete this */}
     <main 
-      className={`${IBMPlexSans.className} h-[350px] w-[99dvw] overflow-x-hidden overflow-y-scroll flex flex-col items-center z-10 no-scrollbar font-light text-white pb-32`}
+      className={`${IBMPlexSans.className} h-[350px] w-full overflow-x-hidden overflow-y-hidden flex flex-col items-center z-10 no-scrollbar font-light text-white pb-32`}
       style={{ backgroundColor: 'rgba(77, 136, 255, 1)' }}
     >
       <div
