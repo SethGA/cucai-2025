@@ -644,4 +644,43 @@ Sixth Section Change Gradient
 
 .dark-mode .first-section .toronto-skyline{
   background-image: url("/bg-sunset.png");
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding-top: 146px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  box-sizing: border-box;
 }
+
+.dark-mode .first-section{
+  background: linear-gradient(180deg, #171456 0%, #6A6CB3 34.4%, #171456 105.8%);
+
+}
+
+.dark-mode .second-section{
+  background: linear-gradient(180deg, #171456 0%, #3F3F83 24.89%);
+
+}
+
+.dark-mode .third-section{
+  background: linear-gradient(180deg, #404084 0%, #171456 100%);
+
+}
+
+.dark-mode .fourth-section{
+  background: linear-gradient(180deg, #3C3C80 0%, #171456 100%);
+}
+
+.dark-mode .fifth-section{
+  background: linear-gradient(180deg, #3C3C80 0%, #171456 100%);
+
+}
+
+.dark-mode .sixth-section{
+  background: #171456;
+
+}
+
