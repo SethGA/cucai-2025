@@ -13,6 +13,8 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --background-z: linear-gradient(180deg, #404084 0%, #171456 100%);
+
   }
 }
 
@@ -612,4 +614,34 @@ body {
   height: 48px;
   padding: 10px;
   vertical-align: middle;
+}
+
+/*DARK MODE CSS*/
+/*
+Toronto Skyline
+.first-section .toronto-skyline
+
+Second Section Change Gradient
+.second-section
+
+Third Section Change Gradient
+.third-section
+
+Fourth Section Change Gradient
+.fourth-section
+
+Fifth Section Change Gradient
+.fifth-section
+
+Sixth Section Change Gradient
+.sixth-section 
+*/
+.dark-mode{
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+.dark-mode .first-section .toronto-skyline{
+  background-image: url("/bg-sunset.png");
 }
