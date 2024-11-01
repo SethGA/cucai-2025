@@ -37,7 +37,30 @@ export let speakers = [
     position: "Ex-Director of AI Research",
     img: "/headshots/ruslan.png",
     company: "/logos/apple-logo.png",
-    width: 44.66,
+  },
+  {
+    name: "Patricia Arocena",
+    position: "Head of Generative AI",
+    img: "/headshots/patricia-arocena.png",
+    company: "/logos/rbc-logo.png",
+  },
+  {
+    name: "Chris Caira",
+    position: "Senior Director",
+    img: "/headshots/chris-caira.png",
+    company: "/logos/ey-parth-logo.png",
+  },
+  {
+    name: "Sam Talasila",
+    position: "Head of LLMs",
+    img: "/headshots/sam-talasila.png",
+    company: "/logos/wealthsimple-logo.png",
+  },
+  {
+    name: "Diego Magaelhaes",
+    position: "Chief Technologist",
+    img: "/headshots/diego-magalhaes.png",
+    company: "/logos/aws-logo.png",
   },
 ];
 
@@ -56,32 +79,32 @@ let student_partners = [
     name: "Western AI",
     logo: "/logos/wai-logo.png",
     university: "University of Western Ontario",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
+    website: "https://www.westernuai.ca/",
+    insta: "https://www.instagram.com/westernu.ai/",
     width: 120,
   },
   {
     name: "McGill AI",
     logo: "/logos/mcgill-ai-logo.png",
     university: "McGill University",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
+    website: "https://mcgillai.com/",
+    insta: "https://www.instagram.com/mcgillaisociety/",
     width: 130,
   },
   {
     name: "UofT AI",
     logo: "/logos/uoftai-logo.png",
     university: "University of Toronto",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
+    website: "https://www.uoft.ai/",
+    insta: "https://www.instagram.com/uoftaigroup/",
     width: 297,
   },
   {
     name: "Wester Cyber Society",
     logo: "/logos/wcs-logo.png",
     university: "University of Western Ontario",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
+    website: "https://www.westerncybersociety.com/items/",
+    insta: "https://www.instagram.com/westerncybersociety/",
     width: 297,
     height: 100,
   },
@@ -89,8 +112,8 @@ let student_partners = [
     name: "UVic AI",
     logo: "/logos/uvic-ai-logo.png",
     university: "University of Victoria",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
+    website: "https://uvicai.ca/",
+    insta: "https://www.instagram.com/uvicaiclub/",
     width: 150,
     height: 100,
   },
@@ -98,8 +121,8 @@ let student_partners = [
     name: "UdeM AI",
     logo: "/logos/udem-ai-logo.png",
     university: "Universitié de Montréal",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
+    website: "https://utmist.gitlab.io/",
+    insta: "https://www.instagram.com/udem.ai/",
     width: 120,
     height: 100,
   },
@@ -107,8 +130,8 @@ let student_partners = [
     name: "UTMIST",
     logo: "/logos/utmist-logo.png",
     university: "University of Toronto",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
+    website: "https://utmist.gitlab.io/",
+    insta: "https://www.instagram.com/uoft_utmist/",
     width: 297,
     height: 100,
   },
@@ -198,14 +221,7 @@ export default function Home() {
       <div id="about">
         <SecondSection />
       </div>
-      <div id="speakers">
-        <div className="third-section">
-          {/* 
-            AI Experts on Stage
-          */}
-          <ThirdSection />
-        </div>
-      </div>
+      <ThirdSection/>
       <div id="student-partners" className="fourth-section">
         <FourthSection />
       </div>

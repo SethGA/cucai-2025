@@ -64,7 +64,7 @@ export default function Header(
 
 
         return (
-            <div className="header">
+            <div className="header bg-gradient-to-t from-[#A2D8EB] to-[#7364FF]">
                 <div className="cucai-logo">
                 <Image src="/image.png" alt="CUCAI logo" width={142.8} height={68} />
                 </div>

@@ -29,7 +29,7 @@ body {
 
 .header {
   display: flex;
-  background: rgb(115, 100, 255);
+  /* background: rgb(115, 100, 255); */
   justify-content: space-between;
   padding: 8px 80px 8px 80px;
   gap: 8px;
@@ -199,11 +199,11 @@ body {
  display: block; 
  background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 136, 255, 1));
  height: 859px;
- padding: 100px 80px 100px 80px;
  gap: 36px;
 }
 
 .third-section .title {
+  padding: 100px 80px 70px 80px;
   width: 1280px;
   gap: 8px;
 }
@@ -324,6 +324,7 @@ body {
   width: 1280px;
   height: 262px;
   margin-top: 7%;
+  margin-left: 2.5%;
 }
 
 .partner-feature .main-feature-logo {
@@ -418,7 +419,7 @@ body {
   height: 37px;
 }
 
-.partner-paragraph .partner-inner-text {
+.partner-inner-text {
   display: flex;
   gap: 0px;
 }

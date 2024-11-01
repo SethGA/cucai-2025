@@ -18,6 +18,8 @@ export default function fourth_section(){
           alt="QMIND Logo"
           className="main-feature-logo"
         />
+
+        
         <div className="main-partner-text">
           <h1 className="main-partner-title">QMIND</h1>
           <p className="main-partner-details">{"Queen's University"}</p>
@@ -48,22 +50,22 @@ export default function fourth_section(){
           </p>
         </div>
       </div>
-      {/* TODO: Fix typing problem */}
       <div className="partner-grid">
         {chunked_partners.map((row) => (
-          <div className="partner-rows" key={"Partner Rows"}>
+          <div 
+            className="partner-rows items-baseline" 
+            key={"Partner Rows"}
+          >
             {row.map((partner) => (
-              <div className="partner-body" key={partner.name}>
-                <Image
-                  src={partner.logo}
-                  width={partner.width}
-                  height={100}
-                  alt={partner.name}
-                  className="partner-logo"
-                />
-                <div className="partner-paragraph">
-                  <b className="partner-title">{partner.name}</b>
-                  <p className="partner-uni">{partner.university}</p>
+              <div key={partner.name}>
+                <div
+                  className="flex flex-col h-[347px] w-[382px] py-8 px-16 gap-4"
+                  key={partner.name}
+                >
+                  <img src={partner.logo} class="w-[382px] h-[150px] object-contain"></img>
+                  <p class="font-bold !text-[23pt]">{partner.name}</p>
+                  <p class="text-[16pt] font-normal">{partner.university}</p>
+                  
                   <p className="partner-inner-text">
                     <a className="partner-links" href={partner.website}>
                       <u className="partner-link-text">Website</u>
