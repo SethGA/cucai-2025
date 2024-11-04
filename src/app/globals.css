@@ -31,7 +31,7 @@ body {
 
 .header {
   display: flex;
-  background: rgb(115, 100, 255);
+  background: #7364FF;
   justify-content: space-between;
   padding: 8px 80px 8px 80px;
   gap: 8px;
@@ -73,6 +73,7 @@ body {
 .header .contact-us {
   display: table-cell;
   vertical-align: middle;
+  background-color: transparent;
   padding: 12px 10px 14px 10px;
 }
 
@@ -95,9 +96,9 @@ body {
 }
 
 .first-section .toronto-skyline {
-  background-image: url("/toronto-skyline-day.png");
+  background-image: url("/bg-day.png");
   width: 100vw;
-  height: 100vh;
+  height: 1117px;
   justify-content: center;
   align-items: center;
   padding-top: 146px;
@@ -105,6 +106,15 @@ body {
   background-position: bottom;
   background-size: cover;
   box-sizing: border-box;
+}
+
+/*after a certain width, the height of the image changes*/
+
+@media(min-width:1568px){
+  .first-section .toronto-skyline{
+    height: 1350px;
+  }
+
 }
 
 .first-section .white-box { 
@@ -233,14 +243,14 @@ body {
 }
 
 .third-section {
- display: block; 
+  display: block; 
  background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 136, 255, 1));
  height: 859px;
- padding: 100px 80px 100px 80px;
  gap: 36px;
 }
 
 .third-section .title {
+  padding: 100px 80px 70px 80px;
   width: 1280px;
   gap: 8px;
 }
@@ -285,19 +295,27 @@ body {
   height: 490px;
   padding: 38px 36px 38px 36px;
   gap: 24px;
+  align-content: center;
+  justify-content: center;
 }
 
 .speaker-elem .speaker-img {
-  width: 250px;
-  height: 250px;
-  border-radius: 200px;
-  background: linear-gradient(rgba(0, 43, 92, 1), rgba(84, 113, 146, 1));
+  margin-top: 17%;
+  margin-left: 12%;
 }
 
 .speaker-elem .speaker-name {
-  width: 250px;
-  height: 34px; 
   font-size: 28px;
+  font-weight: 700;
+  line-height: 33.6px;
+  text-align: center;
+  margin-top: 7%;
+}
+
+.speaker-elem .speaker-name-long {
+  /* width: 250px;
+  height: 34px; */
+  font-size: 20px;
   font-weight: 700;
   line-height: 33.6px;
   text-align: center;
@@ -317,8 +335,6 @@ body {
 .speaker-elem .speaker-logo {
   margin-top: 7%;
 }
-
-
 
 .fourth-section {
   display: block;
@@ -359,6 +375,7 @@ body {
   width: 1280px;
   height: 262px;
   margin-top: 7%;
+  margin-left: 2.5%;
 }
 
 .partner-feature .main-feature-logo {
@@ -453,7 +470,7 @@ body {
   height: 37px;
 }
 
-.partner-paragraph .partner-inner-text {
+.partner-inner-text {
   display: flex;
   gap: 0px;
 }
@@ -470,6 +487,8 @@ body {
   text-align: left;
   margin-right: 5%;
 }
+
+
 
 .fifth-section {
   display: flex; 
@@ -647,6 +666,21 @@ body {
   background-color: rgba(77, 136, 255, 1);
 }
 
+.custom-main2 {
+  font-family: 'IBM Plex Sans', sans-serif; /* Substitute with actual font import if needed */
+  height: 524px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  font-weight: 300; /* Tailwind's 'font-light' */
+  color: black;
+  padding-bottom: 8rem; /* 32px in Tailwind would translate to 8rem based on standard rem */
+}
+
 .custom-main::-webkit-scrollbar {
   display: none; /* Equivalent to 'no-scrollbar' */
 }
@@ -747,7 +781,7 @@ Sixth Section Change Gradient
 .dark-mode .first-section .toronto-skyline{
   background-image: url("/bg-sunset.png");
   width: 100vw;
-  height: 100vh;
+  height: 1117px;
   justify-content: center;
   align-items: center;
   padding-top: 146px;
@@ -756,6 +790,7 @@ Sixth Section Change Gradient
   background-size: cover;
   box-sizing: border-box;
 }
+
 
 .dark-mode .first-section{
   background: linear-gradient(180deg, #171456 0%, #6A6CB3 34.4%, #171456 105.8%);

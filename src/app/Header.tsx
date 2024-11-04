@@ -19,9 +19,7 @@ export default function Header({
 }) {
     const [flip, setFlip] = useState(false);
     const [isTransitioning, setTransition] = useState(false);
-    const [isFadingIn, setFadeIn] = useState(false);
 
-    // Define animations for fadeIn and fadeOut
     const fadeIn = useSpring({
         to: { opacity: 1 },
         from: { opacity: 0 },
@@ -41,22 +39,14 @@ export default function Header({
     });
 
     const changeImage = () => {
-        setFadeIn(false);
         setTransition(true);
         setTimeout(() => {
             setDark(prevDark => !prevDark);
-            setFadeIn(true);
-
-            // Toggle dark mode class on the body
-            if (!isDark) {
-                document.body.classList.add("dark-mode");
-            } else {
-                document.body.classList.remove("dark-mode");
-            }
-        }, 400);
+            document.body.classList.toggle("dark-mode", !isDark);
+        }, 100);
         setTimeout(() => {
             setTransition(false);
-        }, 480);
+        }, 200);
     };
 
     const getImage = () => {
@@ -83,7 +73,7 @@ export default function Header({
                 ))}
                 <button className="menu-toggle" onClick={changeImage}>
                     {isTransitioning ? (
-                        <animated.div style={isFadingIn ? fadeIn : fadeOut}>
+                        <animated.div style={isDark ? fadeIn : fadeOut}>
                             {getImage()}
                         </animated.div>
                     ) : (
@@ -102,5 +92,3 @@ export default function Header({
         </div>
     );
 }
-
-  
