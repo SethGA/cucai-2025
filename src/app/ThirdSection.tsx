@@ -22,9 +22,9 @@ const SpeakerCarousel = ({speakers}) => {
             alt={"Headshot of " + speaker.name} 
             class="h-[250px] rounded-full border-[#002b5c]/50 border-[1px] object-cover bg-gradient-to-t from-[#547192]/0 to-[#002b5c]/50">
           </img>
-          <p class={"text-center font-bold !text-[23pt]"}>{speaker.name}</p>
+          <p className="speaker-name">{speaker.name}</p>
           {/* <p class={"text-center font-bold " + (speaker.name.length > 15 ? "!text-[23pt]" : "text-[28pt]")}>{speaker.name}</p> */}
-          <p class="text-center text-[16pt] font-normal">{speaker.position}</p>
+          <p className="speaker-position">{speaker.position}</p>
           <img src={speaker.company} class="w-[200px] h-[55px] object-contain"></img>
         </div>
       ))}

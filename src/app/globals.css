@@ -273,6 +273,10 @@ body {
   margin-top: 2%;
 }
 
+.dark-mode .third-section .small-font{
+  color: white;
+}
+
 .dark-mode .third-section .big-font {
   height: 62px;
   font-size: 52px;
@@ -288,6 +292,8 @@ body {
   height: 524px;
   gap: 36px;
 }
+
+
 
 .speaker-list .speaker-elem {
   display: table-cell;
@@ -320,6 +326,29 @@ body {
   line-height: 33.6px;
   text-align: center;
   margin-top: 7%;
+}
+
+.speaker-position {
+  text-align: center;    /* Center text */
+  font-size: 16pt;       /* Font size of 16pt */
+  font-weight: normal;   /* Normal font weight */
+  color: black;          /* Text color white */
+}
+
+.dark-mode .speaker-position{
+  color: white;
+}
+
+.speaker-name{
+  text-align: center;
+  font-size: 16pt;
+  font-weight: bold;
+  color: black;
+
+}
+
+.dark-mode .speaker-name{
+  color: white;
 }
 
 .speaker-elem .speaker-text {
@@ -804,6 +833,7 @@ Sixth Section Change Gradient
 
 .dark-mode .third-section{
   background: linear-gradient(180deg, #404084 0%, #171456 100%);
+  
 
 }
 
