@@ -425,6 +425,7 @@ body {
   height: 262px;
   margin-top: 7%;
   margin-left: 2.5%;
+  padding-left: 1.5%;
 }
 
 .partner-feature .main-feature-logo {
@@ -482,6 +483,8 @@ body {
 
 .partner-grid .partner-rows {
   display: flex;
+  padding-left: 4.5%;
+  gap: 70px;
 }
 
 .partner-rows .partner-body {
@@ -674,6 +677,17 @@ body {
   text-align: left;
   color: white;
   /* margin-bottom: 3%; */
+}
+
+/* WebKit Browsers (Chrome, Safari, Edge) */
+.no-scrollbar {
+  overflow: scroll; /* Enables scroll functionality */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in WebKit browsers */
 }
 
 @layer components {
