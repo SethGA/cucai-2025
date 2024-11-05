@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -12,7 +13,15 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --background-z: linear-gradient(180deg, #404084 0%, #171456 100%);
+
   }
+}
+
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -21,9 +30,50 @@ body {
 }
 
 .header {
-  background: rgb(41, 41, 42);
+  display: flex;
+  background: #7364FF;
   justify-content: space-between;
   padding: 8px 80px 8px 80px;
+  gap: 8px;
+}
+
+.dark-mode .header{
+  background: #171456;
+
+}
+.header .menu-list {
+  display: table;
+  justify-content: space-between;
+  font-size: 14px;
+  align-self: center;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  gap: 16px;
+
+}
+
+.menu-list .menu-option {
+  display: table-cell;
+  width: 60px;
+  height: 37px;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.menu-list .menu-toggle {
+  display: table-cell;
+  padding: 16px 10px 10px 10px;
+  vertical-align: bottom;
+}
+
+.header .cucai-logo {
+  padding: 12px 0px 12px 0px;
+}
+
+.header .contact-us {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 12px 10px 14px 10px;
 }
 
 @layer utilities {
@@ -32,10 +82,833 @@ body {
   }
 }
 
-.header .menuList {
+.first-section {
+  display: flex;
+  background: linear-gradient(rgba(115, 100, 255, 1), rgba(162,216,235, 1) 15%);
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-mode .first-section{
+  background: linear-gradient(180deg, #171456 0%, #6A6CB3 34.4%, #171456 105.8%);
+
+}
+
+.first-section .toronto-skyline {
+  background-image: url("/bg-day.png");
+  width: 100vw;
+  height: 1117px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 146px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+/*after a certain width, the height of the image changes*/
+
+@media(min-width:1568px){
+  .first-section .toronto-skyline{
+    height: 1350px;
+  }
+
+}
+
+.first-section .white-box { 
+  width: 783px;
+  height: 379px;
+  align-self: center;
+  margin: auto;
+  border-radius: 24px;
+  padding: 44px 36px 44px 36px;
+  gap: 24px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-box .title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 76.8px;
+  text-align: center;
+}
+
+.dark-mode .white-box .title {
+  font-size: 64px;
+  font-weight: 700;
+  color: black;
+  line-height: 76.8px;
+  text-align: center;
+}
+
+.white-box .subtext {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 39.2px;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.dark-mode .white-box .subtext {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 39.2px;
+  text-align: center;
+  padding-top: 35px;
+  color: black;
+}
+
+.white-box .register-button {
+  padding: 14px 32px 14px 32px;
+  border-radius: 50px;
+  background-color: rgba(71, 5, 210, 1);
+  color: white;
+  margin-left: 39%;
+  line-height: 100px;
+  text-align: center;
+}
+
+
+.second-section {
+  display: flex;
+  background: linear-gradient(rgba(77, 136, 255, 1), rgba(162, 216, 235, 1) 20%);
+  padding: 100px 80px 100px 80px;
+  /* Remove height when adding elements */
+  height: 1020px;
+}
+
+.second-section .web-video {
+  border-radius: 24px;
+  border-color: rgba(23, 20, 86, 1);
+  width: 401px;
+  height: 701px;
+  border-width: 8px;
+}
+
+.second-section .main-text {
+  width: 600px;
+  height: 431px;
+  gap: 24px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: left;
+  margin-top: 25%;
+  margin-left: 30%;
+}
+
+.main-text .big-font {
+  height: 124px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 62.4px;
+  color: rgba(23, 20, 86, 1);
+}
+
+.dark-mode .main-text .big-font {
+  height: 124px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 62.4px;
+  color: white;
+}
+
+
+.main-text .small-font {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 37.4px;
+  margin-top: 5%;
+}
+
+.main-text .register-button {
+  padding: 14px 32px 14px 32px;
+  border-radius: 50px;
+  background-color: rgba(71, 5, 210, 1);
+  color: white;
+  margin-left: 39%;
+  line-height: 100px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 0%;
+}
+
+.dark-mode .main-text .register-button {
+  padding: 14px 32px 14px 32px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 2px solid white; /* Visible white border */
+  color: white;
+  margin-left: 39%;
+  line-height: 100px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 0%;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.dark-mode .main-text .register-button:hover {
+  border-color: rgba(255, 255, 255, 0.8); /* Slightly lighter border on hover */
+  color: rgba(255, 255, 255, 0.8); /* Slightly lighter text color on hover */
+}
+
+.tbd-section {
+  background-color:  rgba(77, 136, 255, 1);
+}
+
+.third-section {
+  display: block; 
+ background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 136, 255, 1));
+ height: 859px;
+ gap: 36px;
+}
+
+.third-section .title {
+  padding: 100px 80px 70px 80px;
+  width: 1280px;
+  gap: 8px;
+}
+
+.third-section .small-font {
+  height: 29px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: left;
+}
+
+.third-section .big-font {
+  height: 62px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 62.4px;
+  text-align: left;
+  color: rgba(23, 20, 86, 1);
+  margin-top: 2%;
+}
+
+.dark-mode .third-section .small-font{
+  color: white;
+}
+
+.dark-mode .third-section .big-font {
+  height: 62px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 62.4px;
+  text-align: left;
+  color: white;
+  margin-top: 2%;
+}
+
+.third-section .speaker-list {
+  display: table;
+  height: 524px;
+  gap: 36px;
+}
+
+
+
+.speaker-list .speaker-elem {
+  display: table-cell;
+  width: 322px;
+  height: 490px;
+  padding: 38px 36px 38px 36px;
+  gap: 24px;
+  align-content: center;
+  justify-content: center;
+}
+
+.speaker-elem .speaker-img {
+  margin-top: 17%;
+  margin-left: 12%;
+}
+
+.speaker-elem .speaker-name {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.6px;
+  text-align: center;
+  margin-top: 7%;
+}
+
+.speaker-elem .speaker-name-long {
+  /* width: 250px;
+  height: 34px; */
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 33.6px;
+  text-align: center;
+  margin-top: 7%;
+}
+
+.speaker-position {
+  text-align: center;    /* Center text */
+  font-size: 16pt;       /* Font size of 16pt */
+  font-weight: normal;   /* Normal font weight */
+  color: black;          /* Text color white */
+}
+
+.dark-mode .speaker-position{
+  color: white;
+}
+
+.speaker-name{
+  text-align: center;
+  font-size: 16pt;
+  font-weight: bold;
+  color: black;
+
+}
+
+.dark-mode .speaker-name{
+  color: white;
+}
+
+.speaker-elem .speaker-text {
+  width: 250px;
+  height: 19px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: center;
+  margin-top: 3%;
+}
+
+.speaker-elem .speaker-logo {
+  margin-top: 7%;
+}
+
+.fourth-section {
+  display: block;
+  background: linear-gradient(rgba(77, 136, 255, 1), rgba(163, 217, 236, 1));
+  /* May need to remove height when adding elements */
+  height: 1856px; 
+  gap: 36px;
+  padding: 100px 80px 100px 80px;
+}
+
+.fourth-section .title {
+  width: 1280px;
+  height: 99px;
+  gap: 8px;
+}
+
+.title .small-liner {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: left;
+}
+
+.title .big-liner {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 62.4px;
+  text-align: left;
+  margin-top: 2%;
+}
+
+.fourth-section .partner-content {
+  gap: 44px;
+}
+
+.partner-content .partner-feature {
+  display: flex;
+  width: 1280px;
+  height: 262px;
+  margin-top: 7%;
+  margin-left: 2.5%;
+  padding-left: 1.5%;
+}
+
+.partner-feature .main-feature-logo {
+  gap: 10px;
+  padding: 12px 32px 12px 32px;
+  width: 488px;
+  height: 155px;
+}
+ 
+.partner-feature .main-partner-text {
+  width: 640px;
+  height: 205px;
+  padding: 32px 24px 32px 24px;
+  gap: 16px;
+  margin-left: 5.5%;
+}
+
+.main-partner-text .main-partner-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: left;
+  width: 592px;
+  height: 48px;
+  margin-bottom: 2%;
+}
+
+.main-partner-text .main-partner-details {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 37.4px;
+  text-align: left;
+  width: 592px;
+  height: 37px;
+  gap: 0px;
+  margin-bottom: 2%;
+}
+
+.main-partner-text .main-partner-links {
+  display: flex;
+}
+
+.main-partner-links .inner-text {
+  display: flex;
+  margin-right: 5%;
+}
+
+.inner-text .link-symbol {
+  margin-left: 5%;
+}
+
+.partner-content .partner-grid {
+  display: block;
+}
+
+.partner-grid .partner-rows {
+  display: flex;
+  padding-left: 4.5%;
+  gap: 70px;
+}
+
+.partner-rows .partner-body {
+  width: 382px;
+  height: 347px;
+}
+
+/* .partner-body .partner-logo {
+  margin-left: 10%;
+  margin-bottom: 10%;
+} */
+
+.partner-body .partner-paragraph {
+  width: 382px;
+  height: 189px;
+  padding: 32px 24px 32px 24px;
+  gap: 8px;
+}
+
+.partner-paragraph .partner-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: left;
+  width: 334px;
+  height: 48px;
+}
+
+.partner-paragraph .partner-uni {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 37.4px;
+  text-align: left;
+  width: 334px;
+  height: 37px;
+}
+
+.partner-inner-text {
+  display: flex;
+  gap: 0px;
+}
+
+.partner-inner-text .partner-links {
+  display: flex;
+  margin-right: 5%;
+}
+
+.partner-links .partner-link-text {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22.1px;
+  text-align: left;
+  margin-right: 5%;
+}
+
+
+
+.fifth-section {
+  display: flex; 
+  background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 135, 255, 1));
+  /* May clash with elements CSS */
+  height: 574px;
+  padding: 100px 80px 100px 80px;
+}
+
+.fifth-section .join-us-pic {
+  border-radius: 24px;
+  width: 540px;
+  height: 374px;
+  margin-left: 10%;
+}
+ 
+.fifth-section .text-part {
+  display: block;
+  width: 590px;
+  height: 323px;
+}
+
+
+.text-part .title {
+  height: 161px;
+}
+
+.title .small-text {
+  height: 29px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: left;
+  margin-bottom: 3%;
+}
+
+.title .big-text {
+  height: 124px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 62.4px;
+  text-align: left;
+  color: rgba(23, 20, 86, 1);
+  margin-bottom: 3%;
+}
+
+.title .big-text {
+  height: 124px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 62.4px;
+  text-align: left;
+  color: white;
+  margin-bottom: 3%;
+}
+
+.text-part p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left;
+}
+
+.text-part .contact-button {
+  padding: 14px 32px 14px 32px;
+  border-radius: 50px;
+  background-color: rgba(71, 5, 210, 1);
+  color: white;
+  margin-left: 39%;
+  line-height: 100px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 0%;
+  margin-top: 3%;
+}
+
+.dark-mode .text-part .contact-button {
+  padding: 14px 32px 14px 32px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 2px solid white; /* Visible white border */
+  color: white;
+  margin-left: 39%;
+  line-height: 100px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 0%;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.sixth-section {
+  display: block; 
+  background: rgba(77, 136, 255, 1);
+  /* May clash with element CSS */
+  height: 249px;
+  padding: 80px;
+  gap: 36px;
+ }
+
+.sixth-section .team-title {
+  width: 1280px;
+  height: 99px;
+  gap: 8px;
+  opacity: 0px;
+  margin-bottom: 5%;
+}
+
+.team-title .small-text {
+  height: 29px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: left;
+  margin-bottom: 2%;
+}
+
+.team-title .big-text {
+  height: 124px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 62.4px;
+  text-align: left;
+  color: rgba(23, 20, 86, 1);
+  /* margin-bottom: 3%; */
+}
+
+.team-title .big-text {
+  height: 124px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 62.4px;
+  text-align: left;
+  color: white;
+  /* margin-bottom: 3%; */
+}
+
+/* WebKit Browsers (Chrome, Safari, Edge) */
+.no-scrollbar {
+  overflow: scroll; /* Enables scroll functionality */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in WebKit browsers */
+}
+
+@layer components {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
+
+.carousel-inner {
+  animation: scroll 25s linear infinite; /* Adjust timing for speed */
+  width: max-content;
+  display: flex;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%); /* Adjust based on duplication */
+  }
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.custom-main {
+  font-family: 'IBM Plex Sans', sans-serif; /* Replace with your preferred font-family */
+  height: 350px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  font-weight: 300; /* Font weight for 'font-light' */
+  color: white;
+  padding-bottom: 32px;
+  background-color: rgba(77, 136, 255, 1);
+}
+
+.custom-main2 {
+  font-family: 'IBM Plex Sans', sans-serif; /* Substitute with actual font import if needed */
+  height: 524px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  font-weight: 300; /* Tailwind's 'font-light' */
+  color: black;
+  padding-bottom: 8rem; /* 32px in Tailwind would translate to 8rem based on standard rem */
+}
+
+.custom-main::-webkit-scrollbar {
+  display: none; /* Equivalent to 'no-scrollbar' */
+}
+
+.dark-mode .custom-main {
+  font-family: 'IBM Plex Sans', sans-serif; /* Replace with your preferred font-family */
+  height: 350px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  font-weight: 300; /* Font weight for 'font-light' */
+  color: white;
+  padding-bottom: 32px;
+  background: #171456;
+
+}
+
+
+.footer {
+  display: flex;
+  background: rgba(77, 136, 255, 1);
+  justify-content: space-between;
+  padding: 8px 80px 24px 80px;
+  gap: 8px;
+}
+
+.footer .menu-list {
+  display: table;
+  justify-content: space-between;
   font-size: 14px;
   align-self: center;
   font-weight: 400;
-  font: Inter;
   color: rgb(255, 255, 255);
+  gap: 16px;
+  left: 19px;
 }
+
+.footer .contact-us {
+  padding: 12px 0px 12px 0px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.2px;
+  text-align: left;
+  color: white;
+}
+
+.footer .contact-us {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 12px 10px 14px 10px;
+}
+
+.menu-list .footer-option {
+  display: table-cell;
+  height: 37px;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.menu-list .footer-logo {
+  display: table-cell;
+  width: 60px;
+  height: 48px;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+/*DARK MODE CSS*/
+/*
+Toronto Skyline
+.first-section .toronto-skyline
+
+Second Section Change Gradient
+.second-section
+
+Third Section Change Gradient
+.third-section
+
+Fourth Section Change Gradient
+.fourth-section
+
+Fifth Section Change Gradient
+.fifth-section
+
+Sixth Section Change Gradient
+.sixth-section 
+*/
+.dark-mode{
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+.dark-mode .first-section .toronto-skyline{
+  background-image: url("/bg-sunset.png");
+  width: 100vw;
+  height: 1117px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 146px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+
+.dark-mode .first-section{
+  background: linear-gradient(180deg, #171456 0%, #6A6CB3 34.4%, #171456 105.8%);
+
+}
+
+.dark-mode .second-section{
+  background: linear-gradient(180deg, #171456 0%, #3F3F83 24.89%);
+
+}
+
+.dark-mode .third-section{
+  background: linear-gradient(180deg, #404084 0%, #171456 100%);
+  
+
+}
+
+.dark-mode .fourth-section{
+  background: #171456;
+
+}
+
+.dark-mode .fifth-section{
+  background: linear-gradient(180deg, #171456 0%, #3D3D81 100%);
+
+
+}
+
+.dark-mode .sixth-section{
+  background: linear-gradient(180deg, #3C3C80 0%, #171456 100%);
+
+
+}
+
+.dark-mode .footer {
+  display: flex;
+  background: #171456;
+
+  justify-content: space-between;
+  padding: 8px 80px 24px 80px;
+  gap: 8px;
+}
+
