@@ -189,7 +189,7 @@ const chunk_array = (array: {}[], size: number) => {
 export const chunked_partners = chunk_array(student_partners, 3);
 
 export default function Home() {
-  const [isDark, setDark] = useState<boolean>(true);
+  const [isDark, setDark] = useState<boolean>(false);
 
   return (
     <div>

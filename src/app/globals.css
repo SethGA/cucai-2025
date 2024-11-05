@@ -577,17 +577,19 @@ body {
   margin-bottom: 3%;
 }
 
+
+
 .title .big-text {
   height: 124px;
   font-size: 52px;
   font-weight: 700;
   line-height: 62.4px;
   text-align: left;
-  color: rgba(23, 20, 86, 1);
+  color: black;
   margin-bottom: 3%;
 }
 
-.title .big-text {
+.dark-mode .title .big-text {
   height: 124px;
   font-size: 52px;
   font-weight: 700;
@@ -670,6 +672,16 @@ body {
 }
 
 .team-title .big-text {
+  height: 124px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 62.4px;
+  text-align: left;
+  color: black;
+  /* margin-bottom: 3%; */
+}
+
+.dark-mode .team-title .big-text {
   height: 124px;
   font-size: 52px;
   font-weight: 700;
