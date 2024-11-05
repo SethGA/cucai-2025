@@ -11,7 +11,7 @@ const buttons = [
 ];
 
 export default function Header({
-    isDark,
+    isDark = false,
     setDark
 }: {
     isDark: boolean,
@@ -46,13 +46,14 @@ export default function Header({
         }, 100);
         setTimeout(() => {
             setTransition(false);
-        }, 200);
+        }, 100);
     };
 
     const getImage = () => {
         return (
             <Image
-                src={isDark ? "/(D)Mode Toggle.png" : "/(L)Mode Toggle.png"}
+                src={isDark ? "/(L)Mode Toggle.png" : "/(D)Mode Toggle.png"}
+                
                 alt={isDark ? "Toggle Mode (DARK)" : "Toggle Mode (LIGHT)"}
                 width={40}
                 height={40}

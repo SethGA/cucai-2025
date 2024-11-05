@@ -49,7 +49,7 @@ body {
   font-weight: 400;
   color: rgb(255, 255, 255);
   gap: 16px;
-  left: 19px;
+
 }
 
 .menu-list .menu-option {
@@ -73,7 +73,6 @@ body {
 .header .contact-us {
   display: table-cell;
   vertical-align: middle;
-  background-color: transparent;
   padding: 12px 10px 14px 10px;
 }
 
@@ -173,6 +172,7 @@ body {
   text-align: center;
 }
 
+
 .second-section {
   display: flex;
   background: linear-gradient(rgba(77, 136, 255, 1), rgba(162, 216, 235, 1) 20%);
@@ -236,6 +236,26 @@ body {
   font-size: 18px;
   font-weight: 500;
   margin-left: 0%;
+}
+
+.dark-mode .main-text .register-button {
+  padding: 14px 32px 14px 32px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 2px solid white; /* Visible white border */
+  color: white;
+  margin-left: 39%;
+  line-height: 100px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 0%;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.dark-mode .main-text .register-button:hover {
+  border-color: rgba(255, 255, 255, 0.8); /* Slightly lighter border on hover */
+  color: rgba(255, 255, 255, 0.8); /* Slightly lighter text color on hover */
 }
 
 .tbd-section {
@@ -593,6 +613,21 @@ body {
   font-weight: 500;
   margin-left: 0%;
   margin-top: 3%;
+}
+
+.dark-mode .text-part .contact-button {
+  padding: 14px 32px 14px 32px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 2px solid white; /* Visible white border */
+  color: white;
+  margin-left: 39%;
+  line-height: 100px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 0%;
+  transition: border-color 0.3s, color 0.3s;
 }
 
 .sixth-section {
