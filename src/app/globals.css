@@ -107,10 +107,27 @@ body {
   box-sizing: border-box;
 }
 
+.dark-mode .first-section .toronto-skyline{
+  background-image: url("/bg-sunset.png");
+  width: 100vw;
+  height: 1117px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 146px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
 /*after a certain width, the height of the image changes*/
 
 @media(min-width:1568px){
   .first-section .toronto-skyline{
+    height: 1350px;
+  }
+
+  .dark-mode .first-section .toronto-skyline{
     height: 1350px;
   }
 
@@ -868,18 +885,7 @@ Sixth Section Change Gradient
   --background-end-rgb: 0, 0, 0;
 }
 
-.dark-mode .first-section .toronto-skyline{
-  background-image: url("/bg-sunset.png");
-  width: 100vw;
-  height: 1117px;
-  justify-content: center;
-  align-items: center;
-  padding-top: 146px;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  box-sizing: border-box;
-}
+
 
 
 .dark-mode .first-section{
