@@ -26,7 +26,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb))
+  background: rgb(var(--background-rgb));
 }
 
 .header {
@@ -134,13 +134,11 @@ body {
 }
 
 .first-section .white-box { 
-  width: 783px;
-  height: 379px;
+  max-width: 783px;
   align-self: center;
   margin: auto;
   border-radius: 24px;
   padding: 44px 36px 44px 36px;
-  gap: 24px;
   background-color: rgba(255, 255, 255, 0.8);
   box-sizing: border-box;
   justify-content: center;
@@ -180,13 +178,16 @@ body {
 }
 
 .white-box .register-button {
-  padding: 14px 32px 14px 32px;
+  /* padding: 14px 32px 14px 32px; */
   border-radius: 50px;
   background-color: rgba(71, 5, 210, 1);
   color: white;
-  margin-left: 39%;
-  line-height: 100px;
+  /* margin-left: 39%; */
+  line-height: 50px;
   text-align: center;
+  width: 179px;
+  height: 50px;
+  font-size: 18px;
 }
 
 
@@ -195,14 +196,16 @@ body {
   background: linear-gradient(rgba(77, 136, 255, 1), rgba(162, 216, 235, 1) 20%);
   padding: 100px 80px 100px 80px;
   /* Remove height when adding elements */
-  height: 1020px;
+  min-height: 1020px;
+  min-width: 700px;
+  position: relative;
 }
 
 .second-section .web-video {
   border-radius: 24px;
   border-color: rgba(23, 20, 86, 1);
-  width: 401px;
-  height: 701px;
+  min-width: 401px;
+  min-height: 701px;
   border-width: 8px;
 }
 
@@ -215,7 +218,8 @@ body {
   line-height: 28.8px;
   text-align: left;
   margin-top: 25%;
-  margin-left: 30%;
+  /* margin-left: 30%; */
+  /* margin-right: 5000%; */
 }
 
 .main-text .big-font {
@@ -224,6 +228,7 @@ body {
   font-weight: 700;
   line-height: 62.4px;
   color: rgba(23, 20, 86, 1);
+  width: 600px;
 }
 
 .dark-mode .main-text .big-font {
@@ -281,9 +286,10 @@ body {
 
 .third-section {
   display: block; 
- background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 136, 255, 1));
- height: 859px;
- gap: 36px;
+  background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 136, 255, 1));
+  min-height: 859px;
+  gap: 36px;
+  position: relative;
 }
 
 .third-section .title {
@@ -329,8 +335,6 @@ body {
   height: 524px;
   gap: 36px;
 }
-
-
 
 .speaker-list .speaker-elem {
   display: table-cell;
@@ -406,14 +410,15 @@ body {
   display: block;
   background: linear-gradient(rgba(77, 136, 255, 1), rgba(163, 217, 236, 1));
   /* May need to remove height when adding elements */
-  height: 1856px; 
+  min-height: 1856px; 
   gap: 36px;
   padding: 100px 80px 100px 80px;
+  position: relative;
 }
 
 .fourth-section .title {
   width: 1280px;
-  height: 99px;
+  min-height: 99px;
   gap: 8px;
 }
 
@@ -439,7 +444,7 @@ body {
 .partner-content .partner-feature {
   display: flex;
   width: 1280px;
-  height: 262px;
+  min-height: 262px;
   margin-top: 7%;
   margin-left: 2.5%;
   padding-left: 1.5%;
@@ -507,6 +512,7 @@ body {
 .partner-rows .partner-body {
   width: 382px;
   height: 347px;
+  margin-right: 50%;
 }
 
 /* .partner-body .partner-logo {
@@ -563,15 +569,21 @@ body {
   display: flex; 
   background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 135, 255, 1));
   /* May clash with elements CSS */
-  height: 574px;
+  min-height: 574px;
   padding: 100px 80px 100px 80px;
+  position: relative;
+  gap: 8px;
 }
 
-.fifth-section .join-us-pic {
+.join-us-pic {
   border-radius: 24px;
-  width: 540px;
-  height: 374px;
-  margin-left: 10%;
+  /* width: 540px;
+  height: auto; */
+  /* margin-left: 10%; */
+  width: 586px;
+  height: 390px;
+  position: relative;
+  object-fit: fill;
 }
  
 .fifth-section .text-part {
@@ -656,9 +668,10 @@ body {
   display: block; 
   background: rgba(77, 136, 255, 1);
   /* May clash with element CSS */
-  height: 249px;
+  min-height: 249px;
   padding: 80px;
   gap: 36px;
+  position: relative;
  }
 
 .sixth-section .team-title {
@@ -779,6 +792,21 @@ body {
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  font-weight: 300; /* Tailwind's 'font-light' */
+  color: black;
+  padding-bottom: 8rem; /* 32px in Tailwind would translate to 8rem based on standard rem */
+}
+
+.custom-main3 {
+  font-family: 'IBM Plex Sans', sans-serif; /* Substitute with actual font import if needed */
+  /* height: 524px; */
+  width: 100%;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
   display: flex;
   flex-direction: column;
   align-items: center;

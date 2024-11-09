@@ -4,7 +4,7 @@ export default function FirstSection() {
   return (
     <div className="first-section">
       <div className="toronto-skyline">
-        <div className="white-box">
+        <div className="white-box flex flex-wrap items-start p-4 gap-4 auto-rows-auto">
           <h1 className="title">{"Experience AI's Future at CUCAI 2025!"}</h1>
           <p className="subtext">
             Empowering the Next Generation of AI Innovators
