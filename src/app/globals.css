@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Tiny5&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -443,51 +444,76 @@ body {
 
 .partner-content .partner-feature {
   display: flex;
-  width: 1280px;
-  min-height: 262px;
-  margin-top: 7%;
-  margin-left: 2.5%;
-  padding-left: 1.5%;
+  max-width: 989px;
+  min-height: 231px;
+  margin-top: 3%;
+  margin-left: 15%;
+  /* padding-left: 1.5%; */
+  border-radius: 14px;
+  background: #83BBF3;
+  box-shadow: 0px 4px 4px 3px rgba(54, 5, 120, 0.25);
+  /* position: absolute; */
+  left: 137px;
+  top: 18px;
 }
 
 .partner-feature .main-feature-logo {
-  gap: 10px;
-  padding: 12px 32px 12px 32px;
-  width: 488px;
-  height: 155px;
+  /* position: absolute; */
+  /* right: 256px;
+  top: 51px; */
+  min-width: 488px;
+  max-height: 155px;
+  margin-top: 3%;
 }
  
 .partner-feature .main-partner-text {
-  width: 640px;
-  height: 205px;
-  padding: 32px 24px 32px 24px;
+  display: flex;
+  max-width: 390px;
+  padding: 32px 24px;
+  flex-direction: column;
+  align-items: flex-end;
   gap: 16px;
-  margin-left: 5.5%;
 }
 
 .main-partner-text .main-partner-title {
+  color: var(--neutrals-black, #000);
+  text-align: right;
   font-size: 40px;
+  font-style: normal;
   font-weight: 700;
-  line-height: 48px;
-  text-align: left;
-  width: 592px;
-  height: 48px;
-  margin-bottom: 2%;
+  line-height: 120%; /* 48px */
 }
 
 .main-partner-text .main-partner-details {
   font-size: 22px;
   font-weight: 400;
+  text-align: right;
   line-height: 37.4px;
-  text-align: left;
+  /* text-align: left; */
   width: 592px;
   height: 37px;
   gap: 0px;
-  margin-bottom: 2%;
+  /* margin-bottom: 2%; */
 }
 
 .main-partner-text .main-partner-links {
   display: flex;
+  align-items: flex-start;
+  gap: 24px;
+
+  color: var(--neutrals-black, #000);
+
+  /* desktop/body/Paragraph */
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 22.1px */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
 }
 
 .main-partner-links .inner-text {
@@ -509,10 +535,14 @@ body {
   gap: 70px;
 }
 
-.partner-rows .partner-body {
-  width: 382px;
-  height: 347px;
-  margin-right: 50%;
+.partner-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 9px;
+  background: #83BBF3;
+  box-shadow: 0px 4px 4px 3px rgba(54, 5, 120, 0.25);
+  /* position: absolute; */
 }
 
 /* .partner-body .partner-logo {
@@ -580,8 +610,8 @@ body {
   /* width: 540px;
   height: auto; */
   /* margin-left: 10%; */
-  width: 586px;
-  height: 390px;
+  min-width: 586px;
+  min-height: 390px;
   position: relative;
   object-fit: fill;
 }
@@ -635,26 +665,36 @@ body {
   text-align: left;
 }
 
-.text-part .contact-button {
-  padding: 14px 32px 14px 32px;
-  border-radius: 50px;
-  background-color: rgba(71, 5, 210, 1);
-  color: white;
-  margin-left: 39%;
-  line-height: 100px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-  margin-left: 0%;
-  margin-top: 3%;
+.register-button--border {
+  width: 188px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #000;
 }
 
-.dark-mode .text-part .contact-button {
+.contact-button {
+  width: 160px;
+  height: 50px;
+  flex-shrink: 0;
+  /* background: #C0C0C0; */
+}
+
+.partner-button--wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 68px;
+  align-self: stretch;
+}
+
+/* .dark-mode .text-part .contact-button {
   padding: 14px 32px 14px 32px;
   border-radius: 50px;
   background-color: transparent;
   border: 2px solid white; /* Visible white border */
-  color: white;
+/*  color: white;
   margin-left: 39%;
   line-height: 100px;
   text-align: center;
@@ -662,7 +702,8 @@ body {
   font-weight: 500;
   margin-left: 0%;
   transition: border-color 0.3s, color 0.3s;
-}
+} 
+*/
 
 .sixth-section {
   display: block; 
@@ -886,6 +927,555 @@ body {
   padding: 10px;
   vertical-align: middle;
 }
+
+.tiny5-regular {
+  font-family: "Tiny5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Found using this website: https://pixelcorners.lukeb.co.uk/?radius=25&multiplier=5&border=1&border_width=3&border_color=#000000
+  Set pixel multiplier to 5, radius to 25, border width to 1, border color to black
+*/
+
+.pixel-corners,
+.pixel-corners--wrapper {
+  clip-path: polygon(0px calc(100% - 100px),
+    5px calc(100% - 100px),
+    5px calc(100% - 85px),
+    10px calc(100% - 85px),
+    10px calc(100% - 80px),
+    10px calc(100% - 70px),
+    15px calc(100% - 70px),
+    15px calc(100% - 60px),
+    20px calc(100% - 60px),
+    20px calc(100% - 55px),
+    25px calc(100% - 55px),
+    25px calc(100% - 50px),
+    30px calc(100% - 50px),
+    30px calc(100% - 45px),
+    30px calc(100% - 40px),
+    35px calc(100% - 40px),
+    40px calc(100% - 35px),
+    40px calc(100% - 30px),
+    45px calc(100% - 30px),
+    50px calc(100% - 30px),
+    50px calc(100% - 25px),
+    55px calc(100% - 25px),
+    55px calc(100% - 20px),
+    60px calc(100% - 20px),
+    60px calc(100% - 15px),
+    70px calc(100% - 15px),
+    70px calc(100% - 10px),
+    80px calc(100% - 10px),
+    85px calc(100% - 10px),
+    85px calc(100% - 5px),
+    100px calc(100% - 5px),
+    100px 100%,
+    calc(100% - 100px) 100%,
+    calc(100% - 100px) calc(100% - 5px),
+    calc(100% - 85px) calc(100% - 5px),
+    calc(100% - 85px) calc(100% - 10px),
+    calc(100% - 80px) calc(100% - 10px),
+    calc(100% - 70px) calc(100% - 10px),
+    calc(100% - 70px) calc(100% - 15px),
+    calc(100% - 60px) calc(100% - 15px),
+    calc(100% - 60px) calc(100% - 20px),
+    calc(100% - 55px) calc(100% - 20px),
+    calc(100% - 55px) calc(100% - 25px),
+    calc(100% - 50px) calc(100% - 25px),
+    calc(100% - 50px) calc(100% - 30px),
+    calc(100% - 45px) calc(100% - 30px),
+    calc(100% - 40px) calc(100% - 30px),
+    calc(100% - 40px) calc(100% - 35px),
+    calc(100% - 35px) calc(100% - 40px),
+    calc(100% - 30px) calc(100% - 40px),
+    calc(100% - 30px) calc(100% - 45px),
+    calc(100% - 30px) calc(100% - 50px),
+    calc(100% - 25px) calc(100% - 50px),
+    calc(100% - 25px) calc(100% - 55px),
+    calc(100% - 20px) calc(100% - 55px),
+    calc(100% - 20px) calc(100% - 60px),
+    calc(100% - 15px) calc(100% - 60px),
+    calc(100% - 15px) calc(100% - 70px),
+    calc(100% - 10px) calc(100% - 70px),
+    calc(100% - 10px) calc(100% - 80px),
+    calc(100% - 10px) calc(100% - 85px),
+    calc(100% - 5px) calc(100% - 85px),
+    calc(100% - 5px) calc(100% - 100px),
+    100% calc(100% - 100px),
+    100% 100px,
+    calc(100% - 5px) 100px,
+    calc(100% - 5px) 85px,
+    calc(100% - 10px) 85px,
+    calc(100% - 10px) 80px,
+    calc(100% - 10px) 70px,
+    calc(100% - 15px) 70px,
+    calc(100% - 15px) 60px,
+    calc(100% - 20px) 60px,
+    calc(100% - 20px) 55px,
+    calc(100% - 25px) 55px,
+    calc(100% - 25px) 50px,
+    calc(100% - 30px) 50px,
+    calc(100% - 30px) 45px,
+    calc(100% - 30px) 40px,
+    calc(100% - 35px) 40px,
+    calc(100% - 40px) 35px,
+    calc(100% - 40px) 30px,
+    calc(100% - 45px) 30px,
+    calc(100% - 50px) 30px,
+    calc(100% - 50px) 25px,
+    calc(100% - 55px) 25px,
+    calc(100% - 55px) 20px,
+    calc(100% - 60px) 20px,
+    calc(100% - 60px) 15px,
+    calc(100% - 70px) 15px,
+    calc(100% - 70px) 10px,
+    calc(100% - 80px) 10px,
+    calc(100% - 85px) 10px,
+    calc(100% - 85px) 5px,
+    calc(100% - 100px) 5px,
+    calc(100% - 100px) 0px,
+    100px 0px,
+    100px 5px,
+    85px 5px,
+    85px 10px,
+    80px 10px,
+    70px 10px,
+    70px 15px,
+    60px 15px,
+    60px 20px,
+    55px 20px,
+    55px 25px,
+    50px 25px,
+    50px 30px,
+    45px 30px,
+    40px 30px,
+    40px 35px,
+    35px 40px,
+    30px 40px,
+    30px 45px,
+    30px 50px,
+    25px 50px,
+    25px 55px,
+    20px 55px,
+    20px 60px,
+    15px 60px,
+    15px 70px,
+    10px 70px,
+    10px 80px,
+    10px 85px,
+    5px 85px,
+    5px 100px,
+    0px 100px);
+  position: relative;
+}
+.pixel-corners {
+  border: 5px solid transparent;
+}
+.pixel-corners--wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+.pixel-corners--wrapper .pixel-corners {
+  display: block;
+  clip-path: polygon(5px 100px,
+    10px 100px,
+    10px 85px,
+    15px 85px,
+    15px 80px,
+    15px 70px,
+    20px 70px,
+    20px 60px,
+    25px 60px,
+    25px 55px,
+    30px 55px,
+    30px 50px,
+    35px 50px,
+    35px 45px,
+    35px 40px,
+    40px 40px,
+    40px 35px,
+    45px 35px,
+    50px 35px,
+    50px 30px,
+    55px 30px,
+    55px 25px,
+    60px 25px,
+    60px 20px,
+    70px 20px,
+    70px 15px,
+    80px 15px,
+    85px 15px,
+    85px 10px,
+    100px 10px,
+    100px 5px,
+    calc(100% - 100px) 5px,
+    calc(100% - 100px) 10px,
+    calc(100% - 85px) 10px,
+    calc(100% - 85px) 15px,
+    calc(100% - 80px) 15px,
+    calc(100% - 70px) 15px,
+    calc(100% - 70px) 20px,
+    calc(100% - 60px) 20px,
+    calc(100% - 60px) 25px,
+    calc(100% - 55px) 25px,
+    calc(100% - 55px) 30px,
+    calc(100% - 50px) 30px,
+    calc(100% - 50px) 35px,
+    calc(100% - 45px) 35px,
+    calc(100% - 40px) 35px,
+    calc(100% - 40px) 40px,
+    calc(100% - 35px) 40px,
+    calc(100% - 35px) 45px,
+    calc(100% - 35px) 50px,
+    calc(100% - 30px) 50px,
+    calc(100% - 30px) 55px,
+    calc(100% - 25px) 55px,
+    calc(100% - 25px) 60px,
+    calc(100% - 20px) 60px,
+    calc(100% - 20px) 70px,
+    calc(100% - 15px) 70px,
+    calc(100% - 15px) 80px,
+    calc(100% - 15px) 85px,
+    calc(100% - 10px) 85px,
+    calc(100% - 10px) 100px,
+    calc(100% - 5px) 100px,
+    calc(100% - 5px) calc(100% - 100px),
+    calc(100% - 10px) calc(100% - 100px),
+    calc(100% - 10px) calc(100% - 85px),
+    calc(100% - 15px) calc(100% - 85px),
+    calc(100% - 15px) calc(100% - 80px),
+    calc(100% - 15px) calc(100% - 70px),
+    calc(100% - 20px) calc(100% - 70px),
+    calc(100% - 20px) calc(100% - 60px),
+    calc(100% - 25px) calc(100% - 60px),
+    calc(100% - 25px) calc(100% - 55px),
+    calc(100% - 30px) calc(100% - 55px),
+    calc(100% - 30px) calc(100% - 50px),
+    calc(100% - 35px) calc(100% - 50px),
+    calc(100% - 35px) calc(100% - 45px),
+    calc(100% - 35px) calc(100% - 40px),
+    calc(100% - 40px) calc(100% - 40px),
+    calc(100% - 40px) calc(100% - 35px),
+    calc(100% - 45px) calc(100% - 35px),
+    calc(100% - 50px) calc(100% - 35px),
+    calc(100% - 50px) calc(100% - 30px),
+    calc(100% - 55px) calc(100% - 30px),
+    calc(100% - 55px) calc(100% - 25px),
+    calc(100% - 60px) calc(100% - 25px),
+    calc(100% - 60px) calc(100% - 20px),
+    calc(100% - 70px) calc(100% - 20px),
+    calc(100% - 70px) calc(100% - 15px),
+    calc(100% - 80px) calc(100% - 15px),
+    calc(100% - 85px) calc(100% - 15px),
+    calc(100% - 85px) calc(100% - 10px),
+    calc(100% - 100px) calc(100% - 10px),
+    calc(100% - 100px) calc(100% - 5px),
+    100px calc(100% - 5px),
+    100px calc(100% - 10px),
+    85px calc(100% - 10px),
+    85px calc(100% - 15px),
+    80px calc(100% - 15px),
+    70px calc(100% - 15px),
+    70px calc(100% - 20px),
+    60px calc(100% - 20px),
+    60px calc(100% - 25px),
+    55px calc(100% - 25px),
+    55px calc(100% - 30px),
+    50px calc(100% - 30px),
+    50px calc(100% - 35px),
+    45px calc(100% - 35px),
+    40px calc(100% - 35px),
+    40px calc(100% - 40px),
+    35px calc(100% - 40px),
+    35px calc(100% - 45px),
+    35px calc(100% - 50px),
+    30px calc(100% - 50px),
+    30px calc(100% - 55px),
+    25px calc(100% - 55px),
+    25px calc(100% - 60px),
+    20px calc(100% - 60px),
+    20px calc(100% - 70px),
+    15px calc(100% - 70px),
+    15px calc(100% - 80px),
+    15px calc(100% - 85px),
+    10px calc(100% - 85px),
+    10px calc(100% - 100px),
+    5px calc(100% - 100px));
+}
+.pixel-corners::after,
+.pixel-corners--wrapper::after {
+  content: "";
+  position: absolute;
+  clip-path: polygon(0px calc(100% - 100px),
+    5px calc(100% - 100px),
+    5px calc(100% - 85px),
+    10px calc(100% - 85px),
+    10px calc(100% - 80px),
+    10px calc(100% - 70px),
+    15px calc(100% - 70px),
+    15px calc(100% - 60px),
+    20px calc(100% - 60px),
+    20px calc(100% - 55px),
+    25px calc(100% - 55px),
+    25px calc(100% - 50px),
+    30px calc(100% - 50px),
+    30px calc(100% - 45px),
+    30px calc(100% - 40px),
+    35px calc(100% - 40px),
+    40px calc(100% - 35px),
+    40px calc(100% - 30px),
+    45px calc(100% - 30px),
+    50px calc(100% - 30px),
+    50px calc(100% - 25px),
+    55px calc(100% - 25px),
+    55px calc(100% - 20px),
+    60px calc(100% - 20px),
+    60px calc(100% - 15px),
+    70px calc(100% - 15px),
+    70px calc(100% - 10px),
+    80px calc(100% - 10px),
+    85px calc(100% - 10px),
+    85px calc(100% - 5px),
+    100px calc(100% - 5px),
+    100px 100%,
+    calc(100% - 100px) 100%,
+    calc(100% - 100px) calc(100% - 5px),
+    calc(100% - 85px) calc(100% - 5px),
+    calc(100% - 85px) calc(100% - 10px),
+    calc(100% - 80px) calc(100% - 10px),
+    calc(100% - 70px) calc(100% - 10px),
+    calc(100% - 70px) calc(100% - 15px),
+    calc(100% - 60px) calc(100% - 15px),
+    calc(100% - 60px) calc(100% - 20px),
+    calc(100% - 55px) calc(100% - 20px),
+    calc(100% - 55px) calc(100% - 25px),
+    calc(100% - 50px) calc(100% - 25px),
+    calc(100% - 50px) calc(100% - 30px),
+    calc(100% - 45px) calc(100% - 30px),
+    calc(100% - 40px) calc(100% - 30px),
+    calc(100% - 40px) calc(100% - 35px),
+    calc(100% - 35px) calc(100% - 40px),
+    calc(100% - 30px) calc(100% - 40px),
+    calc(100% - 30px) calc(100% - 45px),
+    calc(100% - 30px) calc(100% - 50px),
+    calc(100% - 25px) calc(100% - 50px),
+    calc(100% - 25px) calc(100% - 55px),
+    calc(100% - 20px) calc(100% - 55px),
+    calc(100% - 20px) calc(100% - 60px),
+    calc(100% - 15px) calc(100% - 60px),
+    calc(100% - 15px) calc(100% - 70px),
+    calc(100% - 10px) calc(100% - 70px),
+    calc(100% - 10px) calc(100% - 80px),
+    calc(100% - 10px) calc(100% - 85px),
+    calc(100% - 5px) calc(100% - 85px),
+    calc(100% - 5px) calc(100% - 100px),
+    100% calc(100% - 100px),
+    100% 100px,
+    calc(100% - 5px) 100px,
+    calc(100% - 5px) 85px,
+    calc(100% - 10px) 85px,
+    calc(100% - 10px) 80px,
+    calc(100% - 10px) 70px,
+    calc(100% - 15px) 70px,
+    calc(100% - 15px) 60px,
+    calc(100% - 20px) 60px,
+    calc(100% - 20px) 55px,
+    calc(100% - 25px) 55px,
+    calc(100% - 25px) 50px,
+    calc(100% - 30px) 50px,
+    calc(100% - 30px) 45px,
+    calc(100% - 30px) 40px,
+    calc(100% - 35px) 40px,
+    calc(100% - 40px) 35px,
+    calc(100% - 40px) 30px,
+    calc(100% - 45px) 30px,
+    calc(100% - 50px) 30px,
+    calc(100% - 50px) 25px,
+    calc(100% - 55px) 25px,
+    calc(100% - 55px) 20px,
+    calc(100% - 60px) 20px,
+    calc(100% - 60px) 15px,
+    calc(100% - 70px) 15px,
+    calc(100% - 70px) 10px,
+    calc(100% - 80px) 10px,
+    calc(100% - 85px) 10px,
+    calc(100% - 85px) 5px,
+    calc(100% - 100px) 5px,
+    calc(100% - 100px) 0px,
+    100px 0px,
+    100px 5px,
+    85px 5px,
+    85px 10px,
+    80px 10px,
+    70px 10px,
+    70px 15px,
+    60px 15px,
+    60px 20px,
+    55px 20px,
+    55px 25px,
+    50px 25px,
+    50px 30px,
+    45px 30px,
+    40px 30px,
+    40px 35px,
+    35px 40px,
+    30px 40px,
+    30px 45px,
+    30px 50px,
+    25px 50px,
+    25px 55px,
+    20px 55px,
+    20px 60px,
+    15px 60px,
+    15px 70px,
+    10px 70px,
+    10px 80px,
+    10px 85px,
+    5px 85px,
+    5px 100px,
+    0px 100px,
+    0px 50%,
+    5px 50%,
+    5px 100px,
+    10px 100px,
+    10px 85px,
+    15px 85px,
+    15px 80px,
+    15px 70px,
+    20px 70px,
+    20px 60px,
+    25px 60px,
+    25px 55px,
+    30px 55px,
+    30px 50px,
+    35px 50px,
+    35px 45px,
+    35px 40px,
+    40px 40px,
+    40px 35px,
+    45px 35px,
+    50px 35px,
+    50px 30px,
+    55px 30px,
+    55px 25px,
+    60px 25px,
+    60px 20px,
+    70px 20px,
+    70px 15px,
+    80px 15px,
+    85px 15px,
+    85px 10px,
+    100px 10px,
+    100px 5px,
+    calc(100% - 100px) 5px,
+    calc(100% - 100px) 10px,
+    calc(100% - 85px) 10px,
+    calc(100% - 85px) 15px,
+    calc(100% - 80px) 15px,
+    calc(100% - 70px) 15px,
+    calc(100% - 70px) 20px,
+    calc(100% - 60px) 20px,
+    calc(100% - 60px) 25px,
+    calc(100% - 55px) 25px,
+    calc(100% - 55px) 30px,
+    calc(100% - 50px) 30px,
+    calc(100% - 50px) 35px,
+    calc(100% - 45px) 35px,
+    calc(100% - 40px) 35px,
+    calc(100% - 40px) 40px,
+    calc(100% - 35px) 40px,
+    calc(100% - 35px) 45px,
+    calc(100% - 35px) 50px,
+    calc(100% - 30px) 50px,
+    calc(100% - 30px) 55px,
+    calc(100% - 25px) 55px,
+    calc(100% - 25px) 60px,
+    calc(100% - 20px) 60px,
+    calc(100% - 20px) 70px,
+    calc(100% - 15px) 70px,
+    calc(100% - 15px) 80px,
+    calc(100% - 15px) 85px,
+    calc(100% - 10px) 85px,
+    calc(100% - 10px) 100px,
+    calc(100% - 5px) 100px,
+    calc(100% - 5px) calc(100% - 100px),
+    calc(100% - 10px) calc(100% - 100px),
+    calc(100% - 10px) calc(100% - 85px),
+    calc(100% - 15px) calc(100% - 85px),
+    calc(100% - 15px) calc(100% - 80px),
+    calc(100% - 15px) calc(100% - 70px),
+    calc(100% - 20px) calc(100% - 70px),
+    calc(100% - 20px) calc(100% - 60px),
+    calc(100% - 25px) calc(100% - 60px),
+    calc(100% - 25px) calc(100% - 55px),
+    calc(100% - 30px) calc(100% - 55px),
+    calc(100% - 30px) calc(100% - 50px),
+    calc(100% - 35px) calc(100% - 50px),
+    calc(100% - 35px) calc(100% - 45px),
+    calc(100% - 35px) calc(100% - 40px),
+    calc(100% - 40px) calc(100% - 40px),
+    calc(100% - 40px) calc(100% - 35px),
+    calc(100% - 45px) calc(100% - 35px),
+    calc(100% - 50px) calc(100% - 35px),
+    calc(100% - 50px) calc(100% - 30px),
+    calc(100% - 55px) calc(100% - 30px),
+    calc(100% - 55px) calc(100% - 25px),
+    calc(100% - 60px) calc(100% - 25px),
+    calc(100% - 60px) calc(100% - 20px),
+    calc(100% - 70px) calc(100% - 20px),
+    calc(100% - 70px) calc(100% - 15px),
+    calc(100% - 80px) calc(100% - 15px),
+    calc(100% - 85px) calc(100% - 15px),
+    calc(100% - 85px) calc(100% - 10px),
+    calc(100% - 100px) calc(100% - 10px),
+    calc(100% - 100px) calc(100% - 5px),
+    100px calc(100% - 5px),
+    100px calc(100% - 10px),
+    85px calc(100% - 10px),
+    85px calc(100% - 15px),
+    80px calc(100% - 15px),
+    70px calc(100% - 15px),
+    70px calc(100% - 20px),
+    60px calc(100% - 20px),
+    60px calc(100% - 25px),
+    55px calc(100% - 25px),
+    55px calc(100% - 30px),
+    50px calc(100% - 30px),
+    50px calc(100% - 35px),
+    45px calc(100% - 35px),
+    40px calc(100% - 35px),
+    40px calc(100% - 40px),
+    35px calc(100% - 40px),
+    35px calc(100% - 45px),
+    35px calc(100% - 50px),
+    30px calc(100% - 50px),
+    30px calc(100% - 55px),
+    25px calc(100% - 55px),
+    25px calc(100% - 60px),
+    20px calc(100% - 60px),
+    20px calc(100% - 70px),
+    15px calc(100% - 70px),
+    15px calc(100% - 80px),
+    15px calc(100% - 85px),
+    10px calc(100% - 85px),
+    10px calc(100% - 100px),
+    5px calc(100% - 100px),
+    5px 50%,
+    0px 50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000000;
+  display: block;
+  pointer-events: none;
+}
+.pixel-corners::after {
+  margin: -5px;
+}
+
 
 /*DARK MODE CSS*/
 /*

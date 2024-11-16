@@ -10,6 +10,13 @@ import { FifthSection } from "./FifthSection";
 import { Footer } from "./Footer";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { Pixelify_Sans } from 'next/font/google';
+
+const PixelifySans = Pixelify_Sans({
+  subsets: ["cyrillic", "latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal"],
+})
 
 export let speakers = [{
     name: "Ben Rossen",
@@ -232,7 +239,7 @@ export default function Home() {
   console.log(Math.floor(window.innerWidth / 382));
 
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full overflow-x-hidden m-auto">
       <Header isDark={isDark} setDark={setDark} />
       <FirstSection/>
       <div id="about">
@@ -256,23 +263,15 @@ export default function Home() {
               <h1 className="big-liner">{"Empowering Tomorrow's Experts Today"}</h1>
             ):(
               <>
-                <h1 className="big-liner">{"Empowering Tomorrow's"}</h1>
-                <h1 className="big-liner">{"Experts Today"}</h1>
+                <h1 className={"big-liner " + PixelifySans.className}>{"Empowering Tomorrow's Experts Today"}</h1>
               </>
             )}
           </div>
           <div className="partner-content">
-            <div className="partner-feature flex flex-col md:flex-row gap-8 overflow-auto">
-              <Image
-                src={"/logos/qmind-logo.png"}
-                width={1488}
-                height={2125}
-                alt="QMIND Logo"
-                className="main-feature-logo"
-              />
+            <div className="partner-feature flex flex-col md:flex-row gap-8 overflow-hidden">
               <div className="main-partner-text">
-                <h1 className="main-partner-title">QMIND</h1>
-                <p className="main-partner-details">{"Queen's University"}</p>
+                <h1 className="main-partner-title self-end">QMIND</h1>
+                <p className="main-partner-details self-end">{"Queen's University"}</p>
                 <p className="main-partner-links">
                   <a className="inner-text" href="https://qmind.ca/">
                     <u>Website</u>
@@ -285,7 +284,7 @@ export default function Home() {
                     />
                   </a>
                   <a
-                    className="inner-text"
+                    className="inner-text ml-[32px]"
                     href="https://www.instagram.com/qmind.ai/"
                   >
                     <u>Insta</u>
@@ -299,6 +298,13 @@ export default function Home() {
                   </a>
                 </p>
               </div>
+              <Image
+                src={"/logos/qmind-logo.png"}
+                width={488}
+                height={155}
+                alt="QMIND Logo"
+                className="main-feature-logo"
+              />
             </div>
             {/* TODO: Fix typing problem */}
             <div className="partner-grid">
@@ -309,11 +315,12 @@ export default function Home() {
                 >
                   {row.map((partner) => (
                     <div key={partner.name}>
+                      <div className="py-4 px-8">
                       <div
-                        className="flex flex-col h-[347px] w-[382px] py-8 px-16 gap-4 -ml-[50px]"
+                        className="partner-body flex flex-col h-[347px] w-[382px] gap-4 -ml-[50px]"
                         key={partner.name}
                       >
-                        <img src={partner.logo} class="w-[382px] h-[150px] object-contain"></img>
+                        <img src={partner.logo} class="w-[182px] h-[100px] mt-8 object-contain"></img>
                         <p class="font-bold !text-[23pt]">{partner.name}</p>
                         <p class="text-[16pt] font-normal">{partner.university}</p>
                         
@@ -328,7 +335,7 @@ export default function Home() {
                               className="link-symbol"
                             />
                           </a>
-                          <a className="partner-links" href={partner.insta}>
+                          <a className="partner-links ml-[32px]" href={partner.insta}>
                             <u className="partner-link-text">Insta</u>
                             <Image
                               src={"/insta.png"}
@@ -340,6 +347,7 @@ export default function Home() {
                           </a>
                         </p>
                       </div>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -347,7 +355,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-
+        <a href="/" className="partner-button--wrapper">
+        <img 
+          src="become_a_partner.png"
+          alt="Become A Partner"
+          className="mt-8 ml-[40px] h-[61px] w-[220px]"
+        />
+        </a>
       </div>
 
       {/* 

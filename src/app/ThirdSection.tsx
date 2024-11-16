@@ -3,6 +3,13 @@ import Image from "next/image";
 import { speakers } from "./page";
 import { IBM_Plex_Sans } from "next/font/google";
 import { useState, useEffect } from "react";
+import { Pixelify_Sans } from 'next/font/google';
+
+const PixelifySans = Pixelify_Sans({
+  subsets: ["cyrillic", "latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal"],
+})
 
 const IBMPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -19,11 +26,13 @@ function SpeakerCarousel({speakers}){
             className="flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[320px]"
             key={i}
           >
+            <div className="pixel-corners--wrapper">
             <img 
               src={speaker.img} 
               alt={"Headshot of " + speaker.name} 
-              class="h-[250px] rounded-full border-[#002b5c]/50 border-[1px] object-cover bg-gradient-to-t from-[#547192]/0 to-[#002b5c]/50">
+              className="pixel-corners h-[250px] object-cover bg-gradient-to-t from-[#547192]/0 to-[#002b5c]/50">
             </img>
+            </div>
             <p className="speaker-name">{speaker.name}</p>
             {/* <p class={"text-center font-bold " + (speaker.name.length > 15 ? "!text-[23pt]" : "text-[28pt]")}>{speaker.name}</p> */}
             <p className="speaker-position">{speaker.position}</p>
@@ -40,11 +49,13 @@ function SpeakerList({speakers}){
       className="flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[320px]"
       key={i}
     >
+      <div className="pixel-corners--wrapper">
       <img 
         src={speaker.img} 
         alt={"Headshot of " + speaker.name} 
-        class="h-[250px] rounded-full border-[#002b5c]/50 border-[1px] object-cover bg-gradient-to-t from-[#547192]/0 to-[#002b5c]/50">
+        className="pixel-corners h-[250px] object-cover bg-gradient-to-t from-[#547192]/0 to-[#002b5c]/50">
       </img>
+      </div>
       <p className="speaker-name">{speaker.name}</p>
       {/* <p class={"text-center font-bold " + (speaker.name.length > 15 ? "!text-[23pt]" : "text-[28pt]")}>{speaker.name}</p> */}
       <p className="speaker-position">{speaker.position}</p>
@@ -77,7 +88,7 @@ export default function ThirdSection() {
 
         <div className="title">
           <p className="small-font">OUR 2025 SPEAKERS</p>
-          <h1 className="big-font">AI Experts On Stage</h1>
+          <h1 className={"big-font " + PixelifySans.className}>AI Experts On Stage</h1>
         </div>
     
           <div>

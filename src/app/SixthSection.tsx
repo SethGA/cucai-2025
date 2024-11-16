@@ -3,6 +3,13 @@ import Image from "next/image";
 import { leaders } from "./page";
 import { useState, useEffect } from "react";
 import { IBM_Plex_Sans } from "next/font/google";
+import { Pixelify_Sans } from 'next/font/google';
+
+const PixelifySans = Pixelify_Sans({
+  subsets: ["cyrillic", "latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal"],
+})
 
 // TODO: Replace with CUCAI 2025 Staff
 const Team = [
@@ -180,7 +187,7 @@ export function SixthSection() {
           */}
         <div className="team-title">
           <p className="small-text">MEET OUR TEAM</p>
-          <h1 className="big-text">Leaders Behind the Vision</h1>
+          <h1 className={"big-text " + PixelifySans.className}>Leaders Behind the Vision</h1>
         </div>
         {/* Main has some trailing bottom space - delete this */}
         <div>
