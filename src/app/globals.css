@@ -96,12 +96,12 @@ body {
 }
 
 .first-section .toronto-skyline {
-  background-image: url("/bg-day.png");
+  background-image: url("/bg-pixel-day.png");
   width: 100vw;
-  height: 1117px;
+  height: 1317px;
   justify-content: center;
   align-items: center;
-  padding-top: 146px;
+  padding-top: 85px;
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
@@ -109,16 +109,20 @@ body {
 }
 
 .dark-mode .first-section .toronto-skyline{
-  background-image: url("/bg-sunset.png");
+  background-image: url("/bg-pixel-night.png");
   width: 100vw;
   height: 1117px;
   justify-content: center;
   align-items: center;
-  padding-top: 146px;
+  padding-top: 85px;
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
   box-sizing: border-box;
+}
+
+.dark-mode .white-box .title{
+  color: white;
 }
 
 /*after a certain width, the height of the image changes*/
@@ -135,48 +139,44 @@ body {
 }
 
 .first-section .white-box { 
-  max-width: 783px;
+  justify-content: center; /* Horizontally center */
+  align-items: center; 
+  max-width: 811px;
+  height: 486px;
   align-self: center;
   margin: auto;
   border-radius: 24px;
-  padding: 44px 36px 44px 36px;
-  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Optional border for visibility */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
+  border: 2px solid black; /* Solid black border */
 }
 
 .white-box .title {
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 76.8px;
   text-align: center;
+  padding: 0;
+  margin: 0;
+  height: 184px;
+  font-size: 84px;
+  font-weight: 700;
+  line-height: 62.4px;
+  color: rgba(23, 20, 86, 1);
+  width: 650px;
 }
 
-.dark-mode .white-box .title {
-  font-size: 64px;
-  font-weight: 700;
-  color: black;
-  line-height: 76.8px;
-  text-align: center;
-}
 
 .white-box .subtext {
   font-size: 28px;
   font-weight: 400;
   line-height: 39.2px;
   text-align: center;
-  padding-top: 35px;
 }
 
-.dark-mode .white-box .subtext {
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 39.2px;
-  text-align: center;
-  padding-top: 35px;
-  color: black;
-}
+
 
 .white-box .register-button {
   /* padding: 14px 32px 14px 32px; */
