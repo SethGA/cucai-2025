@@ -217,6 +217,7 @@ const chunk_array = (array: {}[], size: number) => {
   return result;
 };
 
+
 export default function Home() {
   const [isDark, setDark] = useState<boolean>(false);
 
@@ -234,6 +235,13 @@ export default function Home() {
   }, [])
 
   const chunked_partners = chunk_array(student_partners, Math.min(Math.floor(window.innerWidth / 382) ,3));
+
+  var fade_speed = 5;
+
+  const gradients = Array.from({ length: chunked_partners.length }, (_, i) => ({
+    from: `rgb(${116 - i * fade_speed}, ${173 - i * fade_speed}, 246)`,
+    to: `rgb(${116 - (i + 1) * fade_speed}, ${173 - (i + 1) * fade_speed}, 246)`,
+  }));
 
   console.log(chunked_partners);
   console.log(Math.floor(window.innerWidth / 382));
@@ -308,7 +316,7 @@ export default function Home() {
             </div>
             {/* TODO: Fix typing problem */}
             <div className="partner-grid">
-            {chunked_partners.map((row) => (
+            {chunked_partners.map((row, row_index) => (
                 <div 
                   className="partner-rows items-baseline" 
                   key={"Partner Rows"}
@@ -319,6 +327,9 @@ export default function Home() {
                       <div
                         className="partner-body flex flex-col h-[347px] w-[382px] gap-4 -ml-[50px]"
                         key={partner.name}
+                        style={{
+                          background: `linear-gradient(to bottom, ${gradients[row_index].from}, ${gradients[row_index].to})`,
+                        }}
                       >
                         <img src={partner.logo} class="w-[182px] h-[100px] mt-8 object-contain"></img>
                         <p class="font-bold !text-[23pt]">{partner.name}</p>
