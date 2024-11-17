@@ -96,7 +96,20 @@ body {
 }
 
 .first-section .toronto-skyline {
-  background-image: url("/bg-day.png");
+  background-image: url("/bg-pixel-day.png");
+  width: 100vw;
+  height: 1317px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 85px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.dark-mode .first-section .toronto-skyline{
+  background-image: url("/bg-pixel-night.png");
   width: 100vw;
   height: 1117px;
   justify-content: center;
@@ -108,17 +121,8 @@ body {
   box-sizing: border-box;
 }
 
-.dark-mode .first-section .toronto-skyline{
-  background-image: url("/bg-sunset.png");
-  width: 100vw;
-  height: 1117px;
-  justify-content: center;
-  align-items: center;
-  padding-top: 146px;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  box-sizing: border-box;
+.dark-mode .white-box .title{
+  color: white;
 }
 
 /*after a certain width, the height of the image changes*/
@@ -164,15 +168,6 @@ body {
   width: 650px;
 }
 
-.dark-mode .white-box .title {
-  height: 124px;
-  margin: 0;
-  font-size: 52px;
-  font-weight: 700;
-  line-height: 62.4px;
-  color: rgba(23, 20, 86, 1);
-  width: 600px;
-}
 
 .white-box .subtext {
   font-size: 28px;
@@ -181,14 +176,7 @@ body {
   text-align: center;
 }
 
-.dark-mode .white-box .subtext {
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 39.2px;
-  text-align: center;
-  padding-top: 35px;
-  color: black;
-}
+
 
 .white-box .register-button {
   /* padding: 14px 32px 14px 32px; */

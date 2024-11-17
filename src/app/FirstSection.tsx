@@ -23,7 +23,7 @@ export default function FirstSection() {
           <img 
             src="register-now.png"
             alt="Apply to CUCAI"
-            className=" h-[50px] w-[142px]"
+            className=" h-[50px] w-[152px]"
           />
           </a>
         </div>
