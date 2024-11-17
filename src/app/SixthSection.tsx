@@ -180,40 +180,35 @@ export function SixthSection() {
   }, [])
 
   return (
-    <div>
-      <div className="sixth-section">
-        {/*
-            Leaders Behind the Vision
-          */}
-        <div className="team-title">
-          <p className="small-text">MEET OUR TEAM</p>
-          <h1 className={"big-text " + PixelifySans.className}>Leaders Behind the Vision</h1>
-        </div>
-        {/* Main has some trailing bottom space - delete this */}
-        <div>
-          {isLargeScreen ? (
-            <main 
-              className="custom-main"
-            >
-              <div
-                id="Team"
-                className="flex flex-row divide-x-[1px] divide-y-[1px] sm:divide-y-[0px divide-[#55E0FF]/50"
-              >
-                <CUCAITeam />
-                <CUCAITeam />
-                <CUCAITeam />
-              </div>
-            </main>
-          ) : (
-            <main className="custom-main3">
-                <CUCAIList />
-            </main>
-          )}
-        </div>
-
+    <div className="sixth-section w-full">
+      {/*
+          Leaders Behind the Vision
+        */}
+      <div className="team-title">
+        <p className="small-text">MEET OUR TEAM</p>
+        <h1 className={"big-text " + PixelifySans.className}>Leaders Behind the Vision</h1>
       </div>
-    
-    
+      {/* Main has some trailing bottom space - delete this */}
+      <div>
+        {isLargeScreen ? (
+          <main 
+            className="custom-main"
+          >
+            <div
+              id="Team"
+              className="flex flex-row divide-x-[1px] divide-y-[1px] sm:divide-y-[0px divide-[#55E0FF]/50"
+            >
+              <CUCAITeam />
+              <CUCAITeam />
+              <CUCAITeam />
+            </div>
+          </main>
+        ) : (
+          <main className="custom-main3">
+              <CUCAIList />
+          </main>
+        )}
+      </div>
     </div>
   );
 }
