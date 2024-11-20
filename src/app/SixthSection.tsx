@@ -1,15 +1,7 @@
 "use client";
 import Image from "next/image";
 import { leaders } from "./page";
-import { useState, useEffect } from "react";
 import { IBM_Plex_Sans } from "next/font/google";
-import { Pixelify_Sans } from 'next/font/google';
-
-const PixelifySans = Pixelify_Sans({
-  subsets: ["cyrillic", "latin", "latin-ext"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal"],
-})
 
 // TODO: Replace with CUCAI 2025 Staff
 const Team = [
@@ -99,86 +91,7 @@ const IBMPlexSans = IBM_Plex_Sans({
   style: ["normal", "italic"],
 });
 
-function CUCAITeam(){
-  return (<div className="carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
-    {Team.map((person, i) => (
-      <div
-        className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[320px]"
-        key={i}
-      >
-        <img
-          src={person.headshot}
-          alt={`Headshot of ${person.name}`}
-          className="h-[150px] rounded-full border-[#55E0FF]/50 border-[1px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
-        />
-        <div className="text-center">
-          <p
-            className={`${
-              person.name.length > 13 ? `!text-[13pt]` : "text-2xl"
-            } font-normal`}
-          >
-            {person.name}
-          </p>
-          <p className="text-sm">{person.title}</p>
-        </div>
-        <a
-          target="_blank"
-          className="flex w-full items-center justify-center hover:bg-white/10 rounded-md p-2"
-          href={person.linkedin}
-        >
-          <img src="/linkedin.png" className="h-5" />
-        </a>
-      </div>
-    ))}
-  </div>);
-}
-
-function CUCAIList(){
-  return Team.map((person, i) => (
-    <div
-      className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[320px]"
-      key={i}
-    >
-      <img
-        src={person.headshot}
-        alt={`Headshot of ${person.name}`}
-        className="h-[150px] rounded-full border-[#55E0FF]/50 border-[1px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
-      />
-      <div className="text-center">
-        <p
-          className={`${
-            person.name.length > 13 ? `!text-[13pt]` : "text-2xl"
-          } font-normal`}
-        >
-          {person.name}
-        </p>
-        <p className="text-sm">{person.title}</p>
-      </div>
-      <a
-        target="_blank"
-        className="flex w-full items-center justify-center hover:bg-white/10 rounded-md p-2"
-        href={person.linkedin}
-      >
-        <img src="/linkedin.png" className="h-5" />
-      </a>
-    </div>
-  ));
-}
-
 export function SixthSection() {
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 768);
-    };
-  
-    window.addEventListener('resize', handleResize);
-  
-    // Clean up event listener on component unmount
-    return () => window.removeEventListener('resize', handleResize);
-  }, [])
-
   return (
     <div>
       <div className="sixth-section">
@@ -187,32 +100,112 @@ export function SixthSection() {
           */}
         <div className="team-title">
           <p className="small-text">MEET OUR TEAM</p>
-          <h1 className={"big-text " + PixelifySans.className}>Leaders Behind the Vision</h1>
+          <h1 className="big-text">Leaders Behind the Vision</h1>
         </div>
-        {/* Main has some trailing bottom space - delete this */}
-        <div>
-          {isLargeScreen ? (
-            <main 
-              className="custom-main"
-            >
-              <div
-                id="Team"
-                className="flex flex-row divide-x-[1px] divide-y-[1px] sm:divide-y-[0px divide-[#55E0FF]/50"
-              >
-                <CUCAITeam />
-                <CUCAITeam />
-                <CUCAITeam />
-              </div>
-            </main>
-          ) : (
-            <main className="custom-main3">
-                <CUCAIList />
-            </main>
-          )}
-        </div>
-
       </div>
-    
+    {/* Main has some trailing bottom space - delete this */}
+    <main 
+      className="custom-main"
+    >
+      <div
+        id="Team"
+        className="flex flex-row divide-x-[1px] divide-y-[1px] sm:divide-y-[0px divide-[#55E0FF]/50"
+      >
+        <div className="carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
+          {Team.map((person, i) => (
+            <div
+              className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[320px]"
+              key={i}
+            >
+              <img
+                src={person.headshot}
+                alt={`Headshot of ${person.name}`}
+                className="h-[150px] rounded-full border-[#55E0FF]/50 border-[1px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
+              />
+              <div className="text-center">
+                <p
+                  className={`${
+                    person.name.length > 13 ? `!text-[13pt]` : "text-2xl"
+                  } font-normal`}
+                >
+                  {person.name}
+                </p>
+                <p className="text-sm">{person.title}</p>
+              </div>
+              <a
+                target="_blank"
+                className="flex w-full items-center justify-center hover:bg-white/10 rounded-md p-2"
+                href={person.linkedin}
+              >
+                <img src="/linkedin.png" className="h-5" />
+              </a>
+            </div>
+          ))}
+        </div>
+        <div className="carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
+          {Team.map((person, i) => (
+            <div
+              className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[320px]"
+              key={i}
+            >
+              <img
+                src={person.headshot}
+                alt={`Headshot of ${person.name}`}
+                className="h-[150px] rounded-full border-[#55E0FF]/50 border-[1px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
+              />
+              <div className="text-center">
+                <p
+                  className={`${
+                    person.name.length > 13 ? `!text-[13pt]` : "text-2xl"
+                  } font-normal`}
+                >
+                  {person.name}
+                </p>
+                <p className="text-sm">{person.title}</p>
+              </div>
+              <a
+                target="_blank"
+                className="flex w-full items-center justify-center hover:bg-white/10 rounded-md p-2"
+                href={person.linkedin}
+              >
+                <img src="/linkedin.png" className="h-5" />
+              </a>
+            </div>
+          ))}
+        </div>
+        <div className="carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
+          {Team.map((person, i) => (
+            <div
+              className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[320px]"
+              key={i}
+            >
+              <img
+                src={person.headshot}
+                alt={`Headshot of ${person.name}`}
+                className="h-[150px] rounded-full border-[#55E0FF]/50 border-[1px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
+              />
+              <div className="text-center">
+                <p
+                  className={`${
+                    person.name.length > 13 ? `!text-[13pt]` : "text-2xl"
+                  } font-normal`}
+                >
+                  {person.name}
+                </p>
+                <p className="text-sm">{person.title}</p>
+              </div>
+              <a
+                target="_blank"
+                className="flex w-full items-center justify-center hover:bg-white/10 rounded-md p-2"
+                href={person.linkedin}
+              >
+                <img src="/linkedin.png" className="h-5" />
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </main>
     
     </div>
   );
