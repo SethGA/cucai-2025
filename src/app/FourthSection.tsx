@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
-import { chunked_partners } from "./page";
+
+import { student_partners } from "@/data/student_partners";
 
 export default function fourth_section(){
   return (
@@ -51,7 +52,7 @@ export default function fourth_section(){
         </div>
       </div>
       <div className="partner-grid">
-        {chunked_partners.map((row) => (
+        {student_partners.map((row) => (
           <div 
             className="partner-rows items-baseline" 
             key={"Partner Rows"}
