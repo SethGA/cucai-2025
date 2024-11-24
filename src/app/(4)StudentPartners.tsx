@@ -99,7 +99,7 @@ export function StudentPartners({windowWidth}) {
   var fade_speed = 5;
 
   const gradients = Array.from({ length: chunked_partners.length }, (_, i) => ({
-    from: `rgb(${116 - i * fade_speed}, ${173 - i * fade_speed}, 246)`,
+    from: `rgb(${111 - i * fade_speed}, ${169 - i * fade_speed}, 242)`,
     to: `rgb(${116 - (i + 1) * fade_speed}, ${
       173 - (i + 1) * fade_speed
     }, 246)`,
