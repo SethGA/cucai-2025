@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import { speakers } from "./page";
 import { IBM_Plex_Sans } from "next/font/google";
 import { useState, useEffect } from "react";
 import { Pixelify_Sans } from 'next/font/google';
+import { speakers } from "@/data/speakers";
 
 const PixelifySans = Pixelify_Sans({
   subsets: ["cyrillic", "latin", "latin-ext"],

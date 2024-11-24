@@ -11,6 +11,8 @@ import { Footer } from "./Footer";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Pixelify_Sans } from 'next/font/google';
+import { speakers } from "@/data/speakers";
+import { student_partners } from "@/data/student_partners";
 
 const PixelifySans = Pixelify_Sans({
   subsets: ["cyrillic", "latin", "latin-ext"],
@@ -18,147 +20,27 @@ const PixelifySans = Pixelify_Sans({
   style: ["normal"],
 })
 
-export let speakers = [{
-    name: "Ben Rossen",
-    position: "AI Policy & Regulation",
-    img: "/headshots/ben-rossen.png",
-    company: "/logos/open-ai-logo.png",
-    width: 220.43,
-  },
-  {
-    name: "Eddie Kim",
-    position: "Manager of Technical Staff",
-    img: "/headshots/eddie-kim.png",
-    company: "/logos/cohere-logo.png",
-    width: 255.36,
-  },
-  {
-    name: "Ezequiel Lanza",
-    position: "AI Open Source Evangelist",
-    img: "/headshots/ezequiel-lanza.png",
-    company: "/logos/intel-logo.png",
-    width: 140.81,
-  },
-  {
-    name: "Dr. Ruslan Salakhutdinov",
-    position: "Ex-Director of AI Research",
-    img: "/headshots/ruslan.png",
-    company: "/logos/apple-logo.png",
-  },
-  {
-    name: "Patricia Arocena",
-    position: "Head of Generative AI",
-    img: "/headshots/patricia-arocena.png",
-    company: "/logos/rbc-logo.png",
-  },
-  {
-    name: "Chris Caira",
-    position: "Senior Director",
-    img: "/headshots/chris-caira.png",
-    company: "/logos/ey-parth-logo.png",
-  },
-  {
-    name: "Sam Talasila",
-    position: "Head of LLMs",
-    img: "/headshots/sam-talasila.png",
-    company: "/logos/wealthsimple-logo.png",
-  },
-  {
-    name: "Diego Magaelhaes",
-    position: "Chief Technologist",
-    img: "/headshots/diego-magalhaes.png",
-    company: "/logos/aws-logo.png",
-  },
-];
+
 
 // TODO: Add other Uni's website and instagram links
 
-let student_partners = [
-  {
-    name: "WAT.ai",
-    logo: "/logos/wat-ai-logo.png",
-    university: "University of Waterloo",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 297,
-  },
-  {
-    name: "Western AI",
-    logo: "/logos/wai-logo.png",
-    university: "University of Western Ontario",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 120,
-  },
-  {
-    name: "McGill AI",
-    logo: "/logos/mcgill-ai-logo.png",
-    university: "McGill University",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 130,
-  },
-  {
-    name: "UofT AI",
-    logo: "/logos/uoftai-logo.png",
-    university: "University of Toronto",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 297,
-  },
-  {
-    name: "Wester Cyber Society",
-    logo: "/logos/wcs-logo.png",
-    university: "University of Western Ontario",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 297,
-    height: 100,
-  },
-  {
-    name: "UVic AI",
-    logo: "/logos/uvic-ai-logo.png",
-    university: "University of Victoria",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 150,
-    height: 100,
-  },
-  {
-    name: "UdeM AI",
-    logo: "/logos/udem-ai-logo.png",
-    university: "Universitié de Montréal",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 120,
-    height: 100,
-  },
-  {
-    name: "UTMIST",
-    logo: "/logos/utmist-logo.png",
-    university: "University of Toronto",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 297,
-    height: 100,
-  },
-];
 
-export let buttons = [
+
+export const buttons = [
   { name: "Speakers", link: "#speakers" },
   { name: "Programming", link: "#schedule" },
   { name: "Student Partners", link: "#student-partners" },
 ];
 
 // TODO: Add CUCAI links here
-export let icons = [
+export const icons = [
   { src: "/email.png", link: "/" },
   { src: "/instagram.png", link: "/" },
   { src: "/linkedin.png", link: "/" },
 ];
 
 // TODO: Add CUCAI staff once the carousel works
-export let leaders = [
+export const leaders = [
   {
     name: "Organizer Name",
     role: "Role Name",
