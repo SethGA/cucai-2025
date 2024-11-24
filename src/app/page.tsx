@@ -1,15 +1,15 @@
 "use client";
 
 import Header from "./Header";
-import FirstSection from "./FirstSection";
-import { SecondSection } from "./SecondSection";
-import ThirdSection from "./ThirdSection";
-import { SixthSection } from "./SixthSection";
-import { FifthSection } from "./FifthSection";
+import FirstSection from "./(1)LandingPage";
+import { SecondSection } from "./(2)VideoAndAboutCucai";
+import ThirdSection from "./(3)AIExpertsOnStage";
+import { SixthSection } from "./(6)LeadersBehindTheVision";
+import { FifthSection } from "./(5)TransformTomorrowTogether";
 import { Footer } from "./Footer";
 import { useState, useEffect } from "react";
 import { Pixelify_Sans } from "next/font/google";
-import { StudentPartners } from "./StudentPartners";
+import { StudentPartners } from "./(4)StudentPartners";
 
 export const PixelifySans = Pixelify_Sans({
   subsets: ["cyrillic", "latin", "latin-ext"],
