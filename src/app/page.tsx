@@ -18,7 +18,7 @@ const PixelifySans = Pixelify_Sans({
   style: ["normal"],
 })
 
-export let speakers = [{
+export const speakers = [{
     name: "Ben Rossen",
     position: "AI Policy & Regulation",
     img: "/headshots/ben-rossen.png",
@@ -73,7 +73,7 @@ export let speakers = [{
 
 // TODO: Add other Uni's website and instagram links
 
-let student_partners = [
+export const student_partners = [
   {
     name: "WAT.ai",
     logo: "/logos/wat-ai-logo.png",
@@ -144,21 +144,21 @@ let student_partners = [
   },
 ];
 
-export let buttons = [
+export const buttons = [
   { name: "Speakers", link: "#speakers" },
   { name: "Programming", link: "#schedule" },
   { name: "Student Partners", link: "#student-partners" },
 ];
 
 // TODO: Add CUCAI links here
-export let icons = [
+export const icons = [
   { src: "/email.png", link: "/" },
   { src: "/instagram.png", link: "/" },
   { src: "/linkedin.png", link: "/" },
 ];
 
 // TODO: Add CUCAI staff once the carousel works
-export let leaders = [
+export const leaders = [
   {
     name: "Organizer Name",
     role: "Role Name",
