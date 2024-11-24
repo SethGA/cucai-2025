@@ -1,0 +1,52 @@
+export const speakers = [{
+    name: "Ben Rossen",
+    position: "AI Policy & Regulation",
+    img: "/headshots/ben-rossen.png",
+    company: "/logos/open-ai-logo.png",
+    width: 220.43,
+  },
+  {
+    name: "Eddie Kim",
+    position: "Manager of Technical Staff",
+    img: "/headshots/eddie-kim.png",
+    company: "/logos/cohere-logo.png",
+    width: 255.36,
+  },
+  {
+    name: "Ezequiel Lanza",
+    position: "AI Open Source Evangelist",
+    img: "/headshots/ezequiel-lanza.png",
+    company: "/logos/intel-logo.png",
+    width: 140.81,
+  },
+  {
+    name: "Dr. Ruslan Salakhutdinov",
+    position: "Ex-Director of AI Research",
+    img: "/headshots/ruslan.png",
+    company: "/logos/apple-logo.png",
+  },
+  {
+    name: "Patricia Arocena",
+    position: "Head of Generative AI",
+    img: "/headshots/patricia-arocena.png",
+    company: "/logos/rbc-logo.png",
+  },
+  {
+    name: "Chris Caira",
+    position: "Senior Director",
+    img: "/headshots/chris-caira.png",
+    company: "/logos/ey-parth-logo.png",
+  },
+  {
+    name: "Sam Talasila",
+    position: "Head of LLMs",
+    img: "/headshots/sam-talasila.png",
+    company: "/logos/wealthsimple-logo.png",
+  },
+  {
+    name: "Diego Magaelhaes",
+    position: "Chief Technologist",
+    img: "/headshots/diego-magalhaes.png",
+    company: "/logos/aws-logo.png",
+  },
+];
