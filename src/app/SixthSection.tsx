@@ -75,7 +75,7 @@ const Team = [
   {
     name: "Mercy Doan",
     headshot: "/headshots/Mercy.png",
-    title: "Community Lead",
+    title: "Director of Student Partnerships",
     linkedin: "https://www.linkedin.com/in/merd//",
   },
 ];
