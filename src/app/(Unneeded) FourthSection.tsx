@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { chunked_partners } from "./page";
 
+// NO LONGER USED - NEW CODE FOR THIS FUNCTION IS NOW IN page.tsx
+
 export default function fourth_section(){
   return (
   <div>
@@ -18,8 +20,6 @@ export default function fourth_section(){
           alt="QMIND Logo"
           className="main-feature-logo"
         />
-
-        
         <div className="main-partner-text">
           <h1 className="main-partner-title">QMIND</h1>
           <p className="main-partner-details">{"Queen's University"}</p>
@@ -38,7 +38,7 @@ export default function fourth_section(){
               className="inner-text"
               href="https://www.instagram.com/qmind.ai/"
             >
-              <u>Instagram</u>
+              <u>Insta</u>
               <Image
                 src={"/insta.png"}
                 width={24}
@@ -50,16 +50,17 @@ export default function fourth_section(){
           </p>
         </div>
       </div>
+      {/* TODO: Fix typing problem */}
       <div className="partner-grid">
-        {chunked_partners.map((row) => (
+      {chunked_partners.map((row) => (
           <div 
-            className="partner-rows items-baseline" 
+            className="partner-rows items-baseline overflow-auto no-scrollbar max-h-full"  
             key={"Partner Rows"}
           >
             {row.map((partner) => (
               <div key={partner.name}>
                 <div
-                  className="flex flex-col h-[347px] w-[382px] py-8 px-16 gap-4"
+                  className="flex flex-col h-[347px] w-[382px] py-8 px-16 gap-4 overflow-x-hidden"
                   key={partner.name}
                 >
                   <img src={partner.logo} class="w-[382px] h-[150px] object-contain"></img>

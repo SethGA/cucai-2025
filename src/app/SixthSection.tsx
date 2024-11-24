@@ -5,17 +5,30 @@ import { IBM_Plex_Sans } from "next/font/google";
 
 // TODO: Replace with CUCAI 2025 Staff
 const Team = [
+
   {
-    name: "Marcelo Chaman Mallqui",
-    headshot: "/headshots/marcelo-chamanmallqui.png",
-    title: "President",
-    linkedin: "https://www.linkedin.com/in/marc-cham/",
+    name: "Lejla Sain",
+    headshot: "/headshots/lejla-sain.png",
+    title: "Co-Chair",
+    linkedin: "https://www.linkedin.com/in/lejla-s/",
   },
   {
-    name: "Olivia Xu",
-    headshot: "/headshots/olivia-xu.png",
+    name: "Seth Grief Albert",
+    headshot: "/headshots/seth-grief-albert.png",
+    title: "Co-Chair",
+    linkedin: "https://www.linkedin.com/in/sethgriefalbert/",
+  },
+  {
+    name: "Daniel Wang",
+    headshot: "/headshots/daniel-wang.png",
     title: "Advisor",
-    linkedin: "https://www.linkedin.com/in/olivia-chen-xu/",
+    linkedin: "https://www.linkedin.com/in/itsdanielwang/",
+  },
+  {
+    name: "Rodrigo Del Aguila",
+    headshot: "/headshots/rodrigo.png",
+    title: "Advisor",
+    linkedin: "https://www.linkedin.com/in/rodrigo-delaguila/",
   },
   {
     name: "Rabab Azeem",
@@ -24,28 +37,10 @@ const Team = [
     linkedin: "https://www.linkedin.com/in/rabab-azeem/",
   },
   {
-    name: "Lejla Sain",
-    headshot: "/headshots/lejla-sain.png",
-    title: "Director of Partnerships",
-    linkedin: "https://www.linkedin.com/in/lejla-s/",
-  },
-  {
-    name: "Daniel Wang",
-    headshot: "/headshots/daniel-wang.png",
-    title: "Director of Partnerships",
-    linkedin: "https://www.linkedin.com/in/itsdanielwang/",
-  },
-  {
-    name: "Rhea George",
-    headshot: "/headshots/rhea-george.png",
-    title: "Director of Marketing",
-    linkedin: "https://www.linkedin.com/in/rhea-george-b81bab1b1/",
-  },
-  {
-    name: "Seth Grief Albert",
-    headshot: "/headshots/seth-grief-albert.png",
-    title: "Director of Strat. Parternships",
-    linkedin: "https://www.linkedin.com/in/sethgriefalbert/",
+    name: "Leonardo Montes Quiliche ",
+    headshot: "/headshots/Leo.png",
+    title: "Director of Sponsorships",
+    linkedin: "https://www.linkedin.com/in/leo-mont/",
   },
   {
     name: "Rowan McDonald",
@@ -55,33 +50,33 @@ const Team = [
   },
   {
     name: "Zana Yan",
-    headshot: "/headshots/zana-yan.png",
-    title: "Product Designer",
+    headshot: "/headshots/Zana-Yan.png",
+    title: "Senior Product Designer",
     linkedin: "https://www.linkedin.com/in/zana-zhizi-yan/",
   },
   {
     name: "Skyye Lambert",
     headshot: "/headshots/skyye-lambert.png",
-    title: "Product Designer",
+    title: "Senior Product Designer",
     linkedin: "https://www.linkedin.com/in/skyye-lambert/",
   },
   {
-    name: "Jasmine Zangeneh",
-    headshot: "/headshots/jasmine-zangeneh.png",
-    title: "Content Designer",
-    linkedin: "https://www.linkedin.com/in/jasmine-zangeneh-aa5147277/",
+    name: "Sara Laker",
+    headshot: "/headshots/Sara-Laker.png",
+    title: "Director of Logistics",
+    linkedin: "https://www.linkedin.com/in/sara-laker/",
   },
   {
-    name: "Andy Huang",
-    headshot: "/headshots/andy-huang.png",
-    title: "Content Designer",
-    linkedin: "https://www.linkedin.com/in/andy-snowflake-huang/",
+    name: "Kevin Wang",
+    headshot: "/headshots/Kevin-Wang.png",
+    title: "Web Developer",
+    linkedin: "https://www.linkedin.com/in/kevin-wang-9b1650226/",
   },
   {
-    name: "John Warren",
-    headshot: "/headshots/john-warren.png",
-    title: "Community Lead",
-    linkedin: "https://www.linkedin.com/in/warrenjk/",
+    name: "Mercy Doan",
+    headshot: "/headshots/Mercy.png",
+    title: "Director of Student Partnerships",
+    linkedin: "https://www.linkedin.com/in/merd//",
   },
 ];
 
