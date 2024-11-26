@@ -710,7 +710,7 @@ body {
   background: rgba(77, 136, 255, 1);
   /* May clash with element CSS */
   min-height: 249px;
-  padding: 80px;
+  /* padding: 80px; */
   gap: 36px;
   position: relative;
  }
@@ -720,7 +720,7 @@ body {
   background: #171456;
   /* May clash with element CSS */
   min-height: 249px;
-  padding: 80px;
+  /* padding: 80px; */
   gap: 36px;
   position: relative;
  }
@@ -731,6 +731,7 @@ body {
   gap: 8px;
   opacity: 0px;
   margin-bottom: 5%;
+  padding: 80px;
 }
 
 .team-title .small-text {
