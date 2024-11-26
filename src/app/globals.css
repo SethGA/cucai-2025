@@ -720,7 +720,7 @@ body {
   background: #171456;
   /* May clash with element CSS */
   min-height: 249px;
-  padding: 80px;
+  /* padding: 80px; */
   gap: 36px;
   position: relative;
  }

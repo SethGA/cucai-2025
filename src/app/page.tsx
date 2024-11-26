@@ -1,14 +1,15 @@
 "use client";
 
 import Header from "./Header";
-import FirstSection from "./(1)LandingPage";
-import { SecondSection } from "./(2)VideoAndAboutCucai";
-import ThirdSection from "./(3)AIExpertsOnStage";
-import { SixthSection } from "./(6)LeadersBehindTheVision";
-import { FifthSection } from "./(5)TransformTomorrowTogether";
+import { Landing } from "./(1)LandingPage";
+import { AboutCucai } from "./(2)VideoAndAboutCucai";
+import { PastSpeakers } from "./(3)AIExpertsOnStage";
+import { StudentPartners } from "./(4)StudentPartners";
+import { ContactUs } from "./(5)TransformTomorrowTogether";
+import { CUCAITeamShowcase } from "./(6)LeadersBehindTheVision";
 import { Footer } from "./Footer";
 import { useState, useEffect } from "react";
-import { Pixelify_Sans } from 'next/font/google';
+import { Pixelify_Sans } from "next/font/google";
 import { speakers } from "@/data/speakers";
 import { student_partners } from "@/data/student_partners";
 
@@ -18,11 +19,7 @@ export const PixelifySans = Pixelify_Sans({
   style: ["normal"],
 });
 
-
-
 // TODO: Add other Uni's website and instagram links
-
-
 
 export const buttons = [
   { name: "Speakers", link: "#speakers" },
@@ -111,25 +108,25 @@ export default function Home() {
   return (
     <div className="w-full overflow-x-hidden m-auto">
       <Header isDark={isDark} setDark={setDark} />
-      <FirstSection />
+      <Landing />
       <div id="about">
-        <SecondSection />
+        <AboutCucai />
       </div>
       <div id="speakers">
         <div className="third-section overflow-auto overflow-x-hidden max-h-full">
           {/* 
             AI Experts on Stage
           */}
-          <ThirdSection />
+          <PastSpeakers />
         </div>
       </div>
       {/* <FourthSection - Moved here for easier access to array variable/> */}
-      <StudentPartners windowWidth={windowWidth}/>
+      <StudentPartners windowWidth={windowWidth} />
       {/* 
         TODO: Fix formatting for section 5
       */}
-      <FifthSection />
-      <SixthSection />
+      <ContactUs />
+      <CUCAITeamShowcase />
       <Footer />
     </div>
   );
