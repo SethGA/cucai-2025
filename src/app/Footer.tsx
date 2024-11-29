@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
-import { buttons, icons } from "./page";
+import { buttons } from "@/data/buttons";
+import { icons } from "@/data/icons";
 
 export function Footer() {
   return (

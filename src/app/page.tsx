@@ -13,29 +13,26 @@ import { Pixelify_Sans } from "next/font/google";
 import { speakers } from "@/data/speakers";
 import { student_partners } from "@/data/student_partners";
 
-export const PixelifySans = Pixelify_Sans({
-  subsets: ["cyrillic", "latin", "latin-ext"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal"],
-});
+const PixelifySans = { fontFamily: "PixelifySans", fontWeight: "400" };
+
 
 // TODO: Add other Uni's website and instagram links
 
-export const buttons = [
+const buttons = [
   { name: "Speakers", link: "#speakers" },
   { name: "Programming", link: "#schedule" },
   { name: "Student Partners", link: "#student-partners" },
 ];
 
 // TODO: Add CUCAI links here
-export const icons = [
+const icons = [
   { src: "/email.png", link: "/" },
   { src: "/instagram.png", link: "/" },
   { src: "/linkedin.png", link: "/" },
 ];
 
 // TODO: Add CUCAI staff once the carousel works
-export const leaders = [
+const leaders = [
   {
     name: "Organizer Name",
     role: "Role Name",
