@@ -1,3 +1,5 @@
+// TODO: Add other uni's links
+
 export const student_partners = [
     {
       name: "WAT.ai",

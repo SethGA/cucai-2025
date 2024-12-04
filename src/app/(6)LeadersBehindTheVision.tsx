@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { leaders } from "./page";
+import { leaders } from "@/data/leaders";
 import { useState, useEffect } from "react";
 import { IBM_Plex_Sans } from "next/font/google";
 import { Pixelify_Sans } from "next/font/google";
@@ -167,19 +167,7 @@ function CUCAIList() {
   ));
 }
 
-export function CUCAITeamShowcase() {
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Clean up event listener on component unmount
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+export function CUCAITeamShowcase({isLargeScreen}:{isLargeScreen:boolean}) {
 
   return (
     <div className="sixth-section w-full">

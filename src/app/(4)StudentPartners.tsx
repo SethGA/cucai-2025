@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Pixelify_Sans } from "next/font/google";
+import { student_partners } from "@/data/student_partners";
 
 export const PixelifySans = Pixelify_Sans({
   subsets: ["cyrillic", "latin", "latin-ext"],
@@ -8,7 +9,15 @@ export const PixelifySans = Pixelify_Sans({
   style: ["normal"],
 });
 
-const chunk_array = (array: {}[], size: number) => {
+interface Partner {
+  name: string;
+  logo: string;
+  university: string;
+  website: string;
+  insta: string;
+}
+
+const chunk_array = (array: Partner[], size: number) => {
   let result = [];
   for (let i = 0; i < array.length; i += size) {
     result.push(array.slice(i, i + size));
@@ -16,84 +25,15 @@ const chunk_array = (array: {}[], size: number) => {
   return result;
 };
 
-// TODO: Add other Uni's website and instagram links
 
-let student_partners = [
-  {
-    name: "WAT.ai",
-    logo: "/logos/wat-ai-logo.png",
-    university: "University of Waterloo",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 297,
-  },
-  {
-    name: "Western AI",
-    logo: "/logos/wai-logo.png",
-    university: "University of Western Ontario",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 120,
-  },
-  {
-    name: "McGill AI",
-    logo: "/logos/mcgill-ai-logo.png",
-    university: "McGill University",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 130,
-  },
-  {
-    name: "UofT AI",
-    logo: "/logos/uoftai-logo.png",
-    university: "University of Toronto",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 297,
-  },
-  {
-    name: "Wester Cyber Society",
-    logo: "/logos/wcs-logo.png",
-    university: "University of Western Ontario",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 297,
-    height: 100,
-  },
-  {
-    name: "UVic AI",
-    logo: "/logos/uvic-ai-logo.png",
-    university: "University of Victoria",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 150,
-    height: 100,
-  },
-  {
-    name: "UdeM AI",
-    logo: "/logos/udem-ai-logo.png",
-    university: "Universitié de Montréal",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 120,
-    height: 100,
-  },
-  {
-    name: "UTMIST",
-    logo: "/logos/utmist-logo.png",
-    university: "University of Toronto",
-    website: "https://watai.ca/",
-    insta: "https://www.instagram.com/wataiteam/",
-    width: 297,
-    height: 100,
-  },
-];
+export function StudentPartners({windowWidth}:{windowWidth:number}) {
 
-export function StudentPartners({windowWidth}) {
-
+  // console.log(windowWidth);
+  // console.log(Math.floor(windowWidth / 382));
+  
   const chunked_partners = chunk_array(
     student_partners,
-    Math.min(Math.floor(window.innerWidth / 382), 3)
+    Math.min(Math.floor(windowWidth / 382), 3)
   );
 
   var fade_speed = 5;
@@ -180,10 +120,10 @@ export function StudentPartners({windowWidth}) {
                       >
                         <img
                           src={partner.logo}
-                          class="w-[182px] h-[100px] mt-8 object-contain"
+                          className="w-[182px] h-[100px] mt-8 object-contain"
                         ></img>
-                        <p class="font-bold !text-[23pt]">{partner.name}</p>
-                        <p class="text-[16pt] font-normal">
+                        <p className="font-bold !text-[23pt]">{partner.name}</p>
+                        <p className="text-[16pt] font-normal">
                           {partner.university}
                         </p>
 

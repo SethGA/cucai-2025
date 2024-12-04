@@ -9,20 +9,7 @@ const PixelifySans = Pixelify_Sans({
   style: ["normal"],
 });
 
-export function AboutCucai() {
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Clean up event listener on component unmount
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+export function AboutCucai({isLargeScreen}:{isLargeScreen:boolean}) {
   return (
     <div className="second-section flex flex-col xl:flex-row">
       <div className="w-[401px] h-[701px] bg-[#171456] rounded-3xl p-2 aspect-[9/16]">

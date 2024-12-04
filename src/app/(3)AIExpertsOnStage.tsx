@@ -17,7 +17,14 @@ const IBMPlexSans = IBM_Plex_Sans({
   style: ["normal", "italic"],
 });
 
-function SpeakerCarousel({ speakers }) {
+interface Speaker {
+  name: string;
+  position: string;
+  img: string;
+  company: string;
+}
+
+function SpeakerCarousel({ speakers }:{ speakers:Speaker[] }) {
   return (
     <div className="carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
       {speakers.map((speaker, i) => (
@@ -37,7 +44,7 @@ function SpeakerCarousel({ speakers }) {
           <p className="speaker-position">{speaker.position}</p>
           <img
             src={speaker.company}
-            class="w-[200px] h-[55px] object-contain"
+            className="w-[200px] h-[55px] object-contain"
           ></img>
         </div>
       ))}
@@ -45,7 +52,7 @@ function SpeakerCarousel({ speakers }) {
   );
 }
 
-function SpeakerList({ speakers }) {
+function SpeakerList({ speakers }:{ speakers:Speaker[] }) {
   return speakers.map((speaker, i) => (
     <div
       className="flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[320px]"
@@ -63,26 +70,13 @@ function SpeakerList({ speakers }) {
       <p className="speaker-position">{speaker.position}</p>
       <img
         src={speaker.company}
-        class="w-[200px] h-[55px] object-contain"
+        className="w-[200px] h-[55px] object-contain"
       ></img>
     </div>
   ));
 }
 
-export function PastSpeakers() {
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Clean up event listener on component unmount
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+export function PastSpeakers({isLargeScreen}:{isLargeScreen:boolean}) {
   return (
     <div className="third-section">
       <div>
