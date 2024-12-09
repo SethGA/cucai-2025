@@ -720,7 +720,6 @@ body {
   /* padding: 80px; */
   gap: 36px;
   position: relative;
-  z-index: -1;
  }
 
  .dark-mode .sixth-section {
@@ -739,8 +738,6 @@ body {
   gap: 8px;
   margin-bottom: 5%;
   padding: 80px;
-  z-index: 1;
-  position: relative;
 }
 
 .team-title .small-text {
