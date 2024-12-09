@@ -31,6 +31,8 @@ const icons = [
 export default function Home() {
   const [isDark, setDark] = useState<boolean>(false);
 
+  console.log(isDark); // If the page doesn't change, then check this
+
   const [windowWidth, setWindowWidth] = useState(1600); // breaks components if window width is initialized to 0
 
   useEffect(() => {

@@ -4,6 +4,7 @@ import { leaders } from "@/data/leaders";
 import { useState, useEffect } from "react";
 import { IBM_Plex_Sans } from "next/font/google";
 import { Pixelify_Sans } from "next/font/google";
+import '@/app/globals.css';
 
 const PixelifySans = Pixelify_Sans({
   subsets: ["cyrillic", "latin", "latin-ext"],
@@ -11,87 +12,7 @@ const PixelifySans = Pixelify_Sans({
   style: ["normal"],
 });
 
-// TODO: Replace with CUCAI 2025 Staff
-const Team = [
-  {
-    name: "Marcelo Chaman Mallqui",
-    headshot: "/headshots/marcelo-chamanmallqui.png",
-    title: "President",
-    linkedin: "https://www.linkedin.com/in/marc-cham/",
-  },
-  {
-    name: "Olivia Xu",
-    headshot: "/headshots/olivia-xu.png",
-    title: "Advisor",
-    linkedin: "https://www.linkedin.com/in/olivia-chen-xu/",
-  },
-  {
-    name: "Rabab Azeem",
-    headshot: "/headshots/rabab-azeem.png",
-    title: "Advisor",
-    linkedin: "https://www.linkedin.com/in/rabab-azeem/",
-  },
-  {
-    name: "Lejla Sain",
-    headshot: "/headshots/lejla-sain.png",
-    title: "Director of Partnerships",
-    linkedin: "https://www.linkedin.com/in/lejla-s/",
-  },
-  {
-    name: "Daniel Wang",
-    headshot: "/headshots/daniel-wang.png",
-    title: "Director of Partnerships",
-    linkedin: "https://www.linkedin.com/in/itsdanielwang/",
-  },
-  {
-    name: "Rhea George",
-    headshot: "/headshots/rhea-george.png",
-    title: "Director of Marketing",
-    linkedin: "https://www.linkedin.com/in/rhea-george-b81bab1b1/",
-  },
-  {
-    name: "Seth Grief Albert",
-    headshot: "/headshots/seth-grief-albert.png",
-    title: "Director of Strat. Parternships",
-    linkedin: "https://www.linkedin.com/in/sethgriefalbert/",
-  },
-  {
-    name: "Rowan McDonald",
-    headshot: "/headshots/rowan-mcdonald.png",
-    title: "Director of Finance",
-    linkedin: "https://www.linkedin.com/in/rowan-m/",
-  },
-  {
-    name: "Zana Yan",
-    headshot: "/headshots/zana-yan.png",
-    title: "Product Designer",
-    linkedin: "https://www.linkedin.com/in/zana-zhizi-yan/",
-  },
-  {
-    name: "Skyye Lambert",
-    headshot: "/headshots/skyye-lambert.png",
-    title: "Product Designer",
-    linkedin: "https://www.linkedin.com/in/skyye-lambert/",
-  },
-  {
-    name: "Jasmine Zangeneh",
-    headshot: "/headshots/jasmine-zangeneh.png",
-    title: "Content Designer",
-    linkedin: "https://www.linkedin.com/in/jasmine-zangeneh-aa5147277/",
-  },
-  {
-    name: "Andy Huang",
-    headshot: "/headshots/andy-huang.png",
-    title: "Content Designer",
-    linkedin: "https://www.linkedin.com/in/andy-snowflake-huang/",
-  },
-  {
-    name: "John Warren",
-    headshot: "/headshots/john-warren.png",
-    title: "Community Lead",
-    linkedin: "https://www.linkedin.com/in/warrenjk/",
-  },
-];
+// TODO: Edit @data/leaders.ts to include current CUCAI staff
 
 const IBMPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -102,7 +23,7 @@ const IBMPlexSans = IBM_Plex_Sans({
 function CUCAITeam() {
   return (
     <div className="carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
-      {Team.map((person, i) => (
+      {leaders.map((person, i) => (
         <div
           className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[320px]"
           key={i}
@@ -136,7 +57,7 @@ function CUCAITeam() {
 }
 
 function CUCAIList() {
-  return Team.map((person, i) => (
+  return leaders.map((person, i) => (
     <div
       className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[320px]"
       key={i}
@@ -173,7 +94,8 @@ export function CUCAITeamShowcase({isLargeScreen}:{isLargeScreen:boolean}) {
     <div className="sixth-section w-full">
       {/*
           Leaders Behind the Vision
-        */}
+      */}
+
       <div className="team-title">
         <p className="small-text">MEET OUR TEAM</p>
         <h1 className={"big-text " + PixelifySans.className}>
