@@ -63,7 +63,7 @@ export default function Home() {
         </div>
       </div>
       {/* <FourthSection - Moved here for easier access to array variable/> */}
-      <StudentPartners windowWidth={windowWidth} />
+      <StudentPartners windowWidth={windowWidth} isDark={isDark}/>
       {/* 
         TODO: Fix formatting for section 5
       */}

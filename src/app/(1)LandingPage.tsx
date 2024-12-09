@@ -16,9 +16,6 @@ export function Landing() {
           <h1 className={"title " + PixelifySans.className}>
             {"Experience AI's Future at CUCAI 2025!"}
           </h1>
-          <p className="subtext">
-            Empowering the Next Generation of AI Innovators
-          </p>
           <a href="/">
             <img
               src="register-now.png"

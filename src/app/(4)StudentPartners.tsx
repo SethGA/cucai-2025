@@ -26,7 +26,7 @@ const chunk_array = (array: Partner[], size: number) => {
 };
 
 
-export function StudentPartners({windowWidth}:{windowWidth:number}) {
+export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDark:boolean}) {
 
   // console.log(windowWidth);
   // console.log(Math.floor(windowWidth / 382));
@@ -38,13 +38,18 @@ export function StudentPartners({windowWidth}:{windowWidth:number}) {
 
   var fade_speed = 5;
 
+  const start_color = isDark ? [60, 60, 128] : [111, 169, 242];
+  const end_color = isDark ? [23, 20, 86] : [116, 173, 246];
+  const qmind_color = isDark ? [60, 60, 128] : [131, 187, 243];
+
   const gradients = Array.from({ length: chunked_partners.length }, (_, i) => ({
-    from: `rgb(${111 - i * fade_speed}, ${169 - i * fade_speed}, 242)`,
-    to: `rgb(${116 - (i + 1) * fade_speed}, ${
-      173 - (i + 1) * fade_speed
-    }, 246)`,
+    from: `rgb(${start_color[0] - i * fade_speed}, ${start_color[1] - i * fade_speed}, ${start_color[2]})`,
+    to: `rgb(${end_color[0] - (i + 1) * fade_speed}, ${
+      end_color[1] - (i + 1) * fade_speed
+    }, ${end_color[2]})`,
   }));
 
+  console.log(gradients);
 
   return (
     <div id="student-partners" className="fourth-section">
@@ -64,14 +69,19 @@ export function StudentPartners({windowWidth}:{windowWidth:number}) {
           )}
         </div>
         <div className="partner-content">
-          <div className="partner-feature flex flex-col md:flex-row gap-8 overflow-hidden">
+          <div 
+            className="partner-feature flex flex-col md:flex-row gap-8 overflow-hidden"
+            style={{
+              background: `rgb(${qmind_color[0]}, ${qmind_color[1]}, ${qmind_color[2]})`,
+            }}
+          >
             <div className="main-partner-text">
-              <h1 className="main-partner-title self-end">QMIND</h1>
+              <h1 className={`main-partner-title self-end ${isDark ? "invert" : ""}`}>QMIND</h1>
               <p className="main-partner-details self-end">
                 {"Queen's University"}
               </p>
               <p className="main-partner-links">
-                <a className="inner-text" href="https://qmind.ca/">
+                <a className={`inner-text ml-[32px] ${isDark ? "invert" : ""}`} href="https://qmind.ca/">
                   <u>Website</u>
                   <Image
                     src={"/Link.png"}
@@ -82,7 +92,7 @@ export function StudentPartners({windowWidth}:{windowWidth:number}) {
                   />
                 </a>
                 <a
-                  className="inner-text ml-[32px]"
+                  className={`inner-text ml-[32px] ${isDark ? "invert" : ""}`}
                   href="https://www.instagram.com/qmind.ai/"
                 >
                   <u>Insta</u>
@@ -120,7 +130,7 @@ export function StudentPartners({windowWidth}:{windowWidth:number}) {
                       >
                         <img
                           src={partner.logo}
-                          className="w-[182px] h-[100px] mt-8 object-contain"
+                          className="w-[182px] h-[100px] mt-8 object-contain " 
                         ></img>
                         <p className="font-bold !text-[23pt]">{partner.name}</p>
                         <p className="text-[16pt] font-normal">
@@ -135,7 +145,7 @@ export function StudentPartners({windowWidth}:{windowWidth:number}) {
                               width={24}
                               height={24}
                               alt="Link Symbol"
-                              className="link-symbol"
+                              className={`link-symbol ${isDark ? "invert" : ""}`}
                             />
                           </a>
                           <a
@@ -148,7 +158,7 @@ export function StudentPartners({windowWidth}:{windowWidth:number}) {
                               width={24}
                               height={24}
                               alt="Insta Symbol"
-                              className="link-symbol"
+                              className={`link-symbol ${isDark ? "invert" : ""}`}
                             />
                           </a>
                         </p>
