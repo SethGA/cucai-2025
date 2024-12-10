@@ -1,6 +1,7 @@
 "use client";
 
 import { Pixelify_Sans } from "next/font/google";
+import {Countdown} from "./CountDown"
 
 const PixelifySans = Pixelify_Sans({
   subsets: ["cyrillic", "latin", "latin-ext"],
@@ -13,6 +14,7 @@ export function Landing() {
     <div className="first-section">
       <div className="toronto-skyline">
         <div className="white-box flex flex-col items-center gap-8">
+          <Countdown font={PixelifySans}/>
           <h1 className={"title " + PixelifySans.className}>
             {"Experience AI's Future at CUCAI 2025!"}
           </h1>
@@ -20,7 +22,7 @@ export function Landing() {
             <img
               src="register-now.png"
               alt="Apply to CUCAI"
-              className=" h-[50px] w-[152px]"
+              className=" h-[50px] w-[152px] hover:brightness-110 active:brightness-90"
             />
           </a>
         </div>

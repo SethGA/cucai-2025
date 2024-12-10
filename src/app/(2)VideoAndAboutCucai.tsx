@@ -42,7 +42,7 @@ export function AboutCucai({isLargeScreen}:{isLargeScreen:boolean}) {
             <img
               src="apply.png"
               alt="Apply to CUCAI"
-              className="mt-8 h-[50px] w-[122px]"
+              className="mt-8 h-[50px] w-[122px] hover:brightness-110 active:brightness-90"
             />
           </a>
         </div>

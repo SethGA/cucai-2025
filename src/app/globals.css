@@ -177,7 +177,6 @@ body {
 }
 
 
-
 .white-box .register-button {
   /* padding: 14px 32px 14px 32px; */
   border-radius: 50px;
@@ -411,7 +410,7 @@ body {
   display: block;
   background: linear-gradient(rgba(77, 136, 255, 1), rgba(163, 217, 236, 1));
   /* May need to remove height when adding elements */
-  min-height: 1856px; 
+  min-height: 1550px; 
   gap: 36px;
   padding: 100px 80px 100px 80px;
   position: relative;

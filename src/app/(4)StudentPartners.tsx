@@ -175,7 +175,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
         <img
           src="become_a_partner.png"
           alt="Become A Partner"
-          className="mt-8 ml-[40px] h-[61px] w-[220px]"
+          className="mt-8 ml-[40px] h-[61px] w-[220px] hover:brightness-90"
         />
       </a>
     </div>

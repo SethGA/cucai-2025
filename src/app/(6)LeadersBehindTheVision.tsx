@@ -20,6 +20,44 @@ const IBMPlexSans = IBM_Plex_Sans({
   style: ["normal", "italic"],
 });
 
+interface Staff {
+  name: string;
+  headshot: string;
+  title: string;
+  linkedin: string;
+}
+
+function StaffImage({person}:{person:Staff}) {
+  const [headShotExists, setHeadShotExists] = useState(true);
+  
+  fetch(person.headshot, { method: 'HEAD' })
+  .then((response) => {
+    if(!response.ok){
+      setHeadShotExists(false);
+    }
+  })
+  .catch(() => {
+    setHeadShotExists(false);
+  });
+
+  if(headShotExists){
+    return (
+      <img 
+        src={person.headshot}
+        alt={`Headshot of ${person.name}`}
+        className="h-[150px] rounded-full border-[#55E0FF]/50 border-[1px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
+      />
+    );
+  }else{
+    return (
+      <img 
+        src="/headshots/default.svg"
+        alt={`Headshot of ${person.name}`}
+        className="h-[150px] rounded-full border-[#55E0FF]/50 border-[1px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
+      />); 
+  }
+}
+
 function CUCAITeam() {
   return (
     <div className="carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
@@ -28,11 +66,7 @@ function CUCAITeam() {
           className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[320px]"
           key={i}
         >
-          <img
-            src={person.headshot}
-            alt={`Headshot of ${person.name}`}
-            className="h-[150px] rounded-full border-[#55E0FF]/50 border-[1px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
-          />
+          <StaffImage person={person}/>
           <div className="text-center">
             <p
               className={`${
@@ -62,11 +96,7 @@ function CUCAIList() {
       className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[320px]"
       key={i}
     >
-      <img
-        src={person.headshot}
-        alt={`Headshot of ${person.name}`}
-        className="h-[150px] rounded-full border-[#55E0FF]/50 border-[1px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
-      />
+      <StaffImage person={person}/>
       <div className="text-center">
         <p
           className={`${

@@ -24,7 +24,7 @@ export function ContactUs() {
               <img
                 src="contact-us-button.png"
                 alt="Contact Us Button"
-                className="contact-button mt-8"
+                className="contact-button mt-8 hover:brightness-110 active:brightness-90"
               />
             </a>
           </div>
