@@ -885,7 +885,7 @@ body {
   font-weight: 300; /* Font weight for 'font-light' */
   color: white;
   padding-bottom: 32px;
-  background: linear-gradient(to bottom, #3C3C80, #171456);
+  background: #171456;
 
 }
 
