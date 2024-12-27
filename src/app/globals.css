@@ -717,7 +717,7 @@ body {
 
  .dark-mode .sixth-section {
   display: block; 
-  background: #171456;
+  background: linear-gradient(to bottom, #3C3C80, #171456);
   /* May clash with element CSS */
   min-height: 249px;
   /* padding: 80px; */
@@ -885,7 +885,7 @@ body {
   font-weight: 300; /* Font weight for 'font-light' */
   color: white;
   padding-bottom: 32px;
-  background: #171456;
+  background: linear-gradient(to bottom, #3C3C80, #171456);
 
 }
 
