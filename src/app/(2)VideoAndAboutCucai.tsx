@@ -27,15 +27,15 @@ export function AboutCucai({isLargeScreen}:{isLargeScreen:boolean}) {
       >
         <div className="main-text">
           <p>ABOUT CUCAI</p>
-          <h1 className={"big-font " + PixelifySans.className}>
+          <h1 className={"big-font " + PixelifySans.className + " w-[70%] sm:w-full h-auto break-words"}>
             {"Where Tomorrow's AI Innovators Meet"}
           </h1>
-          <p className="small-font">
+          <p className={"small-font"  + " w-[70%] sm:w-full h-auto break-words"}>
             Join the Canadian Undergraduate Conference in AI (CUCAI) to connect
             with students, researchers, and industry leaders exploring
             cutting-edge AI.
           </p>
-          <p className="small-font">
+          <p className={"small-font" + " w-[70%] sm:w-full h-auto break-words"}>
             Discover, innovate, and shape the future of AI with us!
           </p>
           <a href="/">

@@ -1,15 +1,7 @@
 "use client"
 
 import { NextFont } from "next/dist/compiled/@next/font";
-import { Pixelify_Sans } from "next/font/google";
 import { useState, useEffect } from "react";
-
-
-const PixelifySans = Pixelify_Sans({
-  subsets: ["cyrillic", "latin", "latin-ext"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal"],
-});
 
 export function Countdown({font}:{font:NextFont}){
     const CUCAIDate = new Date('March 8, 2025 00:00:00').getTime();
@@ -56,7 +48,7 @@ export function Countdown({font}:{font:NextFont}){
 
     return(
         <div 
-            className={"text-2xl " + font.className} 
+            className={"sm:text-base md:text-2xl lg:text-2xl " + font.className} 
             style={{color: "rgba(23, 20, 86, 1)"}}>
                 {(CUCAIDate - new Date().getTime() > 0) ? `${diff.days} Days, ${diff.hours} Hours, ${diff.minutes} Minutes, and ${diff.seconds} Seconds` : "COUNTDOWN HAS ENDED"}
             {/* <h1 className={font.className}>{calcTimeLeft()}</h1> */}

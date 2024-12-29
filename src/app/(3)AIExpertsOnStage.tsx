@@ -86,7 +86,7 @@ export function PastSpeakers({isLargeScreen}:{isLargeScreen:boolean}) {
 
         <div className="title">
           <p className="small-font">OUR 2024 SPEAKERS</p>
-          <h1 className={"big-font " + PixelifySans.className}>
+          <h1 className={"big-font " + PixelifySans.className + " w-[70%] sm:w-full h-auto break-words"}>
             AI Experts On Stage
           </h1>
         </div>

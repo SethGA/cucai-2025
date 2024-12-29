@@ -9,15 +9,29 @@ const PixelifySans = Pixelify_Sans({
   style: ["normal"],
 });
 
-export function Landing() {
+export function Landing({windowWidth}:{windowWidth:number}) {
   return (
     <div className="first-section">
       <div className="toronto-skyline">
-        <div className="white-box flex flex-col items-center gap-8">
+        <div className="white-box flex flex-col items-center gap-8 w-full">
           <Countdown font={PixelifySans}/>
-          <h1 className={"title " + PixelifySans.className}>
-            {"Experience AI's Future at CUCAI 2025!"}
-          </h1>
+          {windowWidth >= 706 ? (
+            <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+              Experience AI's Future at CUCAI 2025!
+            </h1>          
+          ) : (
+            <div>
+              <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+                Experience AI's
+              </h1>          
+              <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+                Future at
+              </h1>          
+              <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+                CUCAI 2025!
+              </h1>
+            </div>          
+          )}
           <a href="/">
             <img
               src="register-now.png"

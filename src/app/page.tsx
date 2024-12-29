@@ -10,8 +10,6 @@ import { CUCAITeamShowcase } from "./(6)LeadersBehindTheVision";
 import { Footer } from "./Footer";
 import { useState, useEffect } from "react";
 
-const PixelifySans = { fontFamily: "PixelifySans", fontWeight: "400" };
-
 
 // TODO: Add other Uni's website and instagram links
 
@@ -51,8 +49,8 @@ export default function Home() {
 
   return (
     <div className="w-full overflow-x-hidden m-auto">
-      <Header isDark={isDark} setDark={setDark} />
-      <Landing />
+      <Header windowWidth={windowWidth} isDark={isDark} setDark={setDark}/>
+      <Landing windowWidth={windowWidth}/>
       <div id="about">
         <AboutCucai isLargeScreen={windowWidth >= 768}/>
       </div>
