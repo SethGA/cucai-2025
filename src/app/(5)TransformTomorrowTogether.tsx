@@ -14,10 +14,10 @@ export function ContactUs() {
       <div className="text-part p-4 flex-shrink-0">
         <div className="title flex-shrink-0">
           <p className="small-text">JOIN US</p>
-          <h1 className={"big-text " + PixelifySans.className}>
+          <h1 className={"big-text " + PixelifySans.className + " w-[70%] sm:w-full h-auto break-words"}>
             Transform Tomorrow Together
           </h1>
-          <div className="text-part">
+          <div className={"text-part" + " w-[70%] sm:w-full h-auto break-words"}>
             <p>Have questions or want to get involved?</p>
             <p>Get in touch with us and join the CUCAI Community!</p>
             <a href="/">

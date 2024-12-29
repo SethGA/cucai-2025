@@ -415,7 +415,7 @@ body {
 }
 
 .fourth-section .title {
-  width: 1280px;
+  /* width: 1280px; */
   min-height: 99px;
   gap: 8px;
 }
@@ -625,7 +625,7 @@ body {
  
 .fifth-section .text-part {
   display: block;
-  width: 590px;
+  /* width: 590px; */
   height: 323px;
 }
 
@@ -646,7 +646,7 @@ body {
 
 
 .title .big-text {
-  height: 124px;
+  /* height: 124px; */
   font-size: 52px;
   font-weight: 700;
   line-height: 62.4px;

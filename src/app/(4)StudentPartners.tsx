@@ -57,7 +57,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
         <div className="title">
           <p className="small-liner">OUR STUDENT PARTNERS</p>
           {windowWidth >= 768 ? (
-            <h1 className="big-liner">
+            <h1 className={"big-liner" + " w-[70%] sm:w-full h-auto break-words"}>
               {"Empowering Tomorrow's Experts Today"}
             </h1>
           ) : (
