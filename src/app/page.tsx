@@ -52,7 +52,7 @@ export default function Home() {
       <Header windowWidth={windowWidth} isDark={isDark} setDark={setDark}/>
       <Landing windowWidth={windowWidth}/>
       <div id="about">
-        <AboutCucai isLargeScreen={windowWidth >= 768}/>
+        <AboutCucai isLargeScreen={windowWidth >= 500}/>
       </div>
       <div id="speakers">
         <div className="third-section overflow-auto overflow-x-hidden max-h-full">
@@ -67,7 +67,7 @@ export default function Home() {
       {/* 
         TODO: Fix formatting for section 5
       */}
-      <ContactUs />
+      <ContactUs windowWidth={windowWidth}/>
       <CUCAITeamShowcase isLargeScreen={windowWidth >= 768}/>
       <Footer />
     </div>

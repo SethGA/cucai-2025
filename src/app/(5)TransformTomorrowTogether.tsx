@@ -8,9 +8,9 @@ const PixelifySans = Pixelify_Sans({
   style: ["normal"],
 });
 
-export function ContactUs() {
-  return (
-    <div className="fifth-section flex-col md:flex-row gap-8">
+export function ContactUs({windowWidth}:{windowWidth:number}) {
+  return ( // 1401 sm:flex-col md:flex-col lg:flex-row
+    <div className={"fifth-section gap-8 " + (windowWidth > 931 ? "flex-row" : "flex-col")}>
       <div className="text-part p-4 flex-shrink-0">
         <div className="title flex-shrink-0">
           <p className="small-text">JOIN US</p>

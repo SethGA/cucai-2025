@@ -128,7 +128,7 @@ export function CUCAITeamShowcase({isLargeScreen}:{isLargeScreen:boolean}) {
 
       <div className="team-title">
         <p className="small-text">MEET OUR TEAM</p>
-        <h1 className={"big-text " + PixelifySans.className}>
+        <h1 className={"big-text " + PixelifySans.className + " w-[70%] sm:w-full h-auto break-words"}>
           Leaders Behind the Vision
         </h1>
       </div>

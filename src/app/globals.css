@@ -443,14 +443,14 @@ body {
   display: flex;
   max-width: 989px;
   min-height: 231px;
-  margin-top: 3%;
-  margin-left: 15%;
+  /* margin-top: 3%;
+  margin-left: 15%; */
   /* padding-left: 1.5%; */
   border-radius: 14px;
   background: #83BBF3;
   box-shadow: 0px 4px 4px 3px rgba(54, 5, 120, 0.25);
   /* position: absolute; */
-  left: 137px;
+  /* left: 137px; */
   top: 18px;
   /* justify-content: center; */
   /* align-items: center; */
@@ -477,13 +477,13 @@ body {
   max-width: 390px;
   padding: 32px 24px;
   flex-direction: column;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   gap: 16px;
 }
 
 .main-partner-text .main-partner-title {
   color: var(--neutrals-black, #000);
-  text-align: right;
+  /* text-align: right; */
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -497,7 +497,7 @@ body {
   text-align: right;
   line-height: 37.4px;
   /* text-align: left; */
-  width: 592px;
+  /* width: 592px; */
   height: 37px;
   gap: 0px;
   /* margin-bottom: 2%; */
@@ -525,11 +525,12 @@ body {
 
 .main-partner-links .inner-text {
   display: flex;
-  margin-right: 5%;
+  /* margin-right: 5%; */
 }
 
-.inner-text .link-symbol {
-  margin-left: 5%;
+.link-symbol {
+  width: 24px;
+  height: 25px;
 }
 
 .partner-content .partner-grid {
@@ -538,7 +539,7 @@ body {
 
 .partner-grid .partner-rows {
   display: flex;
-  padding-left: 4.5%;
+  /* padding-left: 4.5%; */
   gap: 70px;
 }
 
@@ -606,7 +607,7 @@ body {
   display: flex; 
   background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 135, 255, 1));
   /* May clash with elements CSS */
-  min-height: 574px;
+  min-height: max-content;
   padding: 100px 80px 100px 80px;
   position: relative;
   gap: 8px;
@@ -617,8 +618,10 @@ body {
   /* width: 540px;
   height: auto; */
   /* margin-left: 10%; */
-  min-width: 586px;
-  min-height: 390px;
+  width: auto;
+  min-height: 300px;
+  max-width: 540px;
+  /* height: 454px; */
   position: relative;
   object-fit: fill;
 }
@@ -626,16 +629,16 @@ body {
 .fifth-section .text-part {
   display: block;
   /* width: 590px; */
-  height: 323px;
+  /* height: 323px; */
 }
 
 
-.text-part .title {
-  height: 161px;
-}
+/* .text-part .title { */
+  /* height: 161px; */
+/* } */
 
 .title .small-text {
-  height: 29px;
+  /* height: 29px; */
   font-size: 24px;
   font-weight: 500;
   line-height: 28.8px;
@@ -656,7 +659,7 @@ body {
 }
 
 .dark-mode .title .big-text {
-  height: 124px;
+  /* height: 124px; */
   font-size: 52px;
   font-weight: 700;
   line-height: 62.4px;
@@ -733,8 +736,8 @@ body {
  }
 
 .sixth-section .team-title {
-  width: 1280px;
-  height: 99px;
+  /* width: 1280px; */
+  /* height: 99px; */
   gap: 8px;
   margin-bottom: 5%;
   padding: 80px;
@@ -750,7 +753,7 @@ body {
 }
 
 .team-title .big-text {
-  height: 124px;
+  /* height: 124px; */
   font-size: 52px;
   font-weight: 700;
   line-height: 62.4px;
@@ -760,7 +763,7 @@ body {
 }
 
 .team-title .big-text {
-  height: 124px;
+  /* height: 124px; */
   font-size: 52px;
   font-weight: 700;
   line-height: 62.4px;

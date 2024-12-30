@@ -69,105 +69,109 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
           )}
         </div>
         <div className="partner-content">
-          <div 
-            className="partner-feature flex flex-col md:flex-row gap-8 overflow-hidden"
-            style={{
-              background: `rgb(${qmind_color[0]}, ${qmind_color[1]}, ${qmind_color[2]})`,
-            }}
-          >
-            <div className="main-partner-text">
-              <h1 className={`main-partner-title self-end ${isDark ? "invert" : ""}`}>QMIND</h1>
-              <p className="main-partner-details self-end">
-                {"Queen's University"}
-              </p>
-              <p className="main-partner-links">
-                <a className={`inner-text ml-[32px] ${isDark ? "invert" : ""}`} href="https://qmind.ca/">
-                  <u>Website</u>
-                  <Image
-                    src={"/Link.png"}
-                    width={24}
-                    height={24}
-                    alt="Link Symbol"
-                    className="link-symbol"
-                  />
-                </a>
-                <a
-                  className={`inner-text ml-[32px] ${isDark ? "invert" : ""}`}
-                  href="https://www.instagram.com/qmind.ai/"
-                >
-                  <u>Insta</u>
-                  <Image
-                    src={"/insta.png"}
-                    width={24}
-                    height={24}
-                    alt="Insta Symbol"
-                    className="link-symbol"
-                  />
-                </a>
-              </p>
+          <div className="flex flex-col justify-center items-center self-stretch">
+            <div 
+              className="partner-feature flex flex-col md:flex-row gap-8 overflow-hidden mt-8 ml-[20px] min-w-[382px]"
+              style={{
+                background: `rgb(${qmind_color[0]}, ${qmind_color[1]}, ${qmind_color[2]})`,
+              }}
+            >
+              <div className={"main-partner-text"}>
+                <h1 className={"main-partner-title " + (isDark ? "invert " : " ") + (windowWidth >= 964 ? "text-right self-end" : "text-center")}>QMIND</h1>
+                <p className={"main-partner-details " + (windowWidth >= 964 ? "text-right self-end" : "text-center")}>
+                  {"Queen's University"}
+                </p>
+                <p className="main-partner-links">
+                  <a className={"inner-text ml-[32px] gap-2 " + (isDark ? "invert" : "")} href="https://qmind.ca/">
+                    <u>Website</u>
+                    <Image
+                      src={"/Link.png"}
+                      width={24}
+                      height={25}
+                      alt="Link Symbol"
+                      className="link-symbol"
+                    />
+                  </a>
+                  <a
+                    className={`inner-text ml-[32px] gap-2 ${isDark ? "invert" : ""}`}
+                    href="https://www.instagram.com/qmind.ai/"
+                  >
+                    <u>Insta</u>
+                    <Image
+                      src={"/insta.png"}
+                      width={24}
+                      height={25}
+                      alt="Insta Symbol"
+                      className="link-symbol"
+                    />
+                  </a>
+                </p>
+              </div>
+              <Image
+                src={"/logos/qmind-logo.png"}
+                width={488}
+                height={155}
+                alt="QMIND Logo"
+                className={"main-feature-logo" + (windowWidth >= 768 ? " py-[2px] pl-[2px] pr-4" : " p-[32px]")}
+              />
             </div>
-            <Image
-              src={"/logos/qmind-logo.png"}
-              width={488}
-              height={155}
-              alt="QMIND Logo"
-              className="main-feature-logo"
-            />
           </div>
           {/* TODO: Fix typing problem */}
-          <div className="partner-grid">
-            {chunked_partners.map((row, row_index) => (
-              <div className="partner-rows items-baseline" key={"Partner Rows"}>
-                {row.map((partner) => (
-                  <div key={partner.name}>
-                    <div className="py-4 px-8">
-                      <div
-                        className="partner-body flex flex-col h-[347px] w-[382px] gap-4 -ml-[50px]"
-                        key={partner.name}
-                        style={{
-                          background: `linear-gradient(to bottom, ${gradients[row_index].from}, ${gradients[row_index].to})`,
-                        }}
-                      >
-                        <img
-                          src={partner.logo}
-                          className="w-[182px] h-[100px] mt-8 object-contain " 
-                        ></img>
-                        <p className="font-bold !text-[23pt]">{partner.name}</p>
-                        <p className="text-[16pt] font-normal">
-                          {partner.university}
-                        </p>
+          <div>
+            <div className="partner-grid items-center">
+              {chunked_partners.map((row, row_index) => (
+                <div className="partner-rows py-4" key={"Partner Rows"}>
+                  {row.map((partner) => (
+                    <div key={partner.name}>
+                      <div className="flex flex-col justify-center items-center self-stretch">
+                        <div
+                          className={"partner-body flex flex-col h-[347px] w-[382px] gap-4 mt-8 ml-[40px] " + (windowWidth > 693 ? "-ml-[50px]" : "")}
+                          key={partner.name}
+                          style={{
+                            background: `linear-gradient(to bottom, ${gradients[row_index].from}, ${gradients[row_index].to})`,
+                          }}
+                        >
+                          <img
+                            src={partner.logo}
+                            className="w-[182px] h-[100px] mt-8 object-contain " 
+                          ></img>
+                          <p className="font-bold !text-[23pt]">{partner.name}</p>
+                          <p className="text-[16pt] font-normal">
+                            {partner.university}
+                          </p>
 
-                        <p className="partner-inner-text">
-                          <a className="partner-links" href={partner.website}>
-                            <u className="partner-link-text">Website</u>
-                            <Image
-                              src={"/Link.png"}
-                              width={24}
-                              height={24}
-                              alt="Link Symbol"
-                              className={`link-symbol ${isDark ? "invert" : ""}`}
-                            />
-                          </a>
-                          <a
-                            className="partner-links ml-[32px]"
-                            href={partner.insta}
-                          >
-                            <u className="partner-link-text">Insta</u>
-                            <Image
-                              src={"/insta.png"}
-                              width={24}
-                              height={24}
-                              alt="Insta Symbol"
-                              className={`link-symbol ${isDark ? "invert" : ""}`}
-                            />
-                          </a>
-                        </p>
+                          <p className="partner-inner-text">
+                            <a className="partner-links gap-2" href={partner.website}>
+                              <u className="partner-link-text">Website</u>
+                              <Image
+                                src={"/Link.png"}
+                                width={24}
+                                height={54}
+                                alt="Link Symbol"
+                                className={`link-symbol ${isDark ? "invert" : ""}`}
+                              />
+                            </a>
+                            <a
+                              className="partner-links ml-[32px] gap-2"
+                              href={partner.insta}
+                            >
+                              <u className="partner-link-text">Insta</u>
+                              <Image
+                                src={"/insta.png"}
+                                width={24}
+                                height={25}
+                                alt="Insta Symbol"
+                                className={`link-symbol ${isDark ? "invert" : ""}`}
+                              />
+                            </a>
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            ))}
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
