@@ -9,20 +9,7 @@ const PixelifySans = Pixelify_Sans({
   style: ["normal"],
 });
 
-export function AboutCucai() {
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Clean up event listener on component unmount
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+export function AboutCucai({isLargeScreen}:{isLargeScreen:boolean}) {
   return (
     <div className="second-section flex flex-col xl:flex-row">
       <div className="w-[401px] h-[701px] bg-[#171456] rounded-3xl p-2 aspect-[9/16]">
@@ -40,22 +27,22 @@ export function AboutCucai() {
       >
         <div className="main-text">
           <p>ABOUT CUCAI</p>
-          <h1 className={"big-font " + PixelifySans.className}>
+          <h1 className={"big-font " + PixelifySans.className + " w-[70%] sm:w-full h-auto break-words"}>
             {"Where Tomorrow's AI Innovators Meet"}
           </h1>
-          <p className="small-font">
+          <p className={"small-font"  + " w-[70%] sm:w-full h-auto break-words"}>
             Join the Canadian Undergraduate Conference in AI (CUCAI) to connect
             with students, researchers, and industry leaders exploring
             cutting-edge AI.
           </p>
-          <p className="small-font">
+          <p className={"small-font" + " w-[70%] sm:w-full h-auto break-words"}>
             Discover, innovate, and shape the future of AI with us!
           </p>
           <a href="/">
             <img
               src="apply.png"
               alt="Apply to CUCAI"
-              className="mt-8 h-[50px] w-[122px]"
+              className="mt-8 h-[50px] w-[122px] hover:brightness-110 active:brightness-90"
             />
           </a>
         </div>

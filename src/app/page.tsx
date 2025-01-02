@@ -9,11 +9,6 @@ import { ContactUs } from "./(5)TransformTomorrowTogether";
 import { CUCAITeamShowcase } from "./(6)LeadersBehindTheVision";
 import { Footer } from "./Footer";
 import { useState, useEffect } from "react";
-import { Pixelify_Sans } from "next/font/google";
-import { speakers } from "@/data/speakers";
-import { student_partners } from "@/data/student_partners";
-
-const PixelifySans = { fontFamily: "PixelifySans", fontWeight: "400" };
 
 
 // TODO: Add other Uni's website and instagram links
@@ -31,99 +26,49 @@ const icons = [
   { src: "/linkedin.png", link: "/" },
 ];
 
-// TODO: Add CUCAI staff once the carousel works
-const leaders = [
-  {
-    name: "Organizer Name",
-    role: "Role Name",
-    linkedin: "linkedin",
-    hs: "/image.png",
-  },
-  {
-    name: "Organizer Name",
-    role: "Role Name",
-    linkedin: "linkedin",
-    hs: "/image.png",
-  },
-  {
-    name: "Organizer Name",
-    role: "Role Name",
-    linkedin: "linkedin",
-    hs: "/image.png",
-  },
-  {
-    name: "Organizer Name",
-    role: "Role Name",
-    linkedin: "linkedin",
-    hs: "/image.png",
-  },
-  {
-    name: "Organizer Name",
-    role: "Role Name",
-    linkedin: "linkedin",
-    hs: "/image.png",
-  },
-  {
-    name: "Organizer Name",
-    role: "Role Name",
-    linkedin: "linkedin",
-    hs: "/image.png",
-  },
-  {
-    name: "Organizer Name",
-    role: "Role Name",
-    linkedin: "linkedin",
-    hs: "/image.png",
-  },
-  {
-    name: "Organizer Name",
-    role: "Role Name",
-    linkedin: "linkedin",
-    hs: "/image.png",
-  },
-];
-
 export default function Home() {
   const [isDark, setDark] = useState<boolean>(false);
 
-  const [windowWidth, setWindowWidth] = useState(0);
+  console.log(isDark); // If the page doesn't change, then check this
+
+  const [windowWidth, setWindowWidth] = useState(1600); // breaks components if window width is initialized to 0
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Clean up event listener on component unmount
-    return () => window.removeEventListener("resize", handleResize);
+    if(typeof window !== 'undefined'){
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+      handleResize(); // Set initial width
+      window.addEventListener("resize", handleResize);
+  
+      // Clean up event listener on component unmount
+      return () => window.removeEventListener("resize", handleResize);  
+    }
   }, []);
 
-  // console.log(chunked_partners);
-  // console.log(Math.floor(window.innerWidth / 382));
 
   return (
     <div className="w-full overflow-x-hidden m-auto">
-      <Header isDark={isDark} setDark={setDark} />
-      <Landing />
+      <Header windowWidth={windowWidth} isDark={isDark} setDark={setDark}/>
+      <Landing windowWidth={windowWidth}/>
       <div id="about">
-        <AboutCucai />
+        <AboutCucai isLargeScreen={windowWidth >= 500}/>
       </div>
       <div id="speakers">
         <div className="third-section overflow-auto overflow-x-hidden max-h-full">
           {/* 
             AI Experts on Stage
           */}
-          <PastSpeakers />
+          <PastSpeakers isLargeScreen={windowWidth >= 768}/>
         </div>
       </div>
       {/* <FourthSection - Moved here for easier access to array variable/> */}
-      <StudentPartners windowWidth={windowWidth} />
+      <StudentPartners windowWidth={windowWidth} isDark={isDark}/>
       {/* 
         TODO: Fix formatting for section 5
       */}
-      <ContactUs />
-      <CUCAITeamShowcase />
+      <ContactUs windowWidth={windowWidth}/>
+      <CUCAITeamShowcase isLargeScreen={windowWidth >= 768}/>
       <Footer />
     </div>
   );

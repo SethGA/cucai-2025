@@ -1,6 +1,7 @@
 "use client";
 
 import { Pixelify_Sans } from "next/font/google";
+import {Countdown} from "./CountDown"
 
 const PixelifySans = Pixelify_Sans({
   subsets: ["cyrillic", "latin", "latin-ext"],
@@ -8,22 +9,34 @@ const PixelifySans = Pixelify_Sans({
   style: ["normal"],
 });
 
-export function Landing() {
+export function Landing({windowWidth}:{windowWidth:number}) {
   return (
     <div className="first-section">
       <div className="toronto-skyline">
-        <div className="white-box flex flex-col items-center gap-8">
-          <h1 className={"title " + PixelifySans.className}>
-            {"Experience AI's Future at CUCAI 2025!"}
-          </h1>
-          <p className="subtext">
-            Empowering the Next Generation of AI Innovators
-          </p>
+        <div className="white-box flex flex-col items-center gap-8 w-full">
+          <Countdown font={PixelifySans}/>
+          {windowWidth >= 706 ? (
+            <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+              Experience AI's Future at CUCAI 2025!
+            </h1>          
+          ) : (
+            <div>
+              <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+                Experience AI's
+              </h1>          
+              <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+                Future at
+              </h1>          
+              <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+                CUCAI 2025!
+              </h1>
+            </div>          
+          )}
           <a href="/">
             <img
               src="register-now.png"
               alt="Apply to CUCAI"
-              className=" h-[50px] w-[152px]"
+              className=" h-[50px] w-[152px] hover:brightness-110 active:brightness-90"
             />
           </a>
         </div>
