@@ -17,7 +17,7 @@ export function Footer() {
           </a>
         ))}
         {icons.map((i) => (
-          <a href={i.link} className="footer-logo" key={i.link}>
+          <a href={i.link} className="footer-logo" key={i.src}>
             <Image src={i.src} alt={i.link} width={250} height={250} />
           </a>
         ))}

@@ -25,6 +25,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: rgb(var(--background-rgb));
 }

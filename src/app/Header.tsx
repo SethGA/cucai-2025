@@ -90,7 +90,7 @@ export default function Header({
                     getImage()
                 )}
             </button>
-            <a href="/" className="contact-us">
+            <a href="mailto:chair@cucai.ca" className="contact-us">
                 <Image
                     src="/CTA Button.png"
                     alt="Contact Us"
