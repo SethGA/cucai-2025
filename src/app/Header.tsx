@@ -15,9 +15,9 @@ const PixelifySans = Pixelify_Sans({
 const buttons = [
     { name: "About", link: "#about" },
     { name: "Speakers", link: "#speakers" },
-    { name: "Schedule", link: "#schedule" },
-    { name: "Sponsors", link: "#sponsors" },
-    { name: "Register", link: "/" },
+    { name: "Schedule (Soon)", link: "/" },
+    { name: "Sponsors (Soon)", link: "/" },
+    { name: "Register (Soon)", link: "/" },
 ];
 
 export default function Header({

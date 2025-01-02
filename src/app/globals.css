@@ -95,7 +95,7 @@ body {
 }
 
 .first-section .toronto-skyline {
-  background-image: url("/bg-pixel-day.svg");
+  background-image: url("/bg-pixel-day.png");
   width: 100vw;
   height: 1317px;
   justify-content: center;
@@ -108,7 +108,7 @@ body {
 }
 
 .dark-mode .first-section .toronto-skyline{
-  background-image: url("/bg-pixel-night.svg");
+  background-image: url("/bg-pixel-night.png");
   width: 100vw;
   height: 1117px;
   justify-content: center;
