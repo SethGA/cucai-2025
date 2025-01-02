@@ -121,8 +121,7 @@ function CUCAIList() {
 export function CUCAITeamShowcase({isLargeScreen}:{isLargeScreen:boolean}) {
 
   return (
-    <div>
-    <div className="sixth-section">
+    <div className="sixth-section w-full">
       {/*
           Leaders Behind the Vision
       */}
@@ -145,19 +144,13 @@ export function CUCAITeamShowcase({isLargeScreen}:{isLargeScreen:boolean}) {
               <CUCAITeam />
               <CUCAITeam />
             </div>
-            <a
-              target="_blank"
-              className="flex w-full items-center justify-center hover:bg-white/10 rounded-md p-2"
-              href={person.linkedin}
-            >
-              <img src="/linkedin.png" className="h-5" />
-            </a>
-          </div>
-        ))}
+          </main>
+        ) : (
+          <main className="custom-main3">
+            <CUCAIList />
+          </main>
+        )}
       </div>
     </div>
-  </main>
-  
-  </div>
   );
 }
