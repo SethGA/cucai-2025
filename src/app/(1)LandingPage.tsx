@@ -17,12 +17,12 @@ export function Landing({windowWidth}:{windowWidth:number}) {
           <Countdown font={PixelifySans}/>
           {windowWidth >= 706 ? (
             <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
-              Experience AI's Future at CUCAI 2025!
+              Experience AI&apos;s Future at CUCAI 2025!
             </h1>          
           ) : (
             <div>
               <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
-                Experience AI's
+                Experience AI&apos;s
               </h1>          
               <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
                 Future at
