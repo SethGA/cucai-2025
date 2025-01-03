@@ -31,11 +31,13 @@ export function ContactUs({windowWidth}:{windowWidth:number}) {
         </div>
       </div>
 
-      <img
-        src="/image 32.png"
-        alt={"CUCAI Team Picture"}
-        className="join-us-pic py-8"
-      />
+      <div className="pixel-corners--wrapper">
+        <img
+          src="/image 32.png"
+          alt={"CUCAI Team Picture"}
+          className="pixel-corners h-[350px] object-cover bg-gradient-to-t from-[#547192]/0 to-[#002b5c]/50"
+        ></img>
+      </div>
     </div>
   );
 }

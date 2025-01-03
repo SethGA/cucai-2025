@@ -24,6 +24,12 @@ export const leaders = [
     linkedin: "https://www.linkedin.com/in/leo-mont",
   },
   {
+    name: "Rowan McDonald",
+    headshot: "/headshots/rowan-mcdonald_processed.jpg",
+    title: "Director of Finance",
+    linkedin: "https://www.linkedin.com/in/rowan-m",
+  },
+  {
     name: "Aiya Farhan",
     headshot: "/headshots/aiya-farhan.png",
     title: "Director of Marketing / Illustrator",
