@@ -1,7 +1,7 @@
 export const leaders = [
   {
     name: "Seth Grief-Albert",
-    headshot: "/headshots/seth-grief-albert.png",
+    headshot: "/headshots/sethga_processed.jpg",
     title: "Co-Chair",
     linkedin: "https://www.linkedin.com/in/sethgriefalbert/",
   },
@@ -18,15 +18,21 @@ export const leaders = [
     linkedin: "https://ca.linkedin.com/in/merd",
   },
   {
-    name: "Kira Rohra",
-    headshot: "/headshots/kira-rohra.png",
-    title: "Director of Marketing",
-    linkedin: "https://www.linkedin.com/in/kira-rohra/",
+    name: "Leonardo Montes Quiliche",
+    headshot: "/headshots/leo-montes_processed.png",
+    title: "Director of Sponsorship",
+    linkedin: "https://www.linkedin.com/in/leo-mont",
+  },
+  {
+    name: "Rowan McDonald",
+    headshot: "/headshots/rowan-mcdonald_processed.jpg",
+    title: "Director of Finance",
+    linkedin: "https://www.linkedin.com/in/rowan-m",
   },
   {
     name: "Aiya Farhan",
     headshot: "/headshots/aiya-farhan.png",
-    title: "Illustrator",
+    title: "Director of Marketing / Illustrator",
     linkedin: "https://www.linkedin.com/in/aiya-farhan-94243b233/",
   },
   {

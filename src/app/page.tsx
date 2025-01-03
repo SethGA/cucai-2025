@@ -47,9 +47,17 @@ export default function Home() {
   }, []);
 
   // Debug code to check where user is - may be useful in future
-  window.addEventListener("scroll", () => {
-    console.log(`Current position: X = ${window.scrollX}, Y = ${window.scrollY}`);
-  });
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const handleScroll = () => {
+        console.log(`Current position: X = ${window.scrollX}, Y = ${window.scrollY}`);
+      };
+      window.addEventListener("scroll", handleScroll);
+  
+      // Cleanup on component unmount
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, []);
 
   return (
     <div className="w-full overflow-x-hidden m-auto">

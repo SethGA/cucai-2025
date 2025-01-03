@@ -53,32 +53,24 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
 
   return (
     <div id="student-partners" className="fourth-section">
-      <div>
-        <div className="title">
+      <div className="flex flex-col">
+        <div className="title flex-shrink-0">
           <p className="small-liner">OUR STUDENT PARTNERS</p>
-          {windowWidth >= 768 ? (
-            <h1 className={"big-liner" + " w-[70%] sm:w-full h-auto break-words"}>
-              {"Empowering Tomorrow's Experts Today"}
-            </h1>
-          ) : (
-            <>
-              <h1 className={"big-liner " + PixelifySans.className}>
-                {"Empowering Tomorrow's Experts Today"}
-              </h1>
-            </>
-          )}
+          <h1 className={"big-text " + PixelifySans.className + " w-[70%] sm:w-full h-auto break-words"}>
+            Empowering Tomorrow&apos;s Experts Today
+          </h1>
         </div>
-        <div className="partner-content">
+        <div className="partner-content flex flex-col items-center">
           <div className="flex flex-col justify-center items-center self-stretch">
             <div 
-              className="partner-feature flex flex-col md:flex-row gap-8 overflow-hidden mt-8 ml-[20px] min-w-[382px]"
+              className="partner-feature flex flex-col md:flex-row gap-8 overflow-hidden mt-8 mx-auto min-w-[382px]"
               style={{
                 background: `rgb(${qmind_color[0]}, ${qmind_color[1]}, ${qmind_color[2]})`,
               }}
             >
               <div className={"main-partner-text"}>
                 <h1 className={"main-partner-title " + (isDark ? "invert " : " ") + (windowWidth >= 964 ? "text-right self-end" : "text-center")}>QMIND</h1>
-                <p className={"main-partner-details " + (windowWidth >= 964 ? "text-right self-end" : "text-center")}>
+                <p className={"main-partner-details text-center" + (windowWidth >= 964 ? "text-right self-end" : "text-center")}>
                   {"Queen's University"}
                 </p>
                 <p className="main-partner-links">
@@ -112,20 +104,20 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
                 width={488}
                 height={155}
                 alt="QMIND Logo"
-                className={"main-feature-logo" + (windowWidth >= 768 ? " py-[2px] pl-[2px] pr-4" : " p-[32px]")}
+                className={"main-feature-logo" + (windowWidth >= 768 ? " py-[2px] pl-[2px] pr-4" : " p-[32px] mx-auto")}
               />
             </div>
           </div>
           {/* TODO: Fix typing problem */}
-          <div>
-            <div className="partner-grid items-center">
+          <div className="flex justify-center">
+            <div className="partner-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {chunked_partners.map((row, row_index) => (
                 <div className="partner-rows py-4" key={row_index}>
                   {row.map((partner) => (
                     <div key={partner.name}>
                       <div className="flex flex-col justify-center items-center self-stretch">
                         <div
-                          className={"partner-body flex flex-col h-[347px] w-[382px] gap-4 mt-8 ml-[40px] " + (windowWidth > 693 ? "-ml-[50px]" : "")}
+                          className={"partner-body flex flex-col h-[347px] w-[382px] gap-4 mt-8 mx-auto " + (windowWidth > 693 ? "-ml-[50px]" : "")}
                           key={partner.name}
                           style={{
                             background: `linear-gradient(to bottom, ${gradients[row_index].from}, ${gradients[row_index].to})`,
@@ -133,14 +125,14 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
                         >
                           <img
                             src={partner.logo}
-                            className="w-[182px] h-[100px] mt-8 object-contain " 
+                            className="w-[182px] h-[100px] mt-8 object-contain mx-auto" 
                           ></img>
-                          <p className="font-bold !text-[23pt]">{partner.name}</p>
-                          <p className="text-[16pt] font-normal">
+                          <p className="font-bold !text-[23pt] text-center">{partner.name}</p>
+                          <p className="text-[16pt] font-normal text-center">
                             {partner.university}
                           </p>
 
-                          <p className="partner-inner-text">
+                          <p className="partner-inner-text text-center">
                             <a className="partner-links gap-2" href={partner.website}>
                               <u className="partner-link-text">Website</u>
                               <Image
