@@ -55,14 +55,20 @@ export const leaders = [
   },
   {
     name: "Kevin Wang",
-    headshot: "/headshots/kevin-wang.png",
+    headshot: "/headshots/kevin-wang_a.png",
     title: "Front End Developer",
     linkedin: "https://www.linkedin.com/in/kevin-wang-9b1650226/",
   },
   {
     name: "Ryan Su",
-    headshot: "/headshots/ryan-su.png",
+    headshot: "/headshots/ryan-su_a.png",
     title: "Front End Developer",
     linkedin: "https://www.linkedin.com/in/ryan-z-su/",
+  },
+  {
+    name: "Sara Laker",
+    headshot: "/headshots/sara-laker_a.png",
+    title: "Director of Logistics",
+    linkedin: "https://www.linkedin.com/in/sara-laker",
   },
 ];
