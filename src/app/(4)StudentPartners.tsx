@@ -120,7 +120,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
           <div>
             <div className="partner-grid items-center">
               {chunked_partners.map((row, row_index) => (
-                <div className="partner-rows py-4" key={"Partner Rows"}>
+                <div className="partner-rows py-4" key={row_index}>
                   {row.map((partner) => (
                     <div key={partner.name}>
                       <div className="flex flex-col justify-center items-center self-stretch">

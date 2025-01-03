@@ -41,7 +41,7 @@ export default function MainMenu({
                         {b.name}
                     </a>
                 ))}
-                <a href="/" className={"table-cell p-[10px] " + `text-[${fontSize}px] ` + (isDark ? "invert " : "") + font.className} key="Contact Us">
+                <a href="mailto:chair@cucai.ca" className={"table-cell p-[10px] " + `text-[${fontSize}px] ` + (isDark ? "invert " : "") + font.className} key="Contact Us">
                     Contact Us
                 </a>
             </DrawerContent>

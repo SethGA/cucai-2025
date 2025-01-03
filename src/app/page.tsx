@@ -46,6 +46,10 @@ export default function Home() {
     }
   }, []);
 
+  // Debug code to check where user is - may be useful in future
+  window.addEventListener("scroll", () => {
+    console.log(`Current position: X = ${window.scrollX}, Y = ${window.scrollY}`);
+  });
 
   return (
     <div className="w-full overflow-x-hidden m-auto">
