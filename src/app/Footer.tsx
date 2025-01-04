@@ -8,7 +8,7 @@ export function Footer() {
     <div className="footer">
       <div className="contact-us">
         {/* <Image src="/image.png" alt="CUCAI logo" width={142.8} height={68} /> */}
-        Contact Us
+        <a href="mailto:chair@cucai.ca">Contact Us</a>
       </div>
       <div className="menu-list">
         {buttons.map((b) => (

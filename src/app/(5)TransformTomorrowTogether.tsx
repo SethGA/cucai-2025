@@ -20,7 +20,7 @@ export function ContactUs({windowWidth}:{windowWidth:number}) {
           <div className={"text-part" + " w-[70%] sm:w-full h-auto break-words"}>
             <p>Have questions or want to get involved?</p>
             <p>Get in touch with us and join the CUCAI Community!</p>
-            <a href="/">
+            <a href="mailto:chair@cucai.ca">
               <img
                 src="contact-us-button.png"
                 alt="Contact Us Button"

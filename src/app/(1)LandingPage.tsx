@@ -32,9 +32,9 @@ export function Landing({windowWidth}:{windowWidth:number}) {
               </h1>
             </div>          
           )}
-          <a href="/">
+          <a href="https://discord.gg/az6MVvNhdB">
             <img
-              src="register-now.png"
+              src="join-discord.png"
               alt="Apply to CUCAI"
               className=" h-[50px] w-[152px] hover:brightness-110 active:brightness-90"
             />

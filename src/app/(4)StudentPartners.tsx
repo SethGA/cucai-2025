@@ -167,7 +167,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
           </div>
         </div>
       </div>
-      <a href="/" className="partner-button--wrapper">
+      <a href="mailto:chair@cucai.ca" className="partner-button--wrapper">
         <img
           src="become_a_partner.png"
           alt="Become A Partner"
