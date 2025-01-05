@@ -496,9 +496,9 @@ body {
 }
 
 .main-partner-text .main-partner-details {
-  font-size: 22px;
+  /* font-size: 22px; */
   font-weight: 400;
-  text-align: right;
+  /* text-align: right; */
   line-height: 37.4px;
   /* text-align: left; */
   /* width: 592px; */
@@ -509,7 +509,7 @@ body {
 
 .main-partner-text .main-partner-links {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 24px;
 
   color: var(--neutrals-black, #000);
@@ -529,7 +529,6 @@ body {
 
 .main-partner-links .inner-text {
   display: flex;
-  /* margin-right: 5%; */
 }
 
 .link-symbol {

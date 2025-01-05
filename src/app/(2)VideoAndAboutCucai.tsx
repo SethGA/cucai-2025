@@ -38,7 +38,7 @@ export function AboutCucai({isLargeScreen}:{isLargeScreen:boolean}) {
           <p className={"small-font" + " w-[70%] sm:w-full h-auto break-words"}>
             Discover, innovate, and shape the future of AI with us!
           </p>
-          <a href="/">
+          <a href="mailto:chair@cucai.ca">
             <img
               src="apply.png"
               alt="Apply to CUCAI"

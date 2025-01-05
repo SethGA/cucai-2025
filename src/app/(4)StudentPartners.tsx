@@ -63,18 +63,20 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
         <div className="partner-content flex flex-col items-center">
           <div className="flex flex-col justify-center items-center self-stretch">
             <div 
-              className="partner-feature flex flex-col md:flex-row gap-8 overflow-hidden mt-8 mx-auto min-w-[382px]"
+              className="partner-feature flex flex-col md:flex-row gap-8 overflow-hidden mt-8 mx-auto min-w-[382px] pixel-corners--wrapper p-2"
               style={{
                 background: `rgb(${qmind_color[0]}, ${qmind_color[1]}, ${qmind_color[2]})`,
               }}
             >
               <div className={"main-partner-text"}>
                 <h1 className={"main-partner-title " + (isDark ? "invert " : " ") + (windowWidth >= 964 ? "text-right self-end" : "text-center")}>QMIND</h1>
-                <p className={"main-partner-details text-center" + (windowWidth >= 964 ? "text-right self-end" : "text-center")}>
+                <p className={"main-partner-details text-[22px] " 
+                  + (windowWidth >= 964 ? "text-right self-end " : "text-center ")
+                  + ( (windowWidth >= 948 || windowWidth <= 761) ? " text-[22px]" : " text-[15px]")}>
                   {"Queen's University"}
                 </p>
-                <p className="main-partner-links">
-                  <a className={"inner-text ml-[32px] gap-2 " + (isDark ? "invert" : "")} href="https://qmind.ca/">
+                <p className="main-partner-links mx-auto">
+                  <a className={"inner-text gap-2 " + (isDark ? "invert" : "")} href="https://qmind.ca/">
                     <u>Website</u>
                     <Image
                       src={"/Link.png"}
@@ -85,7 +87,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
                     />
                   </a>
                   <a
-                    className={`inner-text ml-[32px] gap-2 ${isDark ? "invert" : ""}`}
+                    className={`inner-text gap-2 ${isDark ? "invert" : ""}`}
                     href="https://www.instagram.com/qmind.ai/"
                   >
                     <u>Insta</u>
@@ -110,14 +112,14 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
           </div>
           {/* TODO: Fix typing problem */}
           <div className="flex justify-center">
-            <div className="partner-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="partner-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 ml-[40px]">
               {chunked_partners.map((row, row_index) => (
                 <div className="partner-rows py-4" key={row_index}>
                   {row.map((partner) => (
                     <div key={partner.name}>
                       <div className="flex flex-col justify-center items-center self-stretch">
                         <div
-                          className={"partner-body flex flex-col h-[347px] w-[382px] gap-4 mt-8 mx-auto " + (windowWidth > 693 ? "-ml-[50px]" : "")}
+                          className={"pixel-corners partner-body flex flex-col h-[347px] w-[382px] gap-4 mt-8 mx-auto " + (windowWidth > 693 ? "-ml-[50px]" : "")}
                           key={partner.name}
                           style={{
                             background: `linear-gradient(to bottom, ${gradients[row_index].from}, ${gradients[row_index].to})`,
