@@ -25,6 +25,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: rgb(var(--background-rgb));
 }
@@ -191,91 +195,7 @@ body {
 
 
 .second-section {
-  display: flex;
   background: linear-gradient(rgba(77, 136, 255, 1), rgba(162, 216, 235, 1) 20%);
-  padding: 100px 80px 100px 80px;
-  /* Remove height when adding elements */
-  min-height: 1020px;
-  min-width: 700px;
-  position: relative;
-}
-
-.second-section .web-video {
-  border-radius: 24px;
-  border-color: rgba(23, 20, 86, 1);
-  min-width: 401px;
-  min-height: 701px;
-  border-width: 8px;
-}
-
-.second-section .main-text {
-  max-width: 600px;
-  /* height: 431px; */
-  gap: 24px;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 28.8px;
-  text-align: left;
-  margin-top: 25%;
-  /* margin-left: 30%; */
-  /* margin-right: 5000%; */
-}
-
-.main-text .big-font {
-  /* height: 124px; */
-  font-size: 52px;
-  font-weight: 700;
-  line-height: 62.4px;
-  color: rgba(23, 20, 86, 1);
-}
-
-.dark-mode .main-text .big-font {
-  height: 124px;
-  font-size: 52px;
-  font-weight: 700;
-  line-height: 62.4px;
-  color: white;
-}
-
-
-.main-text .small-font {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 37.4px;
-  margin-top: 5%;
-}
-
-.main-text .register-button {
-  padding: 14px 32px 14px 32px;
-  border-radius: 50px;
-  background-color: rgba(71, 5, 210, 1);
-  color: white;
-  margin-left: 39%;
-  line-height: 100px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-  margin-left: 0%;
-}
-
-.dark-mode .main-text .register-button {
-  padding: 14px 32px 14px 32px;
-  border-radius: 50px;
-  background-color: transparent;
-  border: 2px solid white; /* Visible white border */
-  color: white;
-  margin-left: 39%;
-  line-height: 100px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-  margin-left: 0%;
-  transition: border-color 0.3s, color 0.3s;
-}
-
-.dark-mode .main-text .register-button:hover {
-  border-color: rgba(255, 255, 255, 0.8); /* Slightly lighter border on hover */
-  color: rgba(255, 255, 255, 0.8); /* Slightly lighter text color on hover */
 }
 
 .tbd-section {

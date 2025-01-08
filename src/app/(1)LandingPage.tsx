@@ -9,20 +9,20 @@ const PixelifySans = Pixelify_Sans({
   style: ["normal"],
 });
 
-export function Landing({windowWidth}:{windowWidth:number}) {
+export function Landing({windowWidth, isDark}:{windowWidth:number, isDark:boolean}) {
   return (
     <div className="first-section">
       <div className="toronto-skyline">
         <div className="white-box flex flex-col items-center gap-8 w-full">
-          <Countdown font={PixelifySans}/>
+          <Countdown font={PixelifySans} isDark={isDark}/>
           {windowWidth >= 706 ? (
             <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
-              Experience AI's Future at CUCAI 2025!
+              Experience AI&apos;s Future at CUCAI 2025!
             </h1>          
           ) : (
             <div>
               <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
-                Experience AI's
+                Experience AI&apos;s
               </h1>          
               <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
                 Future at

@@ -3,7 +3,7 @@
 import { NextFont } from "next/dist/compiled/@next/font";
 import { useState, useEffect } from "react";
 
-export function Countdown({font}:{font:NextFont}){
+export function Countdown({font, isDark}:{font:NextFont, isDark:boolean}){
     const CUCAIDate = new Date('March 8, 2025 00:00:00').getTime();
     const [diff, setDiff] = useState({
         "days":0,
@@ -48,8 +48,7 @@ export function Countdown({font}:{font:NextFont}){
 
     return(
         <div 
-            className={"sm:text-base md:text-2xl lg:text-2xl " + font.className} 
-            style={{color: "rgba(23, 20, 86, 1)"}}>
+            className={"sm:text-base md:text-2xl lg:text-2xl " + font.className + " " + (isDark ? "text-white" : "text-[#171456]")}>
                 {(CUCAIDate - new Date().getTime() > 0) ? `${diff.days} Days, ${diff.hours} Hours, ${diff.minutes} Minutes, and ${diff.seconds} Seconds` : "COUNTDOWN HAS ENDED"}
             {/* <h1 className={font.className}>{calcTimeLeft()}</h1> */}
         </div>

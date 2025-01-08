@@ -10,7 +10,6 @@ import { CUCAITeamShowcase } from "./(6)LeadersBehindTheVision";
 import { Footer } from "./Footer";
 import { useState, useEffect } from "react";
 
-
 // TODO: Add other Uni's website and instagram links
 
 const buttons = [
@@ -46,25 +45,25 @@ export default function Home() {
     }
   }, []);
 
-  // Debug code to check where user is - may be useful in future
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const handleScroll = () => {
-        console.log(`Current position: X = ${window.scrollX}, Y = ${window.scrollY}`);
-      };
-      window.addEventListener("scroll", handleScroll);
+  // // Debug code to check where user is - may be useful in future
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     const handleScroll = () => {
+  //       console.log(`Current position: X = ${window.scrollX}, Y = ${window.scrollY}`);
+  //     };
+  //     window.addEventListener("scroll", handleScroll);
   
-      // Cleanup on component unmount
-      return () => window.removeEventListener("scroll", handleScroll);
-    }
-  }, []);
+  //     // Cleanup on component unmount
+  //     return () => window.removeEventListener("scroll", handleScroll);
+  //   }
+  // }, []);
 
   return (
-    <div className="w-full overflow-x-hidden m-auto">
+    <div className={`w-[${windowWidth}px] overflow-x-hidden m-auto`}>
       <Header windowWidth={windowWidth} isDark={isDark} setDark={setDark}/>
-      <Landing windowWidth={windowWidth}/>
+      <Landing windowWidth={windowWidth} isDark={isDark}/>
       <div id="about">
-        <AboutCucai isLargeScreen={windowWidth >= 500}/>
+        <AboutCucai windowWidth={windowWidth} isDark={isDark}/>
       </div>
       <div id="speakers">
         <div className="third-section overflow-auto overflow-x-hidden max-h-full">
