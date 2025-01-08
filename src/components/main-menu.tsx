@@ -1,9 +1,10 @@
 "use client"
 
-import { useMediaQuery } from "./hooks/use-media-query"
 import { Drawer, DrawerContent, DrawerTrigger } from "./ui/drawer";
 import { NextFont } from "next/dist/compiled/@next/font";
 import { MenuIcon } from "lucide-react";
+import { act, useEffect, useState } from "react";
+import { usePathname } from 'next/navigation'
 
 export default function MainMenu({
     isDark,
@@ -17,13 +18,34 @@ export default function MainMenu({
     }[],
     font:NextFont;
 }){
+    const [isOpen, setIsOpen] = useState(false);
+    const [activeURL, setActiveUrl] = useState("/");
+
     // const isDesktop = useMediaQuery("(min-width: 906px)");
     const fontSize = 50;
 
+    // const pathname = usePathname();
+
+    useEffect(() => {
+        console.log(window.location.href);
+        console.log(activeURL);
+
+        const element = activeURL != "/" && document.querySelector(activeURL);
+        if (!isOpen) {
+            // setActiveUrl(window.location.href);
+            if(element){
+                element.scrollIntoView({block : "start"});
+            }
+        }
+    }, [activeURL, isOpen]);
+    
+    
+
+
     return <div className="absolute right-0 pr-4">
-        <Drawer direction="right">
+        <Drawer direction="right" open={isOpen} onClose={() => setIsOpen(false)}>
             <DrawerTrigger>
-                <MenuIcon size={75} color="white" className={!isDark ? "invert" : ""}/>
+                <MenuIcon size={75} color="white" className={!isDark ? "invert" : ""} onClick={() => setIsOpen(true)}/>
             </DrawerTrigger>
             <DrawerContent 
                 // style={{
@@ -37,7 +59,11 @@ export default function MainMenu({
                 className="menu-list"
                 >
                 {items.map((b) => (
-                    <a href={b.link} className={"table-cell p-[10px] " + `text-[${fontSize}px] ` + (isDark ? "invert " : "") + font.className} key={b.name}>
+                    <a 
+                        href={b.link} 
+                        className={"table-cell p-[10px] " + `text-[${fontSize}px] ` + (isDark ? "invert " : "") + font.className} 
+                        key={b.name}
+                        onClick={() => setActiveUrl(b.link)}>
                         {b.name}
                     </a>
                 ))}

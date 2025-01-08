@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { Pixelify_Sans } from "next/font/google";
 import { student_partners } from "@/data/student_partners";

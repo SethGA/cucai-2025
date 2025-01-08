@@ -51,6 +51,8 @@ export default function Header({
         onRest: () => setFlip(!flip)
     });
 
+    // console.log("Header re-rendered");
+
     const changeImage = () => {
         setTransition(true);
         setTimeout(() => {
