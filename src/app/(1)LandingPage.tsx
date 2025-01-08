@@ -1,5 +1,8 @@
 "use client";
 
+// TODO: TEAR THIS ALL DOWN AND START OVER 
+// Yes, that includes CSS as well.
+
 import { Pixelify_Sans } from "next/font/google";
 import {Countdown} from "./CountDown"
 

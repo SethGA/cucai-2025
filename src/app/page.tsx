@@ -63,7 +63,7 @@ export default function Home() {
       <Header windowWidth={windowWidth} isDark={isDark} setDark={setDark}/>
       <Landing windowWidth={windowWidth}/>
       <div id="about">
-        <AboutCucai isLargeScreen={windowWidth >= 500}/>
+        <AboutCucai windowWidth={windowWidth}/>
       </div>
       <div id="speakers">
         <div className="third-section overflow-auto overflow-x-hidden max-h-full">
