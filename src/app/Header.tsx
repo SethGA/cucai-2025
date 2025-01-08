@@ -124,6 +124,7 @@ export default function Header({
                             getImage()
                         )}
                     </button>
+
                     <MainMenu 
                         isDark={isDark} 
                         items={buttons} 

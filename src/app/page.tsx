@@ -59,11 +59,11 @@ export default function Home() {
   // }, []);
 
   return (
-    <div className="w-full overflow-x-hidden m-auto no-scrollbar">
+    <div className={`w-[${windowWidth}px] overflow-x-hidden m-auto`}>
       <Header windowWidth={windowWidth} isDark={isDark} setDark={setDark}/>
-      <Landing windowWidth={windowWidth}/>
+      <Landing windowWidth={windowWidth} isDark={isDark}/>
       <div id="about">
-        <AboutCucai windowWidth={windowWidth}/>
+        <AboutCucai windowWidth={windowWidth} isDark={isDark}/>
       </div>
       <div id="speakers">
         <div className="third-section overflow-auto overflow-x-hidden max-h-full">

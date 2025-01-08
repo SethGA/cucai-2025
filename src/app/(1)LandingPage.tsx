@@ -1,8 +1,5 @@
 "use client";
 
-// TODO: TEAR THIS ALL DOWN AND START OVER 
-// Yes, that includes CSS as well.
-
 import { Pixelify_Sans } from "next/font/google";
 import {Countdown} from "./CountDown"
 
@@ -12,12 +9,12 @@ const PixelifySans = Pixelify_Sans({
   style: ["normal"],
 });
 
-export function Landing({windowWidth}:{windowWidth:number}) {
+export function Landing({windowWidth, isDark}:{windowWidth:number, isDark:boolean}) {
   return (
     <div className="first-section">
       <div className="toronto-skyline">
         <div className="white-box flex flex-col items-center gap-8 w-full">
-          <Countdown font={PixelifySans}/>
+          <Countdown font={PixelifySans} isDark={isDark}/>
           {windowWidth >= 706 ? (
             <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
               Experience AI&apos;s Future at CUCAI 2025!

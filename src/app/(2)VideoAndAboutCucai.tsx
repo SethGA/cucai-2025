@@ -15,12 +15,23 @@ const border = 950;
 // Do we also have a width bug? This section seems unnaturally large, causing extra whitespace
 
 // justify-center requires flex-row
-export function AboutCucai({windowWidth}:{windowWidth:number}) {
+export function AboutCucai({windowWidth, isDark}:{windowWidth:number, isDark:boolean}) {
   // console.log(windowWidth);
+
+  const [start, end] = isDark ? [
+    "#171456",
+    "#404084"
+  ] : [
+    "#4d88ff",
+    "#a2d8eb"
+  ];
+  const textColor = isDark ? "text-white" : "text-black";
+
+  console.log([start, end]);
 
   return (
     // To center elements on small screens
-    <div className={`flex flex-row bg-gradient-to-b from-[#4d88ff] to-[#a2d8eb] ${windowWidth < border && "justify-center"}`}>
+    <div className={`second-section flex flex-row ${windowWidth < border && "justify-center"}`}>
 
       {/* Parent container of main elements */}
       <div className={`flex ${windowWidth < border && "flex-col"} px-[80px] py-[100px]`}>
@@ -37,18 +48,18 @@ export function AboutCucai({windowWidth}:{windowWidth:number}) {
         </div>
 
         {/* This body works */}
-        <div className={`${PixelifySans.className} ${windowWidth >= border ? "ml-[7vw]" : "mt-[5vh]"}`}>
-          <p className={`text-[24px]`}>ABOUT CUCAI</p>
-          <p className={`text-[52px] leading-[62.4px] font-[700] text-[#171456]`}>Where Tomorrow&apos;s AI Innovators Meet</p>
-          <p className={`font-[400] mt-[30px] text-[22px]`}>
+        <div className={`${PixelifySans.className} ${textColor} ${windowWidth >= border ? "ml-[7vw]" : "mt-[5vh]"}`}>
+          <p className={`text-[24px] ${textColor}`}>ABOUT CUCAI</p>
+          <p className={`text-[52px] leading-[62.4px] font-[700] ${isDark ? "text-white" : "text-[#171456]"}`}>Where Tomorrow&apos;s AI Innovators Meet</p>
+          <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
             Join the Canadian Undergraduate Conference in AI (CUCAI) to connect
             with students, researchers, and industry leaders exploring
             cutting-edge AI.
           </p>
-          <p className={`font-[400] mt-[30px] text-[22px]`}>
+          <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
             Discover, innovate, and shape the future of AI with us!
           </p>
-          <p className={`font-[400] mt-[30px] text-[22px]`}>
+          <p className={`font-[400] mt-[30px] text-[22px] ${windowWidth < border && "flex flex-row justify-center"}`}>
             <a href="mailto:chair@cucai.ca">
               <img
                 src="apply.png"
