@@ -1,7 +1,7 @@
 "use client";
 
 import { Pixelify_Sans } from "next/font/google";
-import {Countdown} from "./CountDown"
+import { Countdown } from "./CountDown";
 
 const PixelifySans = Pixelify_Sans({
   subsets: ["cyrillic", "latin", "latin-ext"],
@@ -9,32 +9,54 @@ const PixelifySans = Pixelify_Sans({
   style: ["normal"],
 });
 
-export function Landing({windowWidth}:{windowWidth:number}) {
+export function Landing({
+  windowWidth,
+  isDark,
+}: {
+  windowWidth: number;
+  isDark: boolean;
+}) {
   return (
     <div className="first-section">
-      <div className="toronto-skyline">
+      <div className="toronto-skyline px-4">
         <div className="white-box flex flex-col items-center gap-8 w-full">
-          <Countdown font={PixelifySans}/>
+          <Countdown font={PixelifySans} isDark={isDark} />
           {windowWidth >= 706 ? (
-            <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+            <h1
+              className={
+                "title text-[50px] sm:text-[84px] " + PixelifySans.className
+              }
+            >
               Experience AI&apos;s Future at CUCAI 2025!
-            </h1>          
+            </h1>
           ) : (
             <div>
-              <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+              <h1
+                className={
+                  "title text-[50px] sm:text-[84px] " + PixelifySans.className
+                }
+              >
                 Experience AI&apos;s
-              </h1>          
-              <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+              </h1>
+              <h1
+                className={
+                  "title text-[50px] sm:text-[84px] " + PixelifySans.className
+                }
+              >
                 Future at
-              </h1>          
-              <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+              </h1>
+              <h1
+                className={
+                  "title text-[50px] sm:text-[84px] " + PixelifySans.className
+                }
+              >
                 CUCAI 2025!
               </h1>
-            </div>          
+            </div>
           )}
-          <a href="/">
+          <a href="https://discord.gg/az6MVvNhdB">
             <img
-              src="register-now.png"
+              src="join-discord.png"
               alt="Apply to CUCAI"
               className=" h-[50px] w-[152px] hover:brightness-110 active:brightness-90"
             />

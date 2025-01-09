@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Tiny5&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Tiny5&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -15,7 +15,6 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
     --background-z: linear-gradient(180deg, #404084 0%, #171456 100%);
-
   }
 }
 
@@ -35,15 +34,14 @@ body {
 
 .header {
   display: flex;
-  background: #7364FF;
+  background: #7364ff;
   justify-content: space-between;
   padding: 8px 80px 8px 80px;
   gap: 8px;
 }
 
-.dark-mode .header{
+.dark-mode .header {
   background: #171456;
-
 }
 .header .menu-list {
   display: table;
@@ -53,7 +51,6 @@ body {
   font-weight: 400;
   color: rgb(255, 255, 255);
   gap: 16px;
-
 }
 
 .menu-list .menu-option {
@@ -88,14 +85,21 @@ body {
 
 .first-section {
   display: flex;
-  background: linear-gradient(rgba(115, 100, 255, 1), rgba(162,216,235, 1) 15%);
+  background: linear-gradient(
+    rgba(115, 100, 255, 1),
+    rgba(162, 216, 235, 1) 15%
+  );
   justify-content: center;
   align-items: center;
 }
 
-.dark-mode .first-section{
-  background: linear-gradient(180deg, #171456 0%, #6A6CB3 34.4%, #171456 105.8%);
-
+.dark-mode .first-section {
+  background: linear-gradient(
+    180deg,
+    #171456 0%,
+    #6a6cb3 34.4%,
+    #171456 105.8%
+  );
 }
 
 .first-section .toronto-skyline {
@@ -111,7 +115,7 @@ body {
   box-sizing: border-box;
 }
 
-.dark-mode .first-section .toronto-skyline{
+.dark-mode .first-section .toronto-skyline {
   background-image: url("/bg-pixel-night.png");
   width: 100vw;
   height: 1117px;
@@ -124,26 +128,25 @@ body {
   box-sizing: border-box;
 }
 
-.dark-mode .white-box .title{
+.dark-mode .white-box .title {
   color: white;
 }
 
 /*after a certain width, the height of the image changes*/
 
-@media(min-width:1568px){
-  .first-section .toronto-skyline{
+@media (min-width: 1568px) {
+  .first-section .toronto-skyline {
     height: 1350px;
   }
 
-  .dark-mode .first-section .toronto-skyline{
+  .dark-mode .first-section .toronto-skyline {
     height: 1350px;
   }
-
 }
 
-.first-section .white-box { 
+.first-section .white-box {
   justify-content: center; /* Horizontally center */
-  align-items: center; 
+  align-items: center;
   max-width: 811px;
   height: 486px;
   align-self: center;
@@ -171,14 +174,12 @@ body {
   width: 650px;
 }
 
-
 .white-box .subtext {
   font-size: 28px;
   font-weight: 400;
   line-height: 39.2px;
   text-align: center;
 }
-
 
 .white-box .register-button {
   /* padding: 14px 32px 14px 32px; */
@@ -193,101 +194,19 @@ body {
   font-size: 18px;
 }
 
-
 .second-section {
-  display: flex;
-  background: linear-gradient(rgba(77, 136, 255, 1), rgba(162, 216, 235, 1) 20%);
-  padding: 100px 80px 100px 80px;
-  /* Remove height when adding elements */
-  min-height: 1020px;
-  min-width: 700px;
-  position: relative;
-}
-
-.second-section .web-video {
-  border-radius: 24px;
-  border-color: rgba(23, 20, 86, 1);
-  min-width: 401px;
-  min-height: 701px;
-  border-width: 8px;
-}
-
-.second-section .main-text {
-  max-width: 600px;
-  /* height: 431px; */
-  gap: 24px;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 28.8px;
-  text-align: left;
-  margin-top: 25%;
-  /* margin-left: 30%; */
-  /* margin-right: 5000%; */
-}
-
-.main-text .big-font {
-  /* height: 124px; */
-  font-size: 52px;
-  font-weight: 700;
-  line-height: 62.4px;
-  color: rgba(23, 20, 86, 1);
-}
-
-.dark-mode .main-text .big-font {
-  height: 124px;
-  font-size: 52px;
-  font-weight: 700;
-  line-height: 62.4px;
-  color: white;
-}
-
-
-.main-text .small-font {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 37.4px;
-  margin-top: 5%;
-}
-
-.main-text .register-button {
-  padding: 14px 32px 14px 32px;
-  border-radius: 50px;
-  background-color: rgba(71, 5, 210, 1);
-  color: white;
-  margin-left: 39%;
-  line-height: 100px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-  margin-left: 0%;
-}
-
-.dark-mode .main-text .register-button {
-  padding: 14px 32px 14px 32px;
-  border-radius: 50px;
-  background-color: transparent;
-  border: 2px solid white; /* Visible white border */
-  color: white;
-  margin-left: 39%;
-  line-height: 100px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-  margin-left: 0%;
-  transition: border-color 0.3s, color 0.3s;
-}
-
-.dark-mode .main-text .register-button:hover {
-  border-color: rgba(255, 255, 255, 0.8); /* Slightly lighter border on hover */
-  color: rgba(255, 255, 255, 0.8); /* Slightly lighter text color on hover */
+  background: linear-gradient(
+    rgba(77, 136, 255, 1),
+    rgba(162, 216, 235, 1) 20%
+  );
 }
 
 .tbd-section {
-  background-color:  rgba(77, 136, 255, 1);
+  background-color: rgba(77, 136, 255, 1);
 }
 
 .third-section {
-  display: block; 
+  display: block;
   background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 136, 255, 1));
   min-height: 859px;
   gap: 36px;
@@ -318,7 +237,7 @@ body {
   margin-top: 2%;
 }
 
-.dark-mode .third-section .small-font{
+.dark-mode .third-section .small-font {
   color: white;
 }
 
@@ -372,25 +291,24 @@ body {
 }
 
 .speaker-position {
-  text-align: center;    /* Center text */
-  font-size: 16pt;       /* Font size of 16pt */
-  font-weight: normal;   /* Normal font weight */
-  color: black;          /* Text color white */
+  text-align: center; /* Center text */
+  font-size: 16pt; /* Font size of 16pt */
+  font-weight: normal; /* Normal font weight */
+  color: black; /* Text color white */
 }
 
-.dark-mode .speaker-position{
+.dark-mode .speaker-position {
   color: white;
 }
 
-.speaker-name{
+.speaker-name {
   text-align: center;
   font-size: 16pt;
   font-weight: bold;
   color: black;
-
 }
 
-.dark-mode .speaker-name{
+.dark-mode .speaker-name {
   color: white;
 }
 
@@ -412,9 +330,8 @@ body {
   display: block;
   background: linear-gradient(rgba(77, 136, 255, 1), rgba(163, 217, 236, 1));
   /* May need to remove height when adding elements */
-  min-height: 1550px; 
+  min-height: 1550px;
   gap: 36px;
-  padding: 100px 80px 100px 80px;
   position: relative;
 }
 
@@ -451,7 +368,7 @@ body {
   margin-left: 15%; */
   /* padding-left: 1.5%; */
   border-radius: 14px;
-  background: #83BBF3;
+  background: #83bbf3;
   box-shadow: 0px 4px 4px 3px rgba(54, 5, 120, 0.25);
   /* position: absolute; */
   /* left: 137px; */
@@ -475,7 +392,7 @@ body {
   display: flex;
   /* margin-top: 3%; */
 }
- 
+
 .partner-feature .main-partner-text {
   display: flex;
   max-width: 390px;
@@ -496,9 +413,9 @@ body {
 }
 
 .main-partner-text .main-partner-details {
-  font-size: 22px;
+  /* font-size: 22px; */
   font-weight: 400;
-  text-align: right;
+  /* text-align: right; */
   line-height: 37.4px;
   /* text-align: left; */
   /* width: 592px; */
@@ -509,7 +426,7 @@ body {
 
 .main-partner-text .main-partner-links {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 24px;
 
   color: var(--neutrals-black, #000);
@@ -529,7 +446,6 @@ body {
 
 .main-partner-links .inner-text {
   display: flex;
-  /* margin-right: 5%; */
 }
 
 .link-symbol {
@@ -552,7 +468,7 @@ body {
   flex-direction: column;
   align-items: center;
   border-radius: 9px;
-  background: #83BBF3;
+  background: #83bbf3;
   box-shadow: 0px 4px 4px 3px rgba(54, 5, 120, 0.25);
   /* position: absolute; */
 }
@@ -605,23 +521,16 @@ body {
   margin-right: 5%;
 }
 
-
-
 .fifth-section {
-  display: flex; 
   background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 135, 255, 1));
   /* May clash with elements CSS */
-  min-height: max-content;
-  padding: 100px 80px 100px 80px;
-  position: relative;
-  gap: 8px;
 }
 
 .join-us-pic {
   border-radius: 24px;
   /* width: 540px;
   height: auto; */
-  /* margin-left: 10%; */
+  margin: 20px;
   width: auto;
   min-height: 300px;
   max-width: 540px;
@@ -629,16 +538,9 @@ body {
   position: relative;
   object-fit: fill;
 }
- 
-.fifth-section .text-part {
-  display: block;
-  /* width: 590px; */
-  /* height: 323px; */
-}
-
 
 /* .text-part .title { */
-  /* height: 161px; */
+/* height: 161px; */
 /* } */
 
 .title .small-text {
@@ -649,8 +551,6 @@ body {
   text-align: left;
   margin-bottom: 3%;
 }
-
-
 
 .title .big-text {
   /* height: 124px; */
@@ -720,31 +620,30 @@ body {
 */
 
 .sixth-section {
-  display: block; 
+  display: block;
   background: rgba(77, 136, 255, 1);
   /* May clash with element CSS */
   min-height: 249px;
   /* padding: 80px; */
   gap: 36px;
   position: relative;
- }
+}
 
- .dark-mode .sixth-section {
-  display: block; 
-  background: linear-gradient(to bottom, #3C3C80, #171456);
+.dark-mode .sixth-section {
+  display: block;
+  background: linear-gradient(to bottom, #3c3c80, #171456);
   /* May clash with element CSS */
   min-height: 249px;
   /* padding: 80px; */
   gap: 36px;
   position: relative;
- }
+}
 
 .sixth-section .team-title {
   /* width: 1280px; */
   /* height: 99px; */
   gap: 8px;
   margin-bottom: 5%;
-  padding: 80px;
 }
 
 .team-title .small-text {
@@ -836,7 +735,7 @@ body {
   display: none;
 }
 .custom-main {
-  font-family: 'IBM Plex Sans', sans-serif; /* Replace with your preferred font-family */
+  font-family: "IBM Plex Sans", sans-serif; /* Replace with your preferred font-family */
   height: 350px;
   width: 100%;
   overflow-x: hidden;
@@ -846,13 +745,13 @@ body {
   align-items: center;
   z-index: 10;
   font-weight: 300; /* Font weight for 'font-light' */
-  color: white;
+
   padding-bottom: 32px;
   background-color: rgba(77, 136, 255, 1);
 }
 
 .custom-main2 {
-  font-family: 'IBM Plex Sans', sans-serif; /* Substitute with actual font import if needed */
+  font-family: "IBM Plex Sans", sans-serif; /* Substitute with actual font import if needed */
   height: 524px;
   width: 100%;
   overflow-x: hidden;
@@ -867,7 +766,7 @@ body {
 }
 
 .custom-main3 {
-  font-family: 'IBM Plex Sans', sans-serif; /* Substitute with actual font import if needed */
+  font-family: "IBM Plex Sans", sans-serif; /* Substitute with actual font import if needed */
   /* height: 524px; */
   width: 100%;
   overflow-x: hidden;
@@ -886,7 +785,7 @@ body {
 }
 
 .dark-mode .custom-main {
-  font-family: 'IBM Plex Sans', sans-serif; /* Replace with your preferred font-family */
+  font-family: "IBM Plex Sans", sans-serif; /* Replace with your preferred font-family */
   height: 350px;
   width: 100%;
   overflow-x: hidden;
@@ -899,27 +798,23 @@ body {
   color: white;
   padding-bottom: 32px;
   background: #171456;
-
 }
-
 
 .footer {
   display: flex;
   background: rgba(77, 136, 255, 1);
-  justify-content: space-between;
-  padding: 8px 80px 24px 80px;
+
   gap: 8px;
 }
 
 .footer .menu-list {
   display: table;
-  justify-content: space-between;
+
   font-size: 14px;
-  align-self: center;
+
   font-weight: 400;
   color: rgb(255, 255, 255);
   gap: 16px;
-  left: 19px;
 }
 
 .footer .contact-us {
@@ -964,7 +859,8 @@ body {
 
 .pixel-corners,
 .pixel-corners--wrapper {
-  clip-path: polygon(0px calc(100% - 12px),
+  clip-path: polygon(
+    0px calc(100% - 12px),
     4px calc(100% - 12px),
     4px calc(100% - 8px),
     8px calc(100% - 4px),
@@ -987,7 +883,8 @@ body {
     8px 4px,
     4px 8px,
     4px 12px,
-    0px 12px);
+    0px 12px
+  );
   position: relative;
 }
 .pixel-corners {
@@ -999,7 +896,8 @@ body {
 }
 .pixel-corners--wrapper .pixel-corners {
   display: block;
-  clip-path: polygon(8px 16px,
+  clip-path: polygon(
+    8px 16px,
     12px 16px,
     12px 12px,
     16px 12px,
@@ -1018,13 +916,15 @@ body {
     16px calc(100% - 12px),
     12px calc(100% - 12px),
     12px calc(100% - 16px),
-    8px calc(100% - 16px));
+    8px calc(100% - 16px)
+  );
 }
 .pixel-corners::after,
 .pixel-corners--wrapper::after {
   content: "";
   position: absolute;
-  clip-path: polygon(0px calc(100% - 12px),
+  clip-path: polygon(
+    0px calc(100% - 12px),
     4px calc(100% - 12px),
     4px calc(100% - 8px),
     8px calc(100% - 4px),
@@ -1071,7 +971,8 @@ body {
     12px calc(100% - 16px),
     8px calc(100% - 16px),
     8px 50%,
-    0px 50%);
+    0px 50%
+  );
   top: 0;
   bottom: 0;
   left: 0;
@@ -1084,10 +985,10 @@ body {
   margin: -8px;
 }
 
-
 .pixel-corners2,
 .pixel-corners2--wrapper {
-  clip-path: polygon(0px calc(100% - 12px),
+  clip-path: polygon(
+    0px calc(100% - 12px),
     4px calc(100% - 12px),
     4px calc(100% - 8px),
     8px calc(100% - 4px),
@@ -1110,7 +1011,8 @@ body {
     8px 4px,
     4px 8px,
     4px 12px,
-    0px 12px);
+    0px 12px
+  );
   position: relative;
 }
 .pixel-corners2 {
@@ -1122,7 +1024,8 @@ body {
 }
 .pixel-corners2--wrapper .pixel-corners {
   display: block;
-  clip-path: polygon(4px 12px,
+  clip-path: polygon(
+    4px 12px,
     8px 12px,
     8px 8px,
     12px 8px,
@@ -1141,13 +1044,15 @@ body {
     12px calc(100% - 8px),
     8px calc(100% - 8px),
     8px calc(100% - 12px),
-    4px calc(100% - 12px));
+    4px calc(100% - 12px)
+  );
 }
 .pixel-corners2::after,
 .pixel-corners2--wrapper::after {
   content: "";
   position: absolute;
-  clip-path: polygon(0px calc(100% - 12px),
+  clip-path: polygon(
+    0px calc(100% - 12px),
     4px calc(100% - 12px),
     4px calc(100% - 8px),
     8px calc(100% - 4px),
@@ -1194,7 +1099,8 @@ body {
     8px calc(100% - 12px),
     4px calc(100% - 12px),
     4px 50%,
-    0px 50%);
+    0px 50%
+  );
   top: 0;
   bottom: 0;
   left: 0;
@@ -1227,47 +1133,40 @@ Fifth Section Change Gradient
 Sixth Section Change Gradient
 .sixth-section 
 */
-.dark-mode{
+.dark-mode {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
 }
 
-
-
-
-.dark-mode .first-section{
-  background: linear-gradient(180deg, #171456 0%, #6A6CB3 34.4%, #171456 105.8%);
-
+.dark-mode .first-section {
+  background: linear-gradient(
+    180deg,
+    #171456 0%,
+    #6a6cb3 34.4%,
+    #171456 105.8%
+  );
 }
 
-.dark-mode .second-section{
-  background: linear-gradient(180deg, #171456 0%, #3F3F83 24.89%);
-
+.dark-mode .second-section {
+  background: linear-gradient(180deg, #171456 0%, #3f3f83 24.89%);
 }
 
-.dark-mode .third-section{
+.dark-mode .third-section {
   background: linear-gradient(180deg, #404084 0%, #171456 100%);
-  
-
 }
 
-.dark-mode .fourth-section{
+.dark-mode .fourth-section {
   background: #171456;
-
 }
 
-.dark-mode .fifth-section{
-  background: linear-gradient(180deg, #171456 0%, #3D3D81 100%);
-
-
+.dark-mode .fifth-section {
+  background: linear-gradient(180deg, #171456 0%, #3d3d81 100%);
 }
 
-.dark-mode .sixth-section{
-  background: linear-gradient(180deg, #3C3C80 0%, #171456 37%);
-
+.dark-mode .sixth-section {
+  background: linear-gradient(180deg, #3c3c80 0%, #171456 37%);
 }
-
 
 .dark-mode .footer {
   display: flex;
@@ -1277,7 +1176,6 @@ Sixth Section Change Gradient
   padding: 8px 80px 24px 80px;
   gap: 8px;
 }
-
 
 @layer base {
   :root {
@@ -1335,7 +1233,6 @@ Sixth Section Change Gradient
   }
 }
 
-
 @layer base {
   * {
     @apply border-border;
@@ -1344,4 +1241,3 @@ Sixth Section Change Gradient
     @apply bg-background text-foreground;
   }
 }
-

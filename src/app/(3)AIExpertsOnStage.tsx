@@ -24,16 +24,19 @@ interface Speaker {
   company: string;
 }
 
-function SpeakerCarousel({ speakers }:{ speakers:Speaker[] }) {
+function SpeakerCarousel({ speakers }: { speakers: Speaker[] }) {
   return (
-    <div className="carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
+    <div
+      className={`carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50 ${PixelifySans.className}`}
+    >
       {speakers.map((speaker, i) => (
         <div
-          className="flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[320px]"
+          className="flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[5vw]"
           key={i}
         >
           <div className="pixel-corners--wrapper">
             <img
+              loading="lazy"
               src={speaker.img}
               alt={"Headshot of " + speaker.name}
               className="pixel-corners h-[250px] object-cover bg-gradient-to-t from-[#547192]/0 to-[#002b5c]/50"
@@ -52,14 +55,15 @@ function SpeakerCarousel({ speakers }:{ speakers:Speaker[] }) {
   );
 }
 
-function SpeakerList({ speakers }:{ speakers:Speaker[] }) {
+function SpeakerList({ speakers }: { speakers: Speaker[] }) {
   return speakers.map((speaker, i) => (
     <div
-      className="flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[320px]"
+      className={`flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[80vw] ${PixelifySans.className}`}
       key={i}
     >
       <div className="pixel-corners--wrapper">
         <img
+          loading="lazy"
           src={speaker.img}
           alt={"Headshot of " + speaker.name}
           className="pixel-corners h-[250px] object-cover bg-gradient-to-t from-[#547192]/0 to-[#002b5c]/50"
@@ -76,17 +80,19 @@ function SpeakerList({ speakers }:{ speakers:Speaker[] }) {
   ));
 }
 
-export function PastSpeakers({isLargeScreen}:{isLargeScreen:boolean}) {
+export function PastSpeakers({ isLargeScreen }: { isLargeScreen: boolean }) {
   return (
-    <div className="third-section">
+    <div className="third-section w-full">
       <div>
-        {/*
-          AI Experts on Stage
-        */}
-
-        <div className="title">
+        <div className="gap-2 py-[100px] md:pb-[70px]  md:px-[80px] px-5">
           <p className="small-font">OUR 2024 SPEAKERS</p>
-          <h1 className={"big-font " + PixelifySans.className + " w-[70%] sm:w-full h-auto break-words"}>
+          <h1
+            className={
+              "big-font " +
+              PixelifySans.className +
+              " sm:w-full h-auto break-words"
+            }
+          >
             AI Experts On Stage
           </h1>
         </div>
