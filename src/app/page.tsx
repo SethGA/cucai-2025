@@ -59,7 +59,7 @@ export default function Home() {
   // }, []);
 
   return (
-    <div className={`w-[${windowWidth}px] overflow-x-hidden m-auto`}>
+    <div className={`overflow-x-hidden m-auto`}>
       <Header windowWidth={windowWidth} isDark={isDark} setDark={setDark}/>
       <Landing windowWidth={windowWidth} isDark={isDark}/>
       <div id="about">
