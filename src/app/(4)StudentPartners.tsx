@@ -33,6 +33,7 @@ export function StudentPartners({
   windowWidth: number;
   isDark: boolean;
 }) {
+  const textColor = isDark ? "text-white" : "text-black";
   const chunked_partners = chunk_array(
     student_partners,
     Math.min(Math.floor(windowWidth / 382), 3)
@@ -53,12 +54,13 @@ export function StudentPartners({
     }, ${end_color[2]})`,
   }));
 
-  console.log(gradients);
-
   return (
-    <div id="student-partners" className="fourth-section">
+    <div
+      id="student-partners"
+      className={`fourth-section ${textColor} py-[100px]`}
+    >
       <div className="flex flex-col">
-        <div className="title md:px-[80px] px-5">
+        <div className="title md:px-[80px] px-5 ">
           <p className="small-liner">OUR STUDENT PARTNERS</p>
           <h1
             className={

@@ -8,33 +8,35 @@ const PixelifySans = Pixelify_Sans({
   style: ["normal"],
 });
 
-export function ContactUs({ windowWidth }: { windowWidth: number }) {
+export function ContactUs({ isDark }: { isDark: boolean }) {
   return (
     // 1401 sm:flex-col md:flex-col lg:flex-row
-    <div className={` flex ${windowWidth > 931 ? "flex-row" : "flex-col"} `}>
-      <div className="text-part  flex-shrink-0">
-        <div className="title flex-shrink-0">
-          <p className="small-text">JOIN US</p>
-          <h1
-            className={
-              "big-text " +
-              PixelifySans.className +
-              " sm:w-[800px] h-auto break-words"
-            }
-          >
-            Transform Tomorrow Together
-          </h1>
-          <div className={"text-part" + " sm:w-full h-auto break-words"}>
-            <p>Have questions or want to get involved?</p>
-            <p>Get in touch with us and join the CUCAI Community!</p>
-            <a href="mailto:chair@cucai.ca">
-              <img
-                src="contact-us-button.png"
-                alt="Contact Us Button"
-                className="contact-button mt-8 hover:brightness-110 active:brightness-90"
-              />
-            </a>
-          </div>
+    <div
+      className={`fifth-section flex md:flex-row flex-col md:px-[80px] px-5 gap-8 py-[100px] ${
+        isDark ? "text-white" : null
+      }`}
+    >
+      <div className="text-part title flex-shrink-0">
+        <p className="small-text">JOIN US</p>
+        <h1
+          className={
+            "big-text " +
+            PixelifySans.className +
+            " sm:w-[800px] h-auto break-words"
+          }
+        >
+          Transform Tomorrow Together
+        </h1>
+        <div className={"text-part" + " sm:w-full h-auto break-words"}>
+          <p>Have questions or want to get involved?</p>
+          <p>Get in touch with us and join the CUCAI Community!</p>
+          <a href="mailto:chair@cucai.ca">
+            <img
+              src="contact-us-button.png"
+              alt="Contact Us Button"
+              className="contact-button mt-8 hover:brightness-110 active:brightness-90"
+            />
+          </a>
         </div>
       </div>
 

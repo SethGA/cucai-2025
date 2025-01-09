@@ -12,13 +12,16 @@ export function About({ isDark }: { isDark: boolean }) {
   const textColor = isDark ? "text-white" : "text-black";
 
   return (
-    <div className="second-section flex flex-col md:flex-row px-5 py-14 md:px-[80px] md:py-[100px] w-full h-full gap-10">
-      <div
-        className={`${PixelifySans.className} ${textColor} border border-cyan-300`}
-      >
+    <div
+      id="about"
+      className="second-section flex flex-col md:flex-row px-5 py-14 md:px-[80px] md:py-[100px] w-full h-full gap-10"
+    >
+      <div className={` ${textColor} border border-cyan-300`}>
         <p className={`text-[24px] ${textColor}`}>ABOUT CUCAI</p>
         <p
-          className={`text-[52px] leading-[62.4px] font-[700] ${
+          className={`${
+            PixelifySans.className
+          } text-[52px] leading-[62.4px] font-[700] ${
             isDark ? "text-white" : "text-[#171456]"
           }`}
         >

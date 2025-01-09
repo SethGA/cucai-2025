@@ -121,15 +121,14 @@ function CUCAIList() {
 
 export function CUCAITeamShowcase({
   isLargeScreen,
+  isDark,
 }: {
   isLargeScreen: boolean;
+  isDark: boolean;
 }) {
+  const textcolor = isDark ? "text-white" : "text-black";
   return (
-    <div className="sixth-section w-full">
-      {/*
-          Leaders Behind the Vision
-      */}
-
+    <div className={`sixth-section w-full ${textcolor} py-[100px]`}>
       <div className="team-title px-5 md:px-[80px]">
         <p className="small-text">MEET OUR TEAM</p>
         <h1
@@ -140,7 +139,6 @@ export function CUCAITeamShowcase({
           Leaders Behind the Vision
         </h1>
       </div>
-      {/* Main has some trailing bottom space - delete this */}
       <div>
         {isLargeScreen ? (
           <main className="custom-main">

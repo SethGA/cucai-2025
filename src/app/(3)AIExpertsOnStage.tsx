@@ -80,11 +80,7 @@ export function PastSpeakers({ isLargeScreen }: { isLargeScreen: boolean }) {
   return (
     <div className="third-section w-full">
       <div>
-        {/*
-          AI Experts on Stage
-        */}
-
-        <div className="gap-2 pt-[100px] md:pb-[70px] pb-[50px] md:px-[80px] px-5">
+        <div className="gap-2 py-[100px] md:pb-[70px]  md:px-[80px] px-5">
           <p className="small-font">OUR 2024 SPEAKERS</p>
           <h1
             className={

@@ -38,7 +38,6 @@ export default function Header({
     reset: false,
     reverse: flip,
     delay: 50,
-    onRest: () => setFlip(!flip),
   });
 
   const fadeOut = useSpring({
@@ -47,7 +46,6 @@ export default function Header({
     reset: false,
     reverse: flip,
     delay: 50,
-    onRest: () => setFlip(!flip),
   });
 
   const changeImage = () => {
@@ -116,7 +114,11 @@ export default function Header({
     };
 
     return (
-      <div className="flex flex-row gap-3 items-center">
+      <div
+        className={`flex flex-row gap-3 items-center ${
+          isDark ? "text-white" : null
+        }`}
+      >
         <button className="menu-toggle min-w-10" onClick={changeImage}>
           {isTransitioning ? (
             <animated.div style={isDark ? fadeIn : fadeOut}>
@@ -132,6 +134,7 @@ export default function Header({
           items={buttons}
           font={PixelifySans}
           isOpen={isSidebarOpen}
+          setIsOpen={setIsSidebarOpen}
           onToggle={toggleSidebar}
         />
       </div>

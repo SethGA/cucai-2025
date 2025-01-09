@@ -745,7 +745,7 @@ body {
   align-items: center;
   z-index: 10;
   font-weight: 300; /* Font weight for 'font-light' */
-  color: white;
+
   padding-bottom: 32px;
   background-color: rgba(77, 136, 255, 1);
 }
@@ -803,20 +803,18 @@ body {
 .footer {
   display: flex;
   background: rgba(77, 136, 255, 1);
-  justify-content: space-between;
 
   gap: 8px;
 }
 
 .footer .menu-list {
   display: table;
-  justify-content: space-between;
+
   font-size: 14px;
-  align-self: center;
+
   font-weight: 400;
   color: rgb(255, 255, 255);
   gap: 16px;
-  left: 19px;
 }
 
 .footer .contact-us {
