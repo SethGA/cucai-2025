@@ -64,7 +64,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
         <div className="partner-content flex flex-col items-center">
           <div className="flex flex-col justify-center items-center self-stretch">
             <div 
-              className="partner-feature flex flex-col md:flex-row gap-8 overflow-hidden mt-8 mx-auto min-w-[382px] pixel-corners--wrapper p-2"
+              className="partner-feature flex flex-col md:flex-row gap-8 overflow-hidden mt-8 mx-auto min-w-[80vw] pixel-corners--wrapper p-2"
               style={{
                 background: `rgb(${qmind_color[0]}, ${qmind_color[1]}, ${qmind_color[2]})`,
               }}
@@ -118,9 +118,9 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
                 <div className="partner-rows py-4" key={row_index}>
                   {row.map((partner) => (
                     <div key={partner.name}>
-                      <div className="flex flex-col justify-center items-center self-stretch">
+                      <div className="pixel-corners--wrapper flex flex-col justify-center items-center self-stretch">
                         <div
-                          className={"pixel-corners partner-body flex flex-col h-[347px] w-[382px] gap-4 mt-8 mx-auto " + (windowWidth > 693 ? "-ml-[50px]" : "")}
+                          className={`"pixel-corners partner-body flex flex-col h-[347px] w-[${80/row.length}vw] gap-4 mt-8 mx-auto ${windowWidth > 693 ? "-ml-[50px]" : ""}`}
                           key={partner.name}
                           style={{
                             background: `linear-gradient(to bottom, ${gradients[row_index].from}, ${gradients[row_index].to})`,

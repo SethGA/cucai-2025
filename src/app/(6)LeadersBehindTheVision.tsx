@@ -43,6 +43,7 @@ function StaffImage({person}:{person:Staff}) {
   if(headShotExists){
     return (
       <img 
+        loading="lazy"
         src={person.headshot}
         alt={`Headshot of ${person.name}`}
         className="h-[150px] rounded-full border-[#55E0FF]/50 border-[1px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
@@ -51,6 +52,7 @@ function StaffImage({person}:{person:Staff}) {
   }else{
     return (
       <img 
+        loading="lazy"
         src="/headshots/default.svg"
         alt={`Headshot of ${person.name}`}
         className="h-[150px] rounded-full border-[#55E0FF]/50 border-[1px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
@@ -63,7 +65,7 @@ function CUCAITeam() {
     <div className="carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
       {leaders.map((person, i) => (
         <div
-          className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[320px]"
+          className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[70vw]"
           key={i}
         >
           <StaffImage person={person}/>
@@ -93,7 +95,7 @@ function CUCAITeam() {
 function CUCAIList() {
   return leaders.map((person, i) => (
     <div
-      className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[320px]"
+      className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[80vw]"
       key={i}
     >
       <StaffImage person={person}/>
