@@ -29,7 +29,7 @@ function SpeakerCarousel({ speakers }:{ speakers:Speaker[] }) {
     <div className="carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
       {speakers.map((speaker, i) => (
         <div
-          className="flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[100vw]"
+          className="flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[5vw]"
           key={i}
         >
           <div className="pixel-corners--wrapper">
@@ -56,7 +56,7 @@ function SpeakerCarousel({ speakers }:{ speakers:Speaker[] }) {
 function SpeakerList({ speakers }:{ speakers:Speaker[] }) {
   return speakers.map((speaker, i) => (
     <div
-      className="flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[80vw]"
+      className={`flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[80vw] ${PixelifySans.className}`}
       key={i}
     >
       <div className="pixel-corners--wrapper">
@@ -78,7 +78,7 @@ function SpeakerList({ speakers }:{ speakers:Speaker[] }) {
   ));
 }
 
-export function PastSpeakers({isLargeScreen}:{isLargeScreen:boolean}) {
+export function PastSpeakers({isLargeScreen, isDark}:{isLargeScreen:boolean, isDark:boolean}) {
   return (
     <div className="third-section">
       <div>
@@ -86,9 +86,9 @@ export function PastSpeakers({isLargeScreen}:{isLargeScreen:boolean}) {
           AI Experts on Stage
         */}
 
-        <div className="title">
-          <p className="small-font">OUR 2024 SPEAKERS</p>
-          <h1 className={"big-font " + PixelifySans.className + " w-[70%] sm:w-full h-auto break-words"}>
+        <div className={"title " + PixelifySans.className}>
+          <p className={`${isDark ? "text-white" : "text-black"} text-xl sm:text-3xl`}>OUR 2024 SPEAKERS</p>
+          <h1 className={`${isDark ? "text-white" : "text-[#171456]"} text-4xl sm:text-5xl leading-[62.4px] font-[700] w-[70%] sm:w-full h-auto break-words`}>
             AI Experts On Stage
           </h1>
         </div>

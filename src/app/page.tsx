@@ -70,7 +70,7 @@ export default function Home() {
           {/* 
             AI Experts on Stage
           */}
-          <PastSpeakers isLargeScreen={windowWidth >= 768}/>
+          <PastSpeakers isLargeScreen={windowWidth >= 768} isDark={isDark}/>
         </div>
       </div>
       {/* <FourthSection - Moved here for easier access to array variable/> */}
