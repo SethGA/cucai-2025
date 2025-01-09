@@ -1,5 +1,4 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
 import "./globals.css";
 import { Pixelify_Sans } from "next/font/google";
 
@@ -12,11 +11,10 @@ const PixelifySans = Pixelify_Sans({
 // Where we swap between large and small screens
 const border = 950;
 
-// Do we also have a width bug? This section seems unnaturally large, causing extra whitespace
+// May be more width bugs in code caused by setting it to a static number of pixels - stay vigilant
 
 // justify-center requires flex-row
 export function AboutCucai({windowWidth, isDark}:{windowWidth:number, isDark:boolean}) {
-  // console.log(windowWidth);
 
   const [start, end] = isDark ? [
     "#171456",
@@ -71,18 +69,6 @@ export function AboutCucai({windowWidth, isDark}:{windowWidth:number, isDark:boo
           </p>
         </div>
         
-        {/* This body doesn't work */}
-        {/* <div className={`${PixelifySans.className}`}>
-          <p className={`text-[24px]`}>ABOUT CUCAI</p>
-          <p className={`text-[52px] leading-[62.4px] font-[700]`}>Where Tomorrow&apos;s AI Innovators Meet</p>
-          <p className={`font-[400] mt-[30px]`}>Join tomorrow&apos;s innovators ... stuff stuff stuff stuff</p>
-          <p className={`font-[400] mt-[30px]`}>Join us today!</p> */}
-          
-          {/* Button wrapper
-          <p className={`mt-[30px]`}>
-            <a>Join discord</a>
-          </p>
-        </div>  */}
       </div>
 
     </div>

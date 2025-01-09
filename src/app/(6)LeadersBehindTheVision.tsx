@@ -65,7 +65,7 @@ function CUCAITeam() {
     <div className="carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
       {leaders.map((person, i) => (
         <div
-          className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[70vw]"
+          className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[5vw]"
           key={i}
         >
           <StaffImage person={person}/>
@@ -128,8 +128,8 @@ export function CUCAITeamShowcase({isLargeScreen}:{isLargeScreen:boolean}) {
           Leaders Behind the Vision
       */}
 
-      <div className="team-title">
-        <p className="small-text">MEET OUR TEAM</p>
+      <div className="team-title px-[80px] pt-[80px]">
+        <p className={"small-text " + PixelifySans.className}>MEET OUR TEAM</p>
         <h1 className={"big-text " + PixelifySans.className + " w-[70%] sm:w-full h-auto break-words"}>
           Leaders Behind the Vision
         </h1>
