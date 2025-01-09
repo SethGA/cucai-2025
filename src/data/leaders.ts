@@ -20,7 +20,7 @@ export const leaders = [
   {
     name: "Leonardo Montes Quiliche",
     headshot: "/headshots/leo-montes_processed.png",
-    title: "Director of Sponsorship",
+    title: "Director of Strategic Partnerships",
     linkedin: "https://www.linkedin.com/in/leo-mont",
   },
   {

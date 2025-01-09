@@ -5,10 +5,12 @@ import { icons } from "@/data/icons";
 
 export function Footer() {
   return (
-    <div className="footer">
+    <div className="footer md:px-[80px] px-5 py-4 flex justify-between">
       <div className="contact-us">
         {/* <Image src="/image.png" alt="CUCAI logo" width={142.8} height={68} /> */}
-        <a href="mailto:chair@cucai.ca">Contact Us</a>
+        <a href="mailto:chair@cucai.ca" className="justidy-center">
+          Contact Us
+        </a>
       </div>
       <div className="menu-list">
         {buttons.map((b) => (
