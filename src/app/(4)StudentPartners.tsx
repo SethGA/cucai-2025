@@ -64,7 +64,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
         <div className="partner-content flex flex-col items-center">
           <div className="flex flex-col justify-center items-center self-stretch">
             <div 
-              className="partner-feature flex flex-col md:flex-row gap-8 overflow-hidden mt-8 mx-auto min-w-[60vw] pixel-corners--wrapper p-2"
+              className="partner-feature flex flex-col md:flex-row gap-8 overflow-hidden mt-8 mx-auto max-w-[60vw] pixel-corners--wrapper p-2"
               style={{
                 background: `rgb(${qmind_color[0]}, ${qmind_color[1]}, ${qmind_color[2]})`,
               }}
