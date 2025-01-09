@@ -26,7 +26,7 @@ interface Speaker {
 
 function SpeakerCarousel({ speakers }:{ speakers:Speaker[] }) {
   return (
-    <div className="carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
+    <div className={`carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50 ${PixelifySans.className}`}>
       {speakers.map((speaker, i) => (
         <div
           className="flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[5vw]"
