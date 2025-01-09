@@ -153,7 +153,7 @@ export function StudentPartners({
                 <div className="partner-rows py-4" key={row_index}>
                   {row.map((partner) => (
                     <div key={partner.name}>
-                      <div className="pixel-corners--wrapper flex flex-col justify-center items-center self-stretch">
+                      <div className="flex flex-col justify-center items-center self-stretch">
                         <div
                           className={
                             "pixel-corners partner-body flex flex-col h-[347px] w-[382px] gap-4 mt-8 mx-auto " +
