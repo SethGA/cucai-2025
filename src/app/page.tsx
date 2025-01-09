@@ -54,7 +54,7 @@ export default function Home() {
 
       <About isDark={isDark} />
 
-      {/* <div id="speakers">
+      <div id="speakers">
         <div className="third-section overflow-auto overflow-x-hidden max-h-full">
           <PastSpeakers isLargeScreen={windowWidth >= 768} />
         </div>
@@ -64,7 +64,7 @@ export default function Home() {
 
       <ContactUs windowWidth={windowWidth} />
       <CUCAITeamShowcase isLargeScreen={windowWidth >= 768} />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }

@@ -1,67 +1,50 @@
-"use client";
-
-import { Drawer, DrawerContent, DrawerTrigger } from "./ui/drawer";
+import { MenuIcon, X } from "lucide-react";
 import { NextFont } from "next/dist/compiled/@next/font";
-import { MenuIcon } from "lucide-react";
-import { act, useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 
-export default function MainMenu({
-  isDark,
-  items,
-  font,
-}: {
+type MainMenuProps = {
   isDark: boolean;
   items: {
     name: string;
     link: string;
   }[];
   font: NextFont;
-}) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeURL, setActiveUrl] = useState("");
+  isOpen: boolean;
+  onToggle: () => void;
+};
 
-  // const isDesktop = useMediaQuery("(min-width: 906px)");
+export default function MainMenu({
+  isDark,
+  items,
+  font,
+  isOpen,
+  onToggle,
+}: MainMenuProps) {
   const fontSize = 50;
 
-  // const pathname = usePathname();
-
-  // useEffect(() => {
-  //     console.log(window.location.href);
-  //     console.log(activeURL);
-
-  //     const element = activeURL != "/" && document.querySelector(activeURL);
-  //     if (!isOpen) {
-  //         // setActiveUrl(window.location.href);
-  //         if(element){
-  //             element.scrollIntoView({block : "start"});
-  //         }
-  //     }
-  // }, [activeURL, isOpen]);
-
-  // get a neater solution when we have time - for now, just take the user there
-  // page is rerendering when we exit (can be seen by difference in dimensions when we exit)
-  // before: 518.4 X 16845.5
-  // after: 518.2 X 16845.4
-  const jumpPaths = (id: string) => {
-    setIsOpen(false); // to close the drawer (and act like this is normal)
-    window.location.hash = id;
-    window.location.reload();
-  };
-
   return (
-    <Drawer
-      direction="right"
-      onOpenChange={() => {
-        setIsOpen(!isOpen);
-      }}
-      open={isOpen}
-      preventScrollRestoration
-    >
-      <DrawerTrigger>
-        <MenuIcon size={50} color="white" className={!isDark ? "invert" : ""} />
-      </DrawerTrigger>
-      <DrawerContent
+    <div className="relative">
+      {/* Trigger button */}
+      <button onClick={onToggle} className="">
+        {isOpen ? (
+          <X
+            size={50}
+            color={isDark ? "white" : "black"}
+            className={!isDark ? "invert" : ""}
+          />
+        ) : (
+          <MenuIcon
+            size={50}
+            color={isDark ? "white" : "black"}
+            className={!isDark ? "invert" : ""}
+          />
+        )}
+      </button>
+
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
         style={
           isDark
             ? {
@@ -72,36 +55,32 @@ export default function MainMenu({
                   "linear-gradient(rgba(115, 100, 255, 1), rgba(162,216,235, 1))",
               }
         }
-        className="menu-list"
       >
-        {items.map((b) => (
+        <div className="flex flex-col pt-20">
+          {items.map((item) => (
+            <a
+              href={item.link}
+              className={`p-4 text-xl hover:bg-black/10 ${
+                isDark ? "text-white" : "text-black"
+              } ${font.className}`}
+              key={item.name}
+              onClick={(e) => {
+                e.preventDefault();
+              }}
+            >
+              {item.name}
+            </a>
+          ))}
           <a
-            href={b.link}
-            className={
-              "table-cell p-[10px] " +
-              `text-[${fontSize}px] ` +
-              (isDark ? "invert " : "") +
-              font.className
-            }
-            key={b.name}
-            onClick={() => jumpPaths(b.link)}
+            href="mailto:chair@cucai.ca"
+            className={`p-4 text-xl hover:bg-black/10 ${
+              isDark ? "text-white" : "text-black"
+            } ${font.className}`}
           >
-            {b.name}
+            Contact Us
           </a>
-        ))}
-        <a
-          href="mailto:chair@cucai.ca"
-          className={
-            "table-cell p-[10px] " +
-            `text-[${fontSize}px] ` +
-            (isDark ? "invert " : "") +
-            font.className
-          }
-          key="Contact Us"
-        >
-          Contact Us
-        </a>
-      </DrawerContent>
-    </Drawer>
+        </div>
+      </div>
+    </div>
   );
 }

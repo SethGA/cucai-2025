@@ -74,7 +74,9 @@ export default function Header({
 
   const LongHeader = () => {
     return (
-      <div className="flex items-center gap-4">
+      <div
+        className={`flex items-center gap-4 ${isDark ? "text-white" : null}`}
+      >
         {buttons.map((b) => (
           <a
             href={b.link}
@@ -107,9 +109,15 @@ export default function Header({
   };
 
   const Burger = () => {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+      setIsSidebarOpen(!isSidebarOpen);
+    };
+
     return (
-      <div className="flex flex-row gap-3">
-        <button className="menu-toggle min-w-10 " onClick={changeImage}>
+      <div className="flex flex-row gap-3 items-center">
+        <button className="menu-toggle min-w-10" onClick={changeImage}>
           {isTransitioning ? (
             <animated.div style={isDark ? fadeIn : fadeOut}>
               {getImage()}
@@ -119,15 +127,23 @@ export default function Header({
           )}
         </button>
 
-        <MainMenu isDark={isDark} items={buttons} font={PixelifySans} />
+        <MainMenu
+          isDark={isDark}
+          items={buttons}
+          font={PixelifySans}
+          isOpen={isSidebarOpen}
+          onToggle={toggleSidebar}
+        />
       </div>
     );
   };
 
-  //have yet to implement burger menu
   return (
-    <header className="flex bg-[#7364ff] px-5 md:px-[80px] py-[8px] justify-between">
-      {/* Improve responsiveness by switching to hamburger menu if window size is less than 768 pixels */}
+    <header
+      className={`flex ${
+        isDark ? "bg-[#171456]" : "bg-[#7364ff]"
+      } px-5 md:px-[80px] py-[8px] justify-between`}
+    >
       <div className="cucai-logo">
         <Image
           src="/image.png"

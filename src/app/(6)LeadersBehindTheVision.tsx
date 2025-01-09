@@ -4,7 +4,7 @@ import { leaders } from "@/data/leaders";
 import { useState, useEffect } from "react";
 import { IBM_Plex_Sans } from "next/font/google";
 import { Pixelify_Sans } from "next/font/google";
-import '@/app/globals.css';
+import "@/app/globals.css";
 
 const PixelifySans = Pixelify_Sans({
   subsets: ["cyrillic", "latin", "latin-ext"],
@@ -27,34 +27,35 @@ interface Staff {
   linkedin: string;
 }
 
-function StaffImage({person}:{person:Staff}) {
+function StaffImage({ person }: { person: Staff }) {
   const [headShotExists, setHeadShotExists] = useState(true);
-  
-  fetch(person.headshot, { method: 'HEAD' })
-  .then((response) => {
-    if(!response.ok){
-      setHeadShotExists(false);
-    }
-  })
-  .catch(() => {
-    setHeadShotExists(false);
-  });
 
-  if(headShotExists){
+  fetch(person.headshot, { method: "HEAD" })
+    .then((response) => {
+      if (!response.ok) {
+        setHeadShotExists(false);
+      }
+    })
+    .catch(() => {
+      setHeadShotExists(false);
+    });
+
+  if (headShotExists) {
     return (
-      <img 
+      <img
         src={person.headshot}
         alt={`Headshot of ${person.name}`}
         className="h-[150px] rounded-full border-[#55E0FF]/50 border-[1px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
       />
     );
-  }else{
+  } else {
     return (
-      <img 
+      <img
         src="/headshots/default.svg"
         alt={`Headshot of ${person.name}`}
         className="h-[150px] rounded-full border-[#55E0FF]/50 border-[1px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
-      />); 
+      />
+    );
   }
 }
 
@@ -66,7 +67,7 @@ function CUCAITeam() {
           className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[320px]"
           key={i}
         >
-          <StaffImage person={person}/>
+          <StaffImage person={person} />
           <div className="text-center">
             <p
               className={`${
@@ -96,7 +97,7 @@ function CUCAIList() {
       className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[320px]"
       key={i}
     >
-      <StaffImage person={person}/>
+      <StaffImage person={person} />
       <div className="text-center">
         <p
           className={`${
@@ -118,17 +119,24 @@ function CUCAIList() {
   ));
 }
 
-export function CUCAITeamShowcase({isLargeScreen}:{isLargeScreen:boolean}) {
-
+export function CUCAITeamShowcase({
+  isLargeScreen,
+}: {
+  isLargeScreen: boolean;
+}) {
   return (
     <div className="sixth-section w-full">
       {/*
           Leaders Behind the Vision
       */}
 
-      <div className="team-title">
+      <div className="team-title px-5 md:px-[80px]">
         <p className="small-text">MEET OUR TEAM</p>
-        <h1 className={"big-text " + PixelifySans.className + " w-[70%] sm:w-full h-auto break-words"}>
+        <h1
+          className={
+            "big-text " + PixelifySans.className + " h-auto break-words"
+          }
+        >
           Leaders Behind the Vision
         </h1>
       </div>

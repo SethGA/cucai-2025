@@ -332,7 +332,6 @@ body {
   /* May need to remove height when adding elements */
   min-height: 1550px;
   gap: 36px;
-  padding: 100px 80px 100px 80px;
   position: relative;
 }
 
@@ -523,32 +522,21 @@ body {
 }
 
 .fifth-section {
-  display: flex;
   background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 135, 255, 1));
   /* May clash with elements CSS */
-  min-height: max-content;
-  padding: 100px 80px 100px 80px;
-  position: relative;
-  gap: 8px;
 }
 
 .join-us-pic {
   border-radius: 24px;
   /* width: 540px;
   height: auto; */
-  /* margin-left: 10%; */
+  margin: 20px;
   width: auto;
   min-height: 300px;
   max-width: 540px;
   /* height: 454px; */
   position: relative;
   object-fit: fill;
-}
-
-.fifth-section .text-part {
-  display: block;
-  /* width: 590px; */
-  /* height: 323px; */
 }
 
 /* .text-part .title { */
@@ -656,7 +644,6 @@ body {
   /* height: 99px; */
   gap: 8px;
   margin-bottom: 5%;
-  padding: 80px;
 }
 
 .team-title .small-text {
@@ -817,7 +804,7 @@ body {
   display: flex;
   background: rgba(77, 136, 255, 1);
   justify-content: space-between;
-  padding: 8px 80px 24px 80px;
+
   gap: 8px;
 }
 
