@@ -50,7 +50,9 @@ export default function Home() {
   return (
     <div className={`w-[${windowWidth}px] overflow-x-hidden m-auto`}>
       <Header isDark={isDark} setDark={setDark} />
+
       <Landing windowWidth={windowWidth} isDark={isDark} />
+      
       <About isDark={isDark} />
 
       <div
@@ -63,7 +65,9 @@ export default function Home() {
       <StudentPartners windowWidth={windowWidth} isDark={isDark} />
 
       <ContactUs isDark={isDark} />
+      
       <CUCAITeamShowcase isLargeScreen={windowWidth >= 768} isDark={isDark} />
+      
       <Footer />
     </div>
   );
