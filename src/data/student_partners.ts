@@ -15,7 +15,7 @@ export const student_partners = [
       university: "University of Western Ontario",
       website: "https://watai.ca/",
       insta: "https://www.instagram.com/wataiteam/",
-      width: 120,
+      width: 100,
     },
     {
       name: "Western Cyber Society",
@@ -23,8 +23,7 @@ export const student_partners = [
       university: "University of Western Ontario",
       website: "https://watai.ca/",
       insta: "https://www.instagram.com/wataiteam/",
-      width: 297,
-      height: 100,
+      width: 200,
     },
     {
       name: "UVic AI",
@@ -32,8 +31,7 @@ export const student_partners = [
       university: "University of Victoria",
       website: "https://watai.ca/",
       insta: "https://www.instagram.com/wataiteam/",
-      width: 150,
-      height: 100,
+      width: 100,
     },
     {
       name: "UTMIST",
@@ -41,7 +39,6 @@ export const student_partners = [
       university: "University of Toronto",
       website: "https://watai.ca/",
       insta: "https://www.instagram.com/wataiteam/",
-      width: 297,
-      height: 100,
+      width: 250,
     },
   ];

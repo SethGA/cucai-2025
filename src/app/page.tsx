@@ -61,10 +61,13 @@ export default function Home() {
   return (
     <div className={`overflow-x-hidden m-auto`}>
       <Header windowWidth={windowWidth} isDark={isDark} setDark={setDark}/>
+
       <Landing windowWidth={windowWidth} isDark={isDark}/>
+  
       <div id="about">
         <AboutCucai windowWidth={windowWidth} isDark={isDark}/>
       </div>
+
       <div id="speakers">
         <div className="third-section overflow-auto overflow-x-hidden max-h-full">
           {/* 
@@ -73,13 +76,16 @@ export default function Home() {
           <PastSpeakers isLargeScreen={windowWidth >= 768} isDark={isDark}/>
         </div>
       </div>
-      {/* <FourthSection - Moved here for easier access to array variable/> */}
+
       <StudentPartners windowWidth={windowWidth} isDark={isDark}/>
+
       {/* 
         TODO: Fix formatting for section 5
       */}
       <ContactUs windowWidth={windowWidth}/>
+
       <CUCAITeamShowcase isLargeScreen={windowWidth >= 768}/>
+
       <Footer />
     </div>
   );
