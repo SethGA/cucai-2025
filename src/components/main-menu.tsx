@@ -26,7 +26,7 @@ export default function MainMenu({
   return (
     <div className="relative">
       {isOpen ? (
-        <button onClick={onToggle} className="z-50 fixed top-4 right-4 z-50">
+        <button onClick={onToggle} className=" fixed top-4 right-4 z-50">
           <X
             size={50}
             color={isDark ? "white" : "black"}

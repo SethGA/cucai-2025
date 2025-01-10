@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MainMenu from "@/components/main-menu";
 import { useSpring, animated } from "react-spring";
 import { Pixelify_Sans } from "next/font/google";
@@ -21,6 +21,22 @@ const buttons = [
   { name: "Register (Soon)", link: "/" },
 ];
 
+const useIsMediumScreen = () => {
+  const [isMedium, setIsMedium] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    const updateIsMedium = () => setIsMedium(mediaQuery.matches);
+
+    updateIsMedium(); // Set initial value
+    mediaQuery.addEventListener("change", updateIsMedium);
+
+    return () => mediaQuery.removeEventListener("change", updateIsMedium);
+  }, []);
+
+  return isMedium;
+};
+
 export default function Header({
   isDark = false,
   setDark,
@@ -28,7 +44,7 @@ export default function Header({
   isDark: boolean;
   setDark: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const isMediumScreen = useMediaQuery({ query: "(min-width: 768px)" });
+  const isMediumScreen = useIsMediumScreen();
   const [flip, setFlip] = useState(false);
   const [isTransitioning, setTransition] = useState(false);
 
