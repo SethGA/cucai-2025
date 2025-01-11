@@ -82,9 +82,9 @@ export default function Home() {
       {/* 
         TODO: Fix formatting for section 5
       */}
-      <ContactUs windowWidth={windowWidth}/>
+      <ContactUs windowWidth={windowWidth} isDark={isDark}/>
 
-      <CUCAITeamShowcase isLargeScreen={windowWidth >= 768}/>
+      <CUCAITeamShowcase isLargeScreen={windowWidth >= 768} isDark={isDark}/>
 
       <Footer />
     </div>

@@ -211,7 +211,7 @@ body {
 }
 
 .third-section .title {
-  padding: 100px 80px 70px 80px;
+  /* padding: 100px 80px 70px 80px; */
   gap: 8px;
 }
 
@@ -328,13 +328,13 @@ body {
 }
 
 .fifth-section {
-  display: flex; 
+  /* display: flex;  */
   background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 135, 255, 1));
   /* May clash with elements CSS */
-  min-height: max-content;
+  /* min-height: max-content;
   padding: 100px 80px 100px 80px;
   position: relative;
-  gap: 8px;
+  gap: 8px; */
 }
 
 .join-us-pic {
@@ -371,25 +371,20 @@ body {
 }
 
 
-
-.title .big-text {
+/* .title .big-text {
   /* height: 124px; */
-  font-size: 52px;
+  /* font-size: 52px;
   font-weight: 700;
   line-height: 62.4px;
   text-align: left;
   color: black;
   margin-bottom: 3%;
-}
+} */ 
 
 .dark-mode .title .big-text {
   /* height: 124px; */
-  font-size: 52px;
-  font-weight: 700;
-  line-height: 62.4px;
-  text-align: left;
   color: white;
-  margin-bottom: 3%;
+  /* margin-bottom: 3%; */
 }
 
 .text-part p {
@@ -466,7 +461,7 @@ body {
 }
 
 .team-title .small-text {
-  height: 29px;
+  /* height: 29px; */
   font-size: 24px;
   font-weight: 500;
   line-height: 28.8px;
@@ -476,31 +471,9 @@ body {
 
 .team-title .big-text {
   /* height: 124px; */
-  font-size: 52px;
-  font-weight: 700;
-  line-height: 62.4px;
-  text-align: left;
-  color: rgba(23, 20, 86, 1);
-  /* margin-bottom: 3%; */
-}
-
-.team-title .big-text {
-  /* height: 124px; */
-  font-size: 52px;
-  font-weight: 700;
-  line-height: 62.4px;
-  text-align: left;
+  /* font-size: 52px; */
+  /* color: rgba(23, 20, 86, 1); */
   color: black;
-  /* margin-bottom: 3%; */
-}
-
-.dark-mode .team-title .big-text {
-  height: 124px;
-  font-size: 52px;
-  font-weight: 700;
-  line-height: 62.4px;
-  text-align: left;
-  color: white;
   /* margin-bottom: 3%; */
 }
 
@@ -595,7 +568,7 @@ body {
   align-items: center;
   z-index: 10;
   font-weight: 300; /* Tailwind's 'font-light' */
-  color: black;
+  /* color: black; */
   padding-bottom: 8rem; /* 32px in Tailwind would translate to 8rem based on standard rem */
 }
 

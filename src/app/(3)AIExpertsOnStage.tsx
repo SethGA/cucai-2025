@@ -86,9 +86,9 @@ export function PastSpeakers({isLargeScreen, isDark}:{isLargeScreen:boolean, isD
           AI Experts on Stage
         */}
 
-        <div className={"title " + PixelifySans.className}>
+        <div className={"title px-[80px] py-[40px] sm:py-[80px] " + PixelifySans.className}>
           <p className={`${isDark ? "text-white" : "text-black"} text-xl sm:text-3xl`}>OUR 2024 SPEAKERS</p>
-          <h1 className={`${isDark ? "text-white" : "text-[#171456]"} text-4xl sm:text-5xl leading-[62.4px] font-[700] w-[70%] sm:w-full h-auto break-words`}>
+          <h1 className={`${isDark ? "text-white" : "text-[#171456]"} text-4xl sm:text-5xl font-[700] w-[70%] sm:w-full h-auto`}>
             AI Experts On Stage
           </h1>
         </div>

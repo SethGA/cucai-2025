@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Pixelify_Sans } from "next/font/google";
+import { Pixelify_Sans, IBM_Plex_Sans } from "next/font/google";
 import { student_partners } from "@/data/student_partners";
 
 export const PixelifySans = Pixelify_Sans({
@@ -18,6 +18,12 @@ interface Partner {
   insta: string;
   width: number;
 }
+
+const IBMPlexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
 
 const chunk_array = (array: Partner[], size: number) => {
   let result = [];
@@ -183,7 +189,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
                               // className={`w-[${partner.width}px]`}
                             />
                           </div>
-                          <p className={`${PixelifySans.className} ${textColor} text-center mt-4`}>
+                          <p className={`${IBMPlexSans.className} ${textColor} text-center mt-4`}>
                             <p className={`lg:mt-[3vh] text-4xl sm:text-5xl font-[700]`}>
                               {partner.name}
                             </p>
@@ -193,7 +199,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
                             
                             {/* Links */}
                             <div className="flex flex-row justify-center mt-2 md:mt-8">
-                              <div className={`flex sm:flex-col lg:flex-row lg:gap-6`}>
+                              <div className={`flex ${windowWidth >= 500 ? "flex-row gap-6" : "flex-col"} lg:gap-6`}>
                                 <a href={partner.website} className="flex flex-row items-center">
                                   <p className="text-2xl underline gap-1">
                                     Website

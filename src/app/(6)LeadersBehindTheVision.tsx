@@ -60,7 +60,7 @@ function StaffImage({person}:{person:Staff}) {
   }
 }
 
-function CUCAITeam() {
+function CUCAITeam({color}:{color:string}) {
   return (
     <div className="carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
       {leaders.map((person, i) => (
@@ -69,7 +69,7 @@ function CUCAITeam() {
           key={i}
         >
           <StaffImage person={person}/>
-          <div className="text-center">
+          <div className={`text-center ${color}`}>
             <p
               className={`${
                 person.name.length > 13 ? `!text-[13pt]` : "text-2xl"
@@ -92,14 +92,14 @@ function CUCAITeam() {
   );
 }
 
-function CUCAIList() {
+function CUCAIList({color}:{color:string}) {
   return leaders.map((person, i) => (
     <div
       className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[80vw]"
       key={i}
     >
       <StaffImage person={person}/>
-      <div className="text-center">
+      <div className={`text-center ${color}`}>
         <p
           className={`${
             person.name.length > 13 ? `!text-[13pt]` : "text-2xl"
@@ -120,7 +120,8 @@ function CUCAIList() {
   ));
 }
 
-export function CUCAITeamShowcase({isLargeScreen}:{isLargeScreen:boolean}) {
+export function CUCAITeamShowcase({isLargeScreen, isDark}:{isLargeScreen:boolean, isDark:boolean}) {
+  const textColor = isDark ? "text-white" : "text-black";
 
   return (
     <div className="sixth-section w-full">
@@ -128,9 +129,9 @@ export function CUCAITeamShowcase({isLargeScreen}:{isLargeScreen:boolean}) {
           Leaders Behind the Vision
       */}
 
-      <div className="team-title px-[80px] pt-[80px]">
+      <div className={`team-title px-[80px] pt-[80px] ${textColor}`}>
         <p className={"small-text " + PixelifySans.className}>MEET OUR TEAM</p>
-        <h1 className={"big-text " + PixelifySans.className + " w-[70%] sm:w-full h-auto break-words"}>
+        <h1 className={"text-4xl font-[700] sm:text-[52px] " + PixelifySans.className + " w-[70%] sm:w-full h-auto"}>
           Leaders Behind the Vision
         </h1>
       </div>
@@ -140,16 +141,18 @@ export function CUCAITeamShowcase({isLargeScreen}:{isLargeScreen:boolean}) {
           <main className="custom-main">
             <div
               id="Team"
-              className="flex flex-row divide-x-[1px] divide-y-[1px] sm:divide-y-[0px divide-[#55E0FF]/50"
+              className="flex flex-row my-8 divide-x-[1px] divide-y-[1px] sm:divide-y-[0px divide-[#55E0FF]/50"
             >
-              <CUCAITeam />
-              <CUCAITeam />
-              <CUCAITeam />
+              <CUCAITeam color={textColor}/>
+              <CUCAITeam color={textColor}/>
+              <CUCAITeam color={textColor}/>
             </div>
           </main>
         ) : (
           <main className="custom-main3">
-            <CUCAIList />
+            <CUCAIList color={textColor}/>
+            <CUCAIList color={textColor}/>
+            <CUCAIList color={textColor}/>
           </main>
         )}
       </div>
