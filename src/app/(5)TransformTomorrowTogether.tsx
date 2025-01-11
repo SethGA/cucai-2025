@@ -1,51 +1,76 @@
 "use client";
 import Image from "next/image";
 import { Pixelify_Sans } from "next/font/google";
+import { IBM_Plex_Sans } from "next/font/google";
 
-const PixelifySans = Pixelify_Sans({
+
+export const PixelifySans = Pixelify_Sans({
   subsets: ["cyrillic", "latin", "latin-ext"],
   weight: ["400", "500", "600", "700"],
   style: ["normal"],
 });
 
-export function ContactUs({ isDark }: { isDark: boolean }) {
+const IBMPlexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
+
+export const achievements = [
+  { number: "340+", category: "DELEGATES" },
+  { number: "10+", category: "INDUSTRY PARTNERS" },
+  { number: "19", category: "SCHOOLS REPRESENTED" },
+];
+
+/* This component should go first on smaller screens. Otherwise, should go second. */
+const TeamImage = () => (
+  /* Looks good when JUST the wrapper is used, for some reason. Strange. */
+  <div className="pixel-corners--wrapper">
+    <img 
+      src="./image 32.png"
+      alt="Picture of us!"
+      className="w-auto max-h-[45vh]"
+    />
+  </div>
+)
+
+export function ContactUs({ windowWidth, isDark }: { windowWidth:number, isDark: boolean }) {
+  const textColor = isDark ? "text-white" : "text-black";
+
   return (
     // 1401 sm:flex-col md:flex-col lg:flex-row
-    <div
-      className={`fifth-section flex md:flex-row flex-col md:px-[80px] px-5 gap-8 py-[100px] ${
-        isDark ? "text-white" : null
-      }`}
-    >
-      <div className="text-part title flex-shrink-0">
-        <p className="small-text">JOIN US</p>
-        <h1
-          className={
-            "big-text " +
-            PixelifySans.className +
-            " sm:w-[800px] h-auto break-words"
-          }
-        >
-          Transform Tomorrow Together
-        </h1>
-        <div className={"text-part" + " sm:w-full h-auto break-words"}>
-          <p>Have questions or want to get involved?</p>
-          <p>Get in touch with us and join the CUCAI Community!</p>
-          <a href="mailto:chair@cucai.ca">
-            <img
-              src="contact-us-button.png"
-              alt="Contact Us Button"
-              className="contact-button mt-8 hover:brightness-110 active:brightness-90"
-            />
-          </a>
-        </div>
-      </div>
 
-      <div className="pixel-corners--wrapper">
-        <img
-          src="/image 32.png"
-          alt={"CUCAI Team Picture"}
-          className="pixel-corners h-[350px] object-cover bg-gradient-to-t from-[#547192]/0 to-[#002b5c]/50"
-        ></img>
+    <div
+      className={`fifth-section flex flex-row justify-center`}>
+      <div className={`flex flex-col gap-8 md:flex-row my-8 px-8`}>
+        
+        {windowWidth < 768 && <TeamImage />}
+
+        <div className="flex flex-row justify-center md:flex-none">
+          <div className={`flex flex-col w-[40vw] ${IBMPlexSans.className} ${textColor}`}>
+
+            {/* Text stuff */}
+            <div className="text-center md:text-left">
+              <p className="text-xl sm:text-[24px] font-[500]">JOIN US</p>
+              <p className={`${PixelifySans.className} text-4xl sm:text-5xl font-[700] my-[3%]`}>Transform Tomorrow Together</p>
+              <div className="text-lg sm:text-xl font-[400] mb-[3%]">
+                <p>Have questions or want to get involved?</p>
+                <p>Get in touch with us and join the CUCAI Community!</p>  
+              </div>
+            </div>
+            
+            <a className={`mt-[3%] ${windowWidth < 768  && "flex flex flex-row justify-center"}`}>
+              <img 
+                src="./contact-us-button.png"
+                alt="mailto:chair@cucai.ca" 
+                className={`w-[160px] h-auto hover:brightness-110 active:brightness-90`}
+              />
+            </a>
+          </div>
+        </div>
+
+        {windowWidth >= 768 && <TeamImage />}
+
       </div>
     </div>
   );
