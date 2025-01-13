@@ -79,11 +79,11 @@ export default function Header({
     const LongHeader = () => {
         return (<div className="menu-list">
             {buttons.map((b) => (
-                <a href={b.link} className={"menu-option " + PixelifySans.className} key={b.name}>
+                <a href={b.link} className={"menu-option " + PixelifySans.className + " hover:scale-110 transition-all"} key={b.name}>
                     {b.name}
                 </a>
             ))}
-            <button className="menu-toggle" onClick={changeImage}>
+            <button className="menu-toggle hover:scale-110 transition-all" onClick={changeImage}>
                 {isTransitioning ? (
                     <animated.div style={isDark ? fadeIn : fadeOut}>
                         {getImage()}
@@ -92,9 +92,9 @@ export default function Header({
                     getImage()
                 )}
             </button>
-            <a href="mailto:chair@cucai.ca" className="contact-us">
+            <a href="mailto:chair@cucai.ca" className="contact-us hover:scale-110 transition-all">
                 <Image
-                    src="/CTA Button.png"
+                    src="/CTA Button Pixel.png"
                     alt="Contact Us"
                     className={PixelifySans.className}
                     width={123}
@@ -109,7 +109,14 @@ export default function Header({
         <div className="header">
             {/* Improve responsiveness by switching to hamburger menu if window size is less than 768 pixels */}
             <div className="cucai-logo">
-                <Image src="/image.png" alt="CUCAI logo" width={142.8} height={68} className="min-w-[142.8px]"/>
+                <a href="/">
+                    <Image 
+                        src="/image.png" 
+                        alt="CUCAI logo" 
+                        width={142.8} 
+                        height={68} 
+                        className="min-w-[142.8px] hover:scale-110 transition-all"/>
+                </a>
             </div>
             {windowWidth >= 906 ? (
                 <LongHeader />

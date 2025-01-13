@@ -26,15 +26,14 @@ interface Speaker {
 
 function SpeakerCarousel({ speakers }:{ speakers:Speaker[] }) {
   return (
-    <div className={`carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50  ${PixelifySans.className}`}>
+    <div className={`carousel-inner flex flex-row items-center h-[60vh] overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50  ${PixelifySans.className}`}>
       {speakers.map((speaker, i) => (
         <div
-          className="flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[5vw]"
+          className="flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[5vw] hover:scale-110 transition-all"
           key={i}
         >
           <div className="pixel-corners--wrapper">
             <img
-              loading="lazy"
               src={speaker.img}
               alt={"Headshot of " + speaker.name}
               className="pixel-corners h-[250px] object-cover bg-gradient-to-t from-[#547192]/0 to-[#002b5c]/50"
@@ -61,7 +60,6 @@ function SpeakerList({ speakers }:{ speakers:Speaker[] }) {
     >
       <div className="pixel-corners--wrapper">
         <img
-          loading="lazy"
           src={speaker.img}
           alt={"Headshot of " + speaker.name}
           className="pixel-corners h-[250px] object-cover bg-gradient-to-t from-[#547192]/0 to-[#002b5c]/50"
