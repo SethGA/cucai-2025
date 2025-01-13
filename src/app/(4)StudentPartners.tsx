@@ -99,7 +99,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
             >
               <div className="p-8 flex flex-col md:flex-row md:justify-center">
                 {/* Text stuff */}
-                <div className={`flex flex-col text-center md:text-right ${IBMPlexSans.className} ${textColor}`}>
+                <div className={`flex flex-col text-center md:text-right ${PixelifySans.className} ${textColor}`}>
                   <p className="text-4xl sm:text-5xl lg:text-6xl font-[700]">
                     QMIND
                   </p>
@@ -189,7 +189,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
                               // className={`w-[${partner.width}px]`}
                             />
                           </div>
-                          <p className={`${IBMPlexSans.className} ${textColor} text-center mt-4`}>
+                          <p className={`${PixelifySans.className} ${textColor} text-center mt-4`}>
                             <p className={`lg:mt-[3vh] text-4xl sm:text-5xl font-[700]`}>
                               {partner.name}
                             </p>

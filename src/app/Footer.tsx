@@ -2,15 +2,20 @@
 import Image from "next/image";
 import { buttons } from "@/data/buttons";
 import { icons } from "@/data/icons";
+import { Pixelify_Sans } from "next/font/google";
+
+const PixelifySans = Pixelify_Sans({
+  subsets: ["cyrillic", "latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal"],
+});
 
 export function Footer() {
   return (
-    <div className="footer md:px-[80px] px-5 py-4 flex justify-between">
+    <div className={`footer ${PixelifySans.className}`}>
       <div className="contact-us">
         {/* <Image src="/image.png" alt="CUCAI logo" width={142.8} height={68} /> */}
-        <a href="mailto:chair@cucai.ca" className="justidy-center">
-          Contact Us
-        </a>
+        <a href="mailto:chair@cucai.ca">Contact Us</a>
       </div>
       <div className="menu-list">
         {buttons.map((b) => (

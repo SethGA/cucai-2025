@@ -69,11 +69,11 @@ function CUCAITeam({color}:{color:string}) {
           key={i}
         >
           <StaffImage person={person}/>
-          <div className={`text-center ${color}`}>
+          <div className={`text-center ${color} ${PixelifySans.className}`}>
             <p
               className={`${
                 person.name.length > 13 ? `!text-[13pt]` : "text-2xl"
-              } font-normal`}
+              } `}
             >
               {person.name}
             </p>
@@ -99,11 +99,11 @@ function CUCAIList({color}:{color:string}) {
       key={i}
     >
       <StaffImage person={person}/>
-      <div className={`text-center ${color}`}>
+      <div className={`text-center ${color} ${PixelifySans.className}`}>
         <p
           className={`${
             person.name.length > 13 ? `!text-[13pt]` : "text-2xl"
-          } font-normal`}
+          } `}
         >
           {person.name}
         </p>
@@ -150,8 +150,6 @@ export function CUCAITeamShowcase({isLargeScreen, isDark}:{isLargeScreen:boolean
           </main>
         ) : (
           <main className="custom-main3">
-            <CUCAIList color={textColor}/>
-            <CUCAIList color={textColor}/>
             <CUCAIList color={textColor}/>
           </main>
         )}

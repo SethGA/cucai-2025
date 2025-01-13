@@ -47,7 +47,7 @@ export function ContactUs({ windowWidth, isDark }: { windowWidth:number, isDark:
         {windowWidth < 768 && <TeamImage />}
 
         <div className="flex flex-row justify-center md:flex-none">
-          <div className={`flex flex-col w-[40vw] ${IBMPlexSans.className} ${textColor}`}>
+          <div className={`flex flex-col w-[40vw] ${PixelifySans.className} ${textColor}`}>
 
             {/* Text stuff */}
             <div className="text-center md:text-left">
