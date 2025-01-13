@@ -19,7 +19,7 @@ export function Landing({
   return (
     <div className="first-section">
       <div className="toronto-skyline px-4">
-        <div className="white-box flex flex-col items-center gap-8 w-full">
+        <div className="white-box flex flex-col items-center gap-8 w-full hover:scale-110 transition-all">
           <Countdown font={PixelifySans} isDark={isDark} />
           {windowWidth >= 706 ? (
             <h1

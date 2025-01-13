@@ -14,9 +14,9 @@ export function About({ isDark }: { isDark: boolean }) {
   return (
     <div
       id="about"
-      className="second-section flex flex-col md:flex-row px-5 py-14 md:px-[80px] md:py-[100px] w-full h-full gap-10"
+      className="second-section flex flex-col md:flex-row px-5 lg:px-[10vw] py-14 md:px-[80px] md:py-[100px] w-full h-full gap-10"
     >
-      <div className={` ${textColor} border border-cyan-300`}>
+      <div className={` ${textColor} ${PixelifySans.className} border border-cyan-300 md:hover:scale-110 transition-all`}>
         <p className={`text-[24px] ${textColor}`}>ABOUT CUCAI</p>
         <p
           className={`${
@@ -45,8 +45,9 @@ export function About({ isDark }: { isDark: boolean }) {
           </a>
         </p>
       </div>
+
       <div className="flex flex-row">
-        <div className="w-[401px] h-[701px] bg-[#171456] rounded-3xl p-2 aspect-[9/16]">
+        <div className="w-[401px] h-[701px] bg-[#171456] rounded-3xl p-2 aspect-[9/16] hover:scale-110 transition-all">
           <iframe
             className="rounded-2xl w-full h-full min-w-full min-h-full"
             src="https://www.youtube.com/embed/D9mYUk5Tji4?controls=0?quality=auto"
@@ -54,6 +55,7 @@ export function About({ isDark }: { isDark: boolean }) {
           />
         </div>
       </div>
+
     </div>
   );
 }

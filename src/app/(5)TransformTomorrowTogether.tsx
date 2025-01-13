@@ -25,7 +25,7 @@ export const achievements = [
 /* This component should go first on smaller screens. Otherwise, should go second. */
 const TeamImage = () => (
   /* Looks good when JUST the wrapper is used, for some reason. Strange. */
-  <div className="pixel-corners--wrapper">
+  <div className="pixel-corners--wrapper hover:scale-110 transition-all">
     <img 
       src="./image 32.png"
       alt="Picture of us!"
@@ -46,7 +46,7 @@ export function ContactUs({ windowWidth, isDark }: { windowWidth:number, isDark:
         
         {windowWidth < 768 && <TeamImage />}
 
-        <div className="flex flex-row justify-center md:flex-none">
+        <div className="flex flex-row justify-center md:flex-none hover:scale-110 transition-all">
           <div className={`flex flex-col w-[40vw] ${PixelifySans.className} ${textColor}`}>
 
             {/* Text stuff */}

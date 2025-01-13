@@ -90,7 +90,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
         </div>
         {/* QMIND Feature */}
         <div className="flex flex-row justify-center">
-          <div className="pixel-corners--wrapper">
+          <div className="pixel-corners--wrapper hover:scale-110 transition-all">
             <div 
               className={`pixel-corners w-[70vw] lg:w-[60vw]`}
               style={{
@@ -160,7 +160,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
               <div className="mt-[8vh] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {row.map((partner, index) => (
                   // Partner exterior
-                  <div key={index} className="pixel-corners--wrapper">
+                  <div key={index} className="pixel-corners--wrapper hover:scale-110 transition-all">
 
                     {/* Partner interior */}
                     <div 
@@ -234,7 +234,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
         </div>
 
         {/* Become a partner button */}
-        <a href="mailto:chair@cucai.ca" className="flex flex-row justify-center">
+        <a href="mailto:chair@cucai.ca" className="flex flex-row justify-center hover:scale-110 transition-all">
           <img 
             src="./become_a_partner.png"
             alt="Become a partner here"
