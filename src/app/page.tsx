@@ -66,7 +66,7 @@ export default function Home() {
 
       <ContactUs windowWidth={windowWidth} isDark={isDark} />
       
-      <CUCAITeamShowcase isLargeScreen={windowWidth >= 768} isDark={isDark} />
+      <CUCAITeamShowcase isLargeScreen={windowWidth >= 450} isDark={isDark} />
       
       <Footer />
     </div>

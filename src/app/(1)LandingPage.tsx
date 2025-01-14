@@ -19,9 +19,13 @@ export function Landing({
   return (
     <div className="first-section">
       <div className="toronto-skyline px-4">
-        <div className="white-box flex flex-col items-center gap-8 w-full hover:scale-110 transition-all">
+        <div className="white-box flex flex-col items-center gap-8 w-full sm:hover:scale-110 transition-all">
           <Countdown font={PixelifySans} isDark={isDark} />
-          {windowWidth >= 706 ? (
+          <h1 className={"title text-[9vw] max-w-[89vw] break-words sm:text-[84px] " + PixelifySans.className}>
+              Experience AI&apos;s Future at CUCAI 2025!
+          </h1>          
+          
+          {/* {windowWidth >= 706 ? (
             <h1
               className={
                 "title text-[50px] sm:text-[84px] " + PixelifySans.className
@@ -53,7 +57,7 @@ export function Landing({
                 CUCAI 2025!
               </h1>
             </div>
-          )}
+          )} */}
           <a href="https://discord.gg/az6MVvNhdB">
             <img
               src="join-discord.png"
