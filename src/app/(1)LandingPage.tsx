@@ -15,8 +15,11 @@ export function Landing({windowWidth, isDark}:{windowWidth:number, isDark:boolea
       <div className="toronto-skyline">
         <div className="white-box flex flex-col items-center gap-8 w-full hover:scale-110 transition-all">
           <Countdown font={PixelifySans} isDark={isDark}/>
-          {windowWidth >= 706 ? (
-            <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+          <h1 className={"title text-[9vw] max-w-[89vw] break-words sm:text-[84px] " + PixelifySans.className}>
+              Experience AI&apos;s Future at CUCAI 2025!
+            </h1>          
+          {/* {windowWidth >= 706 ? (
+            <h1 className={"title text-[5vw] sm:text-[84px] " + PixelifySans.className}>
               Experience AI&apos;s Future at CUCAI 2025!
             </h1>          
           ) : (
@@ -31,7 +34,7 @@ export function Landing({windowWidth, isDark}:{windowWidth:number, isDark:boolea
                 CUCAI 2025!
               </h1>
             </div>          
-          )}
+          )} */}
           <a href="https://discord.gg/az6MVvNhdB">
             <img
               src="join-discord.png"
