@@ -108,7 +108,7 @@ export default function Header({
             getImage()
           )}
         </button>
-        <a href="mailto:chair@cucai.ca" className="contact-us hover:scale-110 transition-all">
+        {/* <a href="mailto:chair@cucai.ca" className="contact-us hover:scale-110 transition-all">
           <Image
             src="/CTA Button Pixel.png"
             alt="Contact Us"
@@ -116,7 +116,15 @@ export default function Header({
             width={123}
             height={45}
           />
-        </a>
+        </a> */}
+          <a className={``}>
+            <img 
+              src="./contact-us-button.png"
+              alt="mailto:chair@cucai.ca" 
+              className={`w-[123px] h-auto hover:brightness-110 active:brightness-90`}
+            />
+          </a>
+
       </div>
     );
   };

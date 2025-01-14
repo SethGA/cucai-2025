@@ -64,7 +64,7 @@ export default function Home() {
 
       <StudentPartners windowWidth={windowWidth} isDark={isDark} />
 
-      <ContactUs windowWidth={windowWidth} isDark={isDark} />
+      {/* <ContactUs windowWidth={windowWidth} isDark={isDark} /> */}
       
       <CUCAITeamShowcase isLargeScreen={windowWidth >= 450} isDark={isDark} />
       

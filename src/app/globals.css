@@ -99,7 +99,7 @@ body {
 }
 
 .first-section .toronto-skyline {
-  background-image: url("/bg-pixel-day.png");
+  background-image: url("/dayskyline_game_2.svg");
   width: 100vw;
   height: 1098px;
   justify-content: center;
@@ -436,7 +436,8 @@ body {
 
 .sixth-section {
   display: block; 
-  background: rgba(77, 136, 255, 1);
+  /* background: rgba(77, 136, 255, 1); */
+  background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 135, 255, 1));
   /* May clash with element CSS */
   min-height: 249px;
   /* padding: 80px; */
