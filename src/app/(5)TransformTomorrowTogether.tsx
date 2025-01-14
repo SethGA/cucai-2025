@@ -55,7 +55,11 @@ export function ContactUs({ windowWidth, isDark }: { windowWidth:number, isDark:
             {/* Text stuff */}
             <div className="text-center md:text-left">
               <p className="text-xl sm:text-[24px] font-[500]">JOIN US</p>
-              <p className={`${PixelifySans.className} text-4xl sm:text-5xl font-[700] my-[3%]`}>Transform Tomorrow Together</p>
+
+              <div className="flex flex-row justify-center w-full">
+                <p className={`${PixelifySans.className} text-4xl sm:text-5xl font-[700] my-[3%]`}>Transform Tomorrow Together</p>
+              </div>
+
               <div className="text-lg sm:text-xl font-[400] mb-[3%]">
                 <p>Have questions or want to get involved?</p>
                 <p>Get in touch with us and join the CUCAI Community!</p>  
