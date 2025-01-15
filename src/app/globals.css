@@ -88,20 +88,24 @@ body {
 
 .first-section {
   display: flex;
-  background: linear-gradient(rgba(115, 100, 255, 1), rgba(162,216,235, 1) 15%);
+  /* background: linear-gradient(rgba(115, 100, 255, 1), rgba(162,216,235, 1) 15%); */
+  /* background: rgba(77, 136, 255, 1); */
+  background: rgba(163, 215, 236, 1);
+  /* background: linear-gradient(rgba(163, 215, 236, 1), rgba(77, 136, 255, 1) 99%); */
   justify-content: center;
   align-items: center;
 }
 
 .dark-mode .first-section{
-  background: linear-gradient(180deg, #171456 0%, #6A6CB3 34.4%, #171456 105.8%);
-
+  /* background: linear-gradient(180deg, #171456 0%, #6A6CB3 34.4%, #171456 105.8%); */
+  background: #6A6CB3;
 }
 
 .first-section .toronto-skyline {
-  background-image: url("/bg-pixel-day.png");
+  background-image: url('/dayskyline_game 1.svg');
+  min-height: 80vh;
+  max-height: 950px;
   width: 100vw;
-  height: 1317px;
   justify-content: center;
   align-items: center;
   padding-top: 85px;
@@ -109,12 +113,13 @@ body {
   background-position: bottom;
   background-size: cover;
   box-sizing: border-box;
+  margin-top: 3%;
 }
 
 .dark-mode .first-section .toronto-skyline{
-  background-image: url("/bg-pixel-night.png");
+  background-image: url("/sunsetskyline_game 1.svg");
   width: 100vw;
-  height: 1117px;
+  max-height: 800px;
   justify-content: center;
   align-items: center;
   padding-top: 85px;
@@ -436,7 +441,8 @@ body {
 
 .sixth-section {
   display: block; 
-  background: rgba(77, 136, 255, 1);
+  /* background: rgba(77, 136, 255, 1); */
+  background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 135, 255, 1) 45%);
   /* May clash with element CSS */
   min-height: 249px;
   /* padding: 80px; */
@@ -528,7 +534,7 @@ body {
 }
 .custom-main {
   font-family: 'IBM Plex Sans', sans-serif; /* Replace with your preferred font-family */
-  height: 350px;
+  /* height: 350px; */
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -539,7 +545,7 @@ body {
   font-weight: 300; /* Font weight for 'font-light' */
   color: white;
   padding-bottom: 32px;
-  background-color: rgba(77, 136, 255, 1);
+  /* background-color: rgba(77, 136, 255, 1); */
 }
 
 .custom-main2 {
@@ -637,8 +643,8 @@ body {
 
 .menu-list .footer-logo {
   display: table-cell;
-  width: 60px;
-  height: 48px;
+  width: 40px;
+  height: 20px;
   padding: 10px;
   vertical-align: middle;
 }
@@ -896,6 +902,200 @@ body {
 }
 .pixel-corners2::after {
   margin: -4px;
+}
+
+.pixel-corners3,
+.pixel-corners3--wrapper {
+  clip-path: polygon(0px calc(100% - 36px),
+    6px calc(100% - 36px),
+    6px calc(100% - 24px),
+    12px calc(100% - 24px),
+    12px calc(100% - 18px),
+    18px calc(100% - 18px),
+    18px calc(100% - 12px),
+    24px calc(100% - 12px),
+    24px calc(100% - 6px),
+    36px calc(100% - 6px),
+    36px 100%,
+    calc(100% - 36px) 100%,
+    calc(100% - 36px) calc(100% - 6px),
+    calc(100% - 24px) calc(100% - 6px),
+    calc(100% - 24px) calc(100% - 12px),
+    calc(100% - 18px) calc(100% - 12px),
+    calc(100% - 18px) calc(100% - 18px),
+    calc(100% - 12px) calc(100% - 18px),
+    calc(100% - 12px) calc(100% - 24px),
+    calc(100% - 6px) calc(100% - 24px),
+    calc(100% - 6px) calc(100% - 36px),
+    100% calc(100% - 36px),
+    100% 36px,
+    calc(100% - 6px) 36px,
+    calc(100% - 6px) 24px,
+    calc(100% - 12px) 24px,
+    calc(100% - 12px) 18px,
+    calc(100% - 18px) 18px,
+    calc(100% - 18px) 12px,
+    calc(100% - 24px) 12px,
+    calc(100% - 24px) 6px,
+    calc(100% - 36px) 6px,
+    calc(100% - 36px) 0px,
+    36px 0px,
+    36px 6px,
+    24px 6px,
+    24px 12px,
+    18px 12px,
+    18px 18px,
+    12px 18px,
+    12px 24px,
+    6px 24px,
+    6px 36px,
+    0px 36px);
+  position: relative;
+}
+.pixel-corners3 {
+  border: 6px solid transparent;
+}
+.pixel-corners3--wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+.pixel-corners3--wrapper .pixel-corners {
+  display: block;
+  clip-path: polygon(6px 36px,
+    12px 36px,
+    12px 24px,
+    18px 24px,
+    18px 18px,
+    24px 18px,
+    24px 12px,
+    36px 12px,
+    36px 6px,
+    calc(100% - 36px) 6px,
+    calc(100% - 36px) 12px,
+    calc(100% - 24px) 12px,
+    calc(100% - 24px) 18px,
+    calc(100% - 18px) 18px,
+    calc(100% - 18px) 24px,
+    calc(100% - 12px) 24px,
+    calc(100% - 12px) 36px,
+    calc(100% - 6px) 36px,
+    calc(100% - 6px) calc(100% - 36px),
+    calc(100% - 12px) calc(100% - 36px),
+    calc(100% - 12px) calc(100% - 24px),
+    calc(100% - 18px) calc(100% - 24px),
+    calc(100% - 18px) calc(100% - 18px),
+    calc(100% - 24px) calc(100% - 18px),
+    calc(100% - 24px) calc(100% - 12px),
+    calc(100% - 36px) calc(100% - 12px),
+    calc(100% - 36px) calc(100% - 6px),
+    36px calc(100% - 6px),
+    36px calc(100% - 12px),
+    24px calc(100% - 12px),
+    24px calc(100% - 18px),
+    18px calc(100% - 18px),
+    18px calc(100% - 24px),
+    12px calc(100% - 24px),
+    12px calc(100% - 36px),
+    6px calc(100% - 36px));
+}
+.pixel-corners3::after,
+.pixel-corners3--wrapper::after {
+  content: "";
+  position: absolute;
+  clip-path: polygon(0px calc(100% - 36px),
+    6px calc(100% - 36px),
+    6px calc(100% - 24px),
+    12px calc(100% - 24px),
+    12px calc(100% - 18px),
+    18px calc(100% - 18px),
+    18px calc(100% - 12px),
+    24px calc(100% - 12px),
+    24px calc(100% - 6px),
+    36px calc(100% - 6px),
+    36px 100%,
+    calc(100% - 36px) 100%,
+    calc(100% - 36px) calc(100% - 6px),
+    calc(100% - 24px) calc(100% - 6px),
+    calc(100% - 24px) calc(100% - 12px),
+    calc(100% - 18px) calc(100% - 12px),
+    calc(100% - 18px) calc(100% - 18px),
+    calc(100% - 12px) calc(100% - 18px),
+    calc(100% - 12px) calc(100% - 24px),
+    calc(100% - 6px) calc(100% - 24px),
+    calc(100% - 6px) calc(100% - 36px),
+    100% calc(100% - 36px),
+    100% 36px,
+    calc(100% - 6px) 36px,
+    calc(100% - 6px) 24px,
+    calc(100% - 12px) 24px,
+    calc(100% - 12px) 18px,
+    calc(100% - 18px) 18px,
+    calc(100% - 18px) 12px,
+    calc(100% - 24px) 12px,
+    calc(100% - 24px) 6px,
+    calc(100% - 36px) 6px,
+    calc(100% - 36px) 0px,
+    36px 0px,
+    36px 6px,
+    24px 6px,
+    24px 12px,
+    18px 12px,
+    18px 18px,
+    12px 18px,
+    12px 24px,
+    6px 24px,
+    6px 36px,
+    0px 36px,
+    0px 50%,
+    6px 50%,
+    6px 36px,
+    12px 36px,
+    12px 24px,
+    18px 24px,
+    18px 18px,
+    24px 18px,
+    24px 12px,
+    36px 12px,
+    36px 6px,
+    calc(100% - 36px) 6px,
+    calc(100% - 36px) 12px,
+    calc(100% - 24px) 12px,
+    calc(100% - 24px) 18px,
+    calc(100% - 18px) 18px,
+    calc(100% - 18px) 24px,
+    calc(100% - 12px) 24px,
+    calc(100% - 12px) 36px,
+    calc(100% - 6px) 36px,
+    calc(100% - 6px) calc(100% - 36px),
+    calc(100% - 12px) calc(100% - 36px),
+    calc(100% - 12px) calc(100% - 24px),
+    calc(100% - 18px) calc(100% - 24px),
+    calc(100% - 18px) calc(100% - 18px),
+    calc(100% - 24px) calc(100% - 18px),
+    calc(100% - 24px) calc(100% - 12px),
+    calc(100% - 36px) calc(100% - 12px),
+    calc(100% - 36px) calc(100% - 6px),
+    36px calc(100% - 6px),
+    36px calc(100% - 12px),
+    24px calc(100% - 12px),
+    24px calc(100% - 18px),
+    18px calc(100% - 18px),
+    18px calc(100% - 24px),
+    12px calc(100% - 24px),
+    12px calc(100% - 36px),
+    6px calc(100% - 36px),
+    6px 50%,
+    0px 50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000000;
+  display: block;
+  pointer-events: none;
+}
+.pixel-corners3::after {
+  margin: -6px;
 }
 
 /*DARK MODE CSS*/

@@ -1,4 +1,7 @@
 "use client";
+
+// THIS IS DEPRECATED - WE ARE NO LONGER INCLUDING THIS SECTION
+
 import Image from "next/image";
 import { Pixelify_Sans } from "next/font/google";
 import { IBM_Plex_Sans } from "next/font/google";
@@ -25,7 +28,7 @@ export const achievements = [
 /* This component should go first on smaller screens. Otherwise, should go second. */
 const TeamImage = () => (
   /* Looks good when JUST the wrapper is used, for some reason. Strange. */
-  <div className="pixel-corners--wrapper">
+  <div className="pixel-corners--wrapper hover:scale-110 transition-all">
     <img 
       src="./image 32.png"
       alt="Picture of us!"
@@ -46,13 +49,17 @@ export function ContactUs({ windowWidth, isDark }: { windowWidth:number, isDark:
         
         {windowWidth < 768 && <TeamImage />}
 
-        <div className="flex flex-row justify-center md:flex-none">
+        <div className="flex flex-row justify-center md:flex-none hover:scale-110 transition-all">
           <div className={`flex flex-col w-[40vw] ${PixelifySans.className} ${textColor}`}>
 
             {/* Text stuff */}
             <div className="text-center md:text-left">
               <p className="text-xl sm:text-[24px] font-[500]">JOIN US</p>
-              <p className={`${PixelifySans.className} text-4xl sm:text-5xl font-[700] my-[3%]`}>Transform Tomorrow Together</p>
+                            
+              <div className="flex flex-row justify-center w-full">
+                <p className={`${PixelifySans.className} text-4xl sm:text-5xl font-[700] my-[3%]`}>Transform Tomorrow Together</p>
+              </div>
+
               <div className="text-lg sm:text-xl font-[400] mb-[3%]">
                 <p>Have questions or want to get involved?</p>
                 <p>Get in touch with us and join the CUCAI Community!</p>  

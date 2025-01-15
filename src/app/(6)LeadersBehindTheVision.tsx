@@ -46,29 +46,30 @@ function StaffImage({person}:{person:Staff}) {
         loading="lazy"
         src={person.headshot}
         alt={`Headshot of ${person.name}`}
-        className="h-[150px] rounded-full border-[#55E0FF]/50 border-[1px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
+        className="pixel-corners3 h-[150px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
       />
     );
   }else{
     return (
       <img 
-        loading="lazy"
-        src="/headshots/default.svg"
+        src="/headshots/default-headshot.png"
         alt={`Headshot of ${person.name}`}
-        className="h-[150px] rounded-full border-[#55E0FF]/50 border-[1px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
+        className="pixel-corners3 h-[150px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
       />); 
   }
 }
 
 function CUCAITeam({color}:{color:string}) {
   return (
-    <div className="carousel-inner flex flex-row items-center h-fit overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
+    <div className="carousel-inner flex flex-row items-center h-[45vh] overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
       {leaders.map((person, i) => (
         <div
-          className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[5vw]"
+          className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[5vw] hover:scale-110 transition-all"
           key={i}
         >
-          <StaffImage person={person}/>
+          <div className="pixel-corners3--wrapper">
+            <StaffImage person={person}/>
+          </div>
           <div className={`text-center ${color} ${PixelifySans.className}`}>
             <p
               className={`${
@@ -98,7 +99,10 @@ function CUCAIList({color}:{color:string}) {
       className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[80vw]"
       key={i}
     >
-      <StaffImage person={person}/>
+      
+      <div className="pixel-corners3--wrapper">
+        <StaffImage person={person}/>
+      </div>
       <div className={`text-center ${color} ${PixelifySans.className}`}>
         <p
           className={`${
