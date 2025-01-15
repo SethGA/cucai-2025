@@ -233,7 +233,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
         </div>
 
         {/* Become a partner button */}
-        <a href="mailto:chair@cucai.ca" className="flex flex-row justify-center">
+        <a href="mailto:chair@cucai.ca" className="flex flex-row justify-center sm:hover:scale-110 transition-all">
           <img 
             src="./become_a_partner.png"
             alt="Become a partner here"

@@ -1,4 +1,7 @@
 "use client";
+
+// THIS IS DEPRECATED - WE ARE NO LONGER INCLUDING THIS SECTION
+
 import Image from "next/image";
 import { Pixelify_Sans } from "next/font/google";
 import { IBM_Plex_Sans } from "next/font/google";

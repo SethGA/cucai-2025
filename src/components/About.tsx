@@ -14,7 +14,7 @@ export function About({ isDark }: { isDark: boolean }) {
   return (
     <div
       id="about"
-      className="second-section flex flex-col md:flex-row px-5 lg:px-[10vw] py-14 md:px-[80px] md:py-[100px] w-full h-full gap-10"
+      className="second-section flex flex-col -mt-[3%] lg:-mt-[1%] md:flex-row px-5 lg:px-[10vw] py-14 md:px-[80px] md:py-[100px] w-full h-full gap-10"
     >
       <div className={` ${textColor} ${PixelifySans.className} border border-cyan-300 md:hover:scale-110 transition-all`}>
         <p className={`text-[24px] ${textColor}`}>ABOUT CUCAI</p>

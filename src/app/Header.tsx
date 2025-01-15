@@ -121,7 +121,7 @@ export default function Header({
             <img 
               src="./contact-us-button.png"
               alt="mailto:chair@cucai.ca" 
-              className={`w-[123px] h-auto hover:brightness-110 active:brightness-90`}
+              className={`w-[123px] h-auto hover:brightness-110 active:brightness-90 sm:hover:scale-110 transition-all`}
             />
           </a>
 
@@ -172,7 +172,7 @@ export default function Header({
     >
       <div className="cucai-logo hover:scale-110 transition-all">
         <Image
-          src="/image.png"
+          src="/CUCAI LOGO.svg"
           alt="CUCAI logo"
           width={142.8}
           height={68}

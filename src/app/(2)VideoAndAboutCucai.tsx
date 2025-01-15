@@ -28,7 +28,7 @@ export function AboutCucai({windowWidth, isDark}:{windowWidth:number, isDark:boo
 
   return (
     // To center elements on small screens
-    <div className={`second-section flex flex-row ${windowWidth < border && "justify-center"}`}>
+    <div className={`second-section flex flex-row mt-[10vh] ${windowWidth < border && "justify-center"}`}>
 
       {/* Parent container of main elements */}
       <div className={`flex ${windowWidth < border && "flex-col"} px-[80px] py-[100px]`}>

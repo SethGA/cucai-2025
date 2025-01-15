@@ -17,7 +17,12 @@ export function Landing({
   isDark: boolean;
 }) {
   return (
-    <div className="first-section">
+    <div 
+      className="first-section"
+      style={{
+        background: isDark ? "#6A6CB3" : "rgba(163, 215, 236, 1)"
+      }}
+    >
       <div className="toronto-skyline px-4">
         <div className="white-box flex flex-col items-center gap-8 w-full sm:hover:scale-110 transition-all">
           <Countdown font={PixelifySans} isDark={isDark} />
