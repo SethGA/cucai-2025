@@ -1,6 +1,5 @@
 "use client";
 
-import Header from "./Header";
 import { Landing } from "./(1)LandingPage";
 import { AboutCucai } from "./(2)VideoAndAboutCucai";
 import { PastSpeakers } from "./(3)AIExpertsOnStage";
@@ -49,9 +48,7 @@ export default function Home() {
 
   return (
     <div className={`w-[${windowWidth}px] overflow-x-hidden m-auto`}>
-      <Header isDark={isDark} setDark={setDark} />
-
-      <Landing windowWidth={windowWidth} isDark={isDark} />
+      <Landing windowWidth={windowWidth} isDark={isDark} setDark={setDark} />
       
       <About isDark={isDark} />
 

@@ -2,6 +2,8 @@
 
 import { Pixelify_Sans } from "next/font/google";
 import { Countdown } from "./CountDown";
+import Header from "./Header";
+import { SetStateAction } from "react";
 
 const PixelifySans = Pixelify_Sans({
   subsets: ["cyrillic", "latin", "latin-ext"],
@@ -12,18 +14,25 @@ const PixelifySans = Pixelify_Sans({
 export function Landing({
   windowWidth,
   isDark,
+  setDark
 }: {
   windowWidth: number;
   isDark: boolean;
+  setDark: any;
 }) {
   return (
-    <div 
-      className="first-section"
-      style={{
-        background: isDark ? "#6A6CB3" : "rgba(163, 215, 236, 1)"
-      }}
-    >
+    <div className="first-section">
       <div className="toronto-skyline px-4">
+        {/* Put this elem at the top 
+            TODO: Center it
+        */}
+
+        <div className="absolute top-0">
+          <Header isDark={isDark} setDark={setDark} />
+        </div>
+
+        {/* <Header isDark={isDark} setDark={setDark} /> */}
+
         <div className="white-box flex flex-col items-center gap-8 w-full sm:hover:scale-110 transition-all">
           <Countdown font={PixelifySans} isDark={isDark} />
           <h1 className={"title text-[9vw] max-w-[89vw] break-words sm:text-[84px] " + PixelifySans.className}>

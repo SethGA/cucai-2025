@@ -35,7 +35,7 @@ body {
 
 .header {
   display: flex;
-  background: #7364FF;
+  /* background: #7364FF; */
   justify-content: space-between;
   padding: 8px 80px 8px 80px;
   gap: 8px;
@@ -88,24 +88,23 @@ body {
 
 .first-section {
   display: flex;
-  /* background: linear-gradient(rgba(115, 100, 255, 1), rgba(162,216,235, 1) 15%); */
+  background: linear-gradient(rgba(115, 100, 255, 1), rgba(162,216,235, 1) 15%);
   /* background: rgba(77, 136, 255, 1); */
-  background: rgba(163, 215, 236, 1);
+  /* background: rgba(163, 215, 236, 1); */
   /* background: linear-gradient(rgba(163, 215, 236, 1), rgba(77, 136, 255, 1) 99%); */
   justify-content: center;
   align-items: center;
 }
 
 .dark-mode .first-section{
-  /* background: linear-gradient(180deg, #171456 0%, #6A6CB3 34.4%, #171456 105.8%); */
-  background: #6A6CB3;
+  background: linear-gradient(180deg, #171456 0%, #6A6CB3 34.4%, #171456 105.8%);
+  /* background: #6A6CB3; */
 }
 
 .first-section .toronto-skyline {
-  background-image: url('/dayskyline_game 1.svg');
-  min-height: 80vh;
-  max-height: 950px;
+  background-image: url('/bg-pixel-day-shortened-svg.svg');
   width: 100vw;
+  height: 905px;
   justify-content: center;
   align-items: center;
   padding-top: 85px;
@@ -113,13 +112,12 @@ body {
   background-position: bottom;
   background-size: cover;
   box-sizing: border-box;
-  margin-top: 3%;
 }
 
 .dark-mode .first-section .toronto-skyline{
-  background-image: url("/sunsetskyline_game 1.svg");
+  background-image: url("/bg-pixel-night.png");
   width: 100vw;
-  max-height: 800px;
+  height: 905px;
   justify-content: center;
   align-items: center;
   padding-top: 85px;
