@@ -26,7 +26,7 @@ const icons = [
   { src: "/linkedin.png", link: "/" },
 ];
 
-export const achievements = [
+const achievements = [
   { number: "340+", category: "DELEGATES" },
   { number: "10+", category: "INDUSTRY PARTNERS" },
   { number: "19", category: "SCHOOLS REPRESENTED" },
