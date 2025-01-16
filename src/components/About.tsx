@@ -9,6 +9,8 @@ const PixelifySans = Pixelify_Sans({
 
 // justify-center requires flex-row
 export function About({ isDark }: { isDark: boolean }) {
+  
+  const headColor = isDark ? "text-[#a2d8d7]" : "text-[#4705d2]" ;
   const textColor = isDark ? "text-white" : "text-black";
 
   return (
@@ -16,25 +18,27 @@ export function About({ isDark }: { isDark: boolean }) {
       id="about"
       className="second-section flex flex-col md:flex-row px-5 lg:px-[10vw] py-14 md:px-[80px] md:py-[100px] w-full h-full gap-10"
     >
-      <div className={` ${textColor} ${PixelifySans.className} border border-cyan-300 md:hover:scale-110 transition-all`}>
-        <p className={`text-[24px] ${textColor}`}>ABOUT CUCAI</p>
-        <p
-          className={`${
-            PixelifySans.className
-          } text-[52px] leading-[62.4px] font-[700] ${
-            isDark ? "text-white" : "text-[#171456]"
-          }`}
-        >
-          Where Tomorrow&apos;s AI Innovators Meet
-        </p>
-        <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
-          Join the Canadian Undergraduate Conference in AI (CUCAI) to connect
-          with students, researchers, and industry leaders exploring
-          cutting-edge AI.
-        </p>
-        <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
-          Discover, innovate, and shape the future of AI with us!
-        </p>
+      <div className={`${PixelifySans.className} border border-cyan-300 md:hover:scale-110 transition-all`}>
+        <p className={`text-[24px] ${headColor} font-[600]`}>ABOUT CUCAI</p>
+        <div className={textColor}>
+          <p
+            className={`${
+              PixelifySans.className
+            } text-[52px] leading-[62.4px] font-[700] ${
+              isDark ? "text-white" : "text-[#171456]"
+            }`}
+          >
+            Where Tomorrow&apos;s AI Innovators Meet
+          </p>
+          <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
+            Join the Canadian Undergraduate Conference in AI (CUCAI) to connect
+            with students, researchers, and industry leaders exploring
+            cutting-edge AI.
+          </p>
+          <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
+            Discover, innovate, and shape the future of AI with us!
+          </p>
+        </div>
         <p className={`font-[400] mt-[30px] text-[22px] `}>
           <a href="mailto:chair@cucai.ca">
             <img

@@ -27,7 +27,7 @@ export function Landing({
             TODO: Center it
         */}
 
-        <div className="absolute top-0 w-full mt-[1%]">
+        <div className="absolute top-0 w-[90vw] mt-[1%]">
           <Header isDark={isDark} setDark={setDark} />
         </div>
 

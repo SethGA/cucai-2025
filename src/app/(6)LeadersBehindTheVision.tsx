@@ -60,7 +60,7 @@ function StaffImage({person}:{person:Staff}) {
 
 function CUCAITeam({color}:{color:string}) {
   return (
-    <div className="carousel-inner flex flex-row items-center h-[45vh] overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
+    <div className="carousel-inner flex flex-row items-center h-[40vh] overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50">
       {leaders.map((person, i) => (
         <div
           className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[5vw] hover:scale-110 transition-all"
@@ -125,6 +125,7 @@ function CUCAIList({color}:{color:string}) {
 
 export function CUCAITeamShowcase({isLargeScreen, isDark}:{isLargeScreen:boolean, isDark:boolean}) {
   const textColor = isDark ? "text-white" : "text-black";
+  const headColor = isDark ? "text-[#a2d8d7]" : "text-[#4705d2]" ;
 
   return (
     <div className="sixth-section w-full">
@@ -133,7 +134,7 @@ export function CUCAITeamShowcase({isLargeScreen, isDark}:{isLargeScreen:boolean
       */}
 
       <div className={`team-title px-[80px] pt-[80px] ${textColor}`}>
-        <p className={"small-text " + PixelifySans.className}>MEET OUR TEAM</p>
+        <p className={"small-text " + PixelifySans.className + " font-[600] text-[24px] " + headColor}>MEET OUR TEAM</p>
         <h1 className={"text-4xl font-[700] sm:text-[52px] " + PixelifySans.className + " w-[70%] sm:w-full h-auto"}>
           Leaders Behind the Vision
         </h1>

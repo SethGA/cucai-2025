@@ -205,6 +205,15 @@ body {
   background-color:  rgba(77, 136, 255, 1);
 }
 
+.details-section {
+  background: rgba(162, 216, 235, 1);
+}
+
+.dark-mode .details-section{
+  background: #3F3F83;
+}
+
+
 .third-section {
   display: block; 
   background: linear-gradient(rgba(163, 217, 236, 1), rgba(77, 136, 255, 1));
@@ -593,7 +602,7 @@ body {
   font-weight: 300; /* Font weight for 'font-light' */
   color: white;
   padding-bottom: 32px;
-  background: #171456;
+  /* background: #171456; */
 
 }
 
@@ -1142,8 +1151,8 @@ Sixth Section Change Gradient
 }
 
 .dark-mode .fourth-section{
-  background: #171456;
-
+  /* background: #171456; */  
+  background: linear-gradient(180deg, #171456 0%, #3D3D81 100%);
 }
 
 .dark-mode .fifth-section{

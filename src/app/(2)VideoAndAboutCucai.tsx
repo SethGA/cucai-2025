@@ -23,7 +23,7 @@ export function AboutCucai({windowWidth, isDark}:{windowWidth:number, isDark:boo
     "#4d88ff",
     "#a2d8eb"
   ];
-  const textColor = isDark ? "text-white" : "text-black";
+  const textColor = isDark ? " text-[#4705d2]" : "text-[#a2d8d7]";
   // console.log([start, end]);
 
   return (
