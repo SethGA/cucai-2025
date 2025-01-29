@@ -37,7 +37,7 @@ export function Landing({
 
           <div className="text-center pt-[10%]">
             <h1 className={`text-[9vw] leading-tight max-w-[89vw] sm:text-[48px] ${PixelifySans.className} ${isDark ? 'text-white' : 'text-[#171456]'}`}>
-              March 8-9, 2024 | Toronto, ON
+              March 8-9, 2025 | Toronto, ON
             </h1>
             <h1 className={`title text-[9vw] leading-tight max-w-[89vw] sm:text-[148px] ${PixelifySans.className} ${isDark ? 'text-white' : 'text-[#171456]'}`}>
               CUCAI 2025!
