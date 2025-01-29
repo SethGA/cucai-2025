@@ -47,8 +47,7 @@ export function Countdown({font, isDark}:{font:NextFont, isDark:boolean}){
 
 
     return(
-        <div 
-            className={"text-[4vw] font-[700] sm:text-base md:text-2xl lg:text-2xl " + font.className + " " + (isDark ? "text-white" : "text-[#171456]")}>
+        <div className={"text-[4vw] font-[700] sm:text-base md:text-2xl lg:text-2xl " + font.className + " " + (isDark ? "text-white" : "text-[#171456]")}>
                 {(CUCAIDate - new Date().getTime() > 0) ? `${diff.days} Days, ${diff.hours} Hours, ${diff.minutes} Minutes, and ${diff.seconds} Seconds` : "COUNTDOWN HAS ENDED"}
             {/* <h1 className={font.className}>{calcTimeLeft()}</h1> */}
         </div>

@@ -31,14 +31,14 @@ export const WhyCUCAI = ({
         
         <div className="flex flex-row justify-center">
             <div className={`flex flex-col text-center ${headColor}`}>
-                <p className={`text-center font-[700] text-3xl lg:text-[24px]    mt-[5vh]`}>
+                <p className={`text-center font-[700] text-3xl lg:text-[24px]  hover:scale-110 transition-all  mt-[5vh]`}>
                     Our 2024 Conference
                 </p>
 
                 {/* Stats stuff */}
                 <div className="flex flex-col md:flex-row md:gap-8 md:ml-[1%]">
                     {achievements.map((item, index) => (
-                    <div key={index} className="my-[5vh] lg:mt-none">
+                    <div key={index} className="my-[5vh] lg:mt-none hover:scale-110 transition-all">
                         {isDark ? 
                         <div
                             className={`text-[90px] font-extrabold bg-[#1aa9cb] bg-clip-text text-transparent drop-shadow-[0_-4px_0px_rgba(91,196,233,1)] ${PixelifySans.className}`}

@@ -45,7 +45,6 @@ export function Landing({
             <Countdown 
               font={PixelifySans} 
               isDark={isDark} 
-              size={`text-[24px] sm:text-[36px] ${isDark ? 'text-white' : 'text-[#171456]'}`} 
             />
           </div>
 
