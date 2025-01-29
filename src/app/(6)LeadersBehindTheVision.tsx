@@ -54,7 +54,7 @@ function StaffImage({person}:{person:Staff}) {
         src="/headshots/default-headshot.png"
         alt={`Headshot of ${person.name}`}
         className="pixel-corners3 h-[150px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
-      />) 
+      />); 
   }
 }
 
@@ -98,6 +98,7 @@ function CUCAIList({color}:{color:string}) {
       className="flex flex-col justify-center items-center py-8 px-16 gap-4 min-w-[80vw]"
       key={i}
     >
+      
       <div className="pixel-corners3--wrapper">
         <StaffImage person={person}/>
       </div>

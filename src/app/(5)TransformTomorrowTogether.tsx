@@ -1,4 +1,7 @@
 "use client";
+
+// THIS IS DEPRECATED - WE ARE NO LONGER INCLUDING THIS SECTION
+
 import Image from "next/image";
 import { Pixelify_Sans } from "next/font/google";
 import { IBM_Plex_Sans } from "next/font/google";
@@ -55,7 +58,7 @@ export function ContactUs({ windowWidth, isDark }: { windowWidth:number, isDark:
             {/* Text stuff */}
             <div className="text-center md:text-left">
               <p className="text-xl sm:text-[24px] font-[500]">JOIN US</p>
-
+                            
               <div className="flex flex-row justify-center w-full">
                 <p className={`${PixelifySans.className} text-4xl sm:text-5xl font-[700] my-[3%]`}>Transform Tomorrow Together</p>
               </div>

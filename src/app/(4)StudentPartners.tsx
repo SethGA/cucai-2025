@@ -157,14 +157,14 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
         <div>
           {chunked_partners.map((row, row_index) => (
             <div key={row_index} className="flex flex-row justify-center">
-              <div className="mt-[8vh] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[5vw]">
+              <div className="mt-[8vh] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {row.map((partner, index) => (
                   // Partner exterior
                   <div key={index} className="pixel-corners--wrapper hover:scale-110 transition-all">
 
                     {/* Partner interior */}
                     <div 
-                      className="pixel-corners w-[70vw] sm:w-[40vw] md:w-[25vw] p-8 min-h-[45vh]"
+                      className="pixel-corners w-[70vw] sm:w-[40vw] lg:w-[25vw] p-8 min-h-[45vh]"
                       // className="pixel-corners w-[70vw] sm:w-[27vw] md:w-[45vw] lg:w-[27vw] min-h-[35vh]"
                       style={{
                         background: gradients[row_index] ? 
@@ -233,7 +233,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
         </div>
 
         {/* Become a partner button */}
-        <a href="mailto:chair@cucai.ca" className="flex flex-row justify-center">
+        <a href="mailto:chair@cucai.ca" className="flex flex-row justify-center sm:hover:scale-110 transition-all">
           <img 
             src="./become_a_partner.png"
             alt="Become a partner here"

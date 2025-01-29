@@ -1,7 +1,7 @@
 "use client";
 
 import { Pixelify_Sans } from "next/font/google";
-import {Countdown} from "./CountDown"
+import { Countdown } from "./CountDown";
 
 const PixelifySans = Pixelify_Sans({
   subsets: ["cyrillic", "latin", "latin-ext"],
@@ -9,32 +9,60 @@ const PixelifySans = Pixelify_Sans({
   style: ["normal"],
 });
 
-export function Landing({windowWidth, isDark}:{windowWidth:number, isDark:boolean}) {
+export function Landing({
+  windowWidth,
+  isDark,
+}: {
+  windowWidth: number;
+  isDark: boolean;
+}) {
   return (
-    <div className="first-section">
-      <div className="toronto-skyline">
-        <div className="white-box flex flex-col items-center gap-8 w-full hover:scale-110 transition-all">
-          <Countdown font={PixelifySans} isDark={isDark}/>
+    <div 
+      className="first-section"
+      style={{
+        background: isDark ? "#6A6CB3" : "rgba(163, 215, 236, 1)"
+      }}
+    >
+      <div className="toronto-skyline px-4">
+        <div className="white-box flex flex-col items-center gap-8 w-full sm:hover:scale-110 transition-all">
+          <Countdown font={PixelifySans} isDark={isDark} />
           <h1 className={"title text-[9vw] max-w-[89vw] break-words sm:text-[84px] " + PixelifySans.className}>
               Experience AI&apos;s Future at CUCAI 2025!
-            </h1>          
+          </h1>          
+          
           {/* {windowWidth >= 706 ? (
-            <h1 className={"title text-[5vw] sm:text-[84px] " + PixelifySans.className}>
+            <h1
+              className={
+                "title text-[50px] sm:text-[84px] " + PixelifySans.className
+              }
+            >
               Experience AI&apos;s Future at CUCAI 2025!
-            </h1>          
+            </h1>
           ) : (
             <div>
-              <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+              <h1
+                className={
+                  "title text-[50px] sm:text-[84px] " + PixelifySans.className
+                }
+              >
                 Experience AI&apos;s
-              </h1>          
-              <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+              </h1>
+              <h1
+                className={
+                  "title text-[50px] sm:text-[84px] " + PixelifySans.className
+                }
+              >
                 Future at
-              </h1>          
-              <h1 className={"title text-[50px] sm:text-[84px] " + PixelifySans.className}>
+              </h1>
+              <h1
+                className={
+                  "title text-[50px] sm:text-[84px] " + PixelifySans.className
+                }
+              >
                 CUCAI 2025!
               </h1>
             </div>          
-          )} */}
+          )}
           <a href="https://discord.gg/az6MVvNhdB">
             <img
               src="join-discord.png"
