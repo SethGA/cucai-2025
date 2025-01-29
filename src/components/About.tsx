@@ -31,12 +31,14 @@ export function About({ isDark }: { isDark: boolean }) {
             Where Tomorrow&apos;s AI Innovators Meet
           </p>
           <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
-            Join the Canadian Undergraduate Conference in AI (CUCAI) to connect
-            with students, researchers, and industry leaders exploring
-            cutting-edge AI.
+            We are a not-for-profit conference that brings together over 320 of the brightest minds in AI from across the country.
+            100% run by undergraduate volunteers, out of passion.
+            Since our inception in 2018, CUCAI has served as a platform for top Canadian undergraduates in AI to learn, share their passion, and connect with industry leaders.
+            Our main event is the AI project showcase where student teams from across Canada demo their project and paper in front of
+            recruiters, sponsors, speakers, & their fellow delegates.
           </p>
           <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
-            Discover, innovate, and shape the future of AI with us!
+            CUCAI 2025 will be held in Toronto, Ontario on March 8-9, 2025.
           </p>
         </div>
         <p className={`font-[400] mt-[30px] text-[22px] `}>
