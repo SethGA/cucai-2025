@@ -335,8 +335,12 @@ body {
   margin-top: 7%;
 }
 
-.fourth-section {
+.three-point-five-section {
   background: linear-gradient(rgba(77, 136, 255, 1), rgba(163, 217, 236, 1));
+}
+
+.fourth-section {
+  background:  rgba(163, 217, 236, 1);
 }
 
 .fifth-section {
@@ -1150,9 +1154,14 @@ Sixth Section Change Gradient
 
 }
 
-.dark-mode .fourth-section{
+.dark-mode .three-point-five-section{
   /* background: #171456; */  
   background: linear-gradient(180deg, #171456 0%, #3D3D81 100%);
+}
+
+.dark-mode .fourth-section{
+  /* background: #171456; */  
+  background:  #3D3D81;
 }
 
 .dark-mode .fifth-section{
