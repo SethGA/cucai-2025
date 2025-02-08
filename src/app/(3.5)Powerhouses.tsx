@@ -67,13 +67,13 @@ export function PowerhousesBehindCUCAI({windowWidth, isDark}:{windowWidth:Number
                     (<div className="flex flex-col md:flex-row p-8" key={sponsor.name}>
                         
                         {/* Booth component */}
-                        <div className="relative max-w-[50vw] min-h-[35vh] flex justify-end mx-auto md:mx-none">
-                            <img src={sponsor.booth} className=""/>
+                        <div className="relative max-w-[50vw] sm:min-h-[35vh] flex justify-end mx-auto md:mx-none">
+                            <img src={sponsor.booth}/>
                         </div>
                         
                         {/* Text component */}
                         <div className="relative flex items-end min-h-[35vh] mx-auto md:mx-none">
-                            <div className="pixel-corners--wrapper ml-none md:ml-[5vw] my-[3vh] md:my-none">
+                            <div className="pixel-corners--wrapper ml-none md:ml-[5vw] mt-[3vh] md:mt-none">
                                 <div 
                                     className="pixel-corners bg-red-200 p-2 w-[60vw] md:w-[30vw]"
                                     style={{
