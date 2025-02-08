@@ -166,10 +166,12 @@ export default function Header({
 
   return (
     <header
-      className={`flex ${
-        isDark ? "bg-[#171456]" : "bg-[#7364ff]"
-      } px-5 md:px-[80px] py-[8px] justify-between`}
-    >
+      // className={`flex ${
+      //   isDark ? "bg-[#171456]" : "bg-[#7364ff]"
+      // } px-5 md:px-[80px] py-[8px] justify-between`}
+
+      className={`flex px-5 md:px-[80px] justify-between`}
+>
       <div className="cucai-logo hover:scale-110 transition-all">
         <Image
           src="/CUCAI LOGO.svg"

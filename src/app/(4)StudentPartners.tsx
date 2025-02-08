@@ -49,6 +49,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
   const diffs = end_color.map((color, i) => (color - start_color[i]));
   const qmind_color = isDark ? [60, 60, 128] : [131, 187, 243];
   const textColor = isDark ? "text-white" : "text-black";
+  const headColor = isDark ? "text-[#a2d8d7]" : "text-[#4705d2]" ;
 
   let gradients = Array.from({ length: chunked_partners.length }, (_, i) => ({
     from: `rgb(${
@@ -81,7 +82,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
       <div className="flex flex-col">
         {/* Title text */}
         <div className={`${PixelifySans.className} ${textColor}`}>
-          <p className="text-xl sm:text-3xl font-[500] ">
+          <p className={`text-xl sm:text-3xl font-[500] ${headColor}`}>
             OUR STUDENT PARTNERS
           </p>
           <p className="text-[52px] font-[700] leading-[62.4px] mb-[3%]">

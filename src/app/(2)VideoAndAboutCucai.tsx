@@ -23,12 +23,12 @@ export function AboutCucai({windowWidth, isDark}:{windowWidth:number, isDark:boo
     "#4d88ff",
     "#a2d8eb"
   ];
-  const textColor = isDark ? "text-white" : "text-black";
+  const textColor = isDark ? " text-[#4705d2]" : "text-[#a2d8d7]";
   // console.log([start, end]);
 
   return (
     // To center elements on small screens
-    <div className={`second-section flex flex-row mt-[10vh] ${windowWidth < border && "justify-center"}`}>
+    <div className={`second-section flex flex-row ${windowWidth < border && "justify-center"}`}>
 
       {/* Parent container of main elements */}
       <div className={`flex ${windowWidth < border && "flex-col"} px-[80px] py-[100px]`}>
@@ -51,12 +51,14 @@ export function AboutCucai({windowWidth, isDark}:{windowWidth:number, isDark:boo
           <p className={`text-[24px] ${textColor}`}>ABOUT CUCAI</p>
           <p className={`text-4xl sm:text-5xl leading-[62.4px] font-[700] ${isDark ? "text-white" : "text-[#171456]"}`}>Where Tomorrow&apos;s AI Innovators Meet</p>
           <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
-            Join the Canadian Undergraduate Conference in AI (CUCAI) to connect
-            with students, researchers, and industry leaders exploring
-            cutting-edge AI.
+          We are a not-for-profit conference that brings together over 320 of the brightest minds in AI from across the country.
+          100% run by undergraduate volunteers, out of passion.
+          Since our inception in 2018, CUCAI has served as a platform for top Canadian undergraduates in AI to learn, share their passion, and connect with industry leaders.
+          Our main event is the AI project showcase where student teams from across Canada demo their project and paper in front of
+          recruiters, sponsors, speakers, & their fellow delegates.
           </p>
           <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
-            Discover, innovate, and shape the future of AI with us!
+            CUCAI 2025 will be held in Toronto, Ontario on March 8-9, 2025.
           </p>
           <p className={`font-[400] mt-[30px] text-[22px] ${windowWidth < border && "flex flex-row justify-center"}`}>
             <a href="mailto:chair@cucai.ca">
