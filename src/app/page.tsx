@@ -1,15 +1,14 @@
 "use client";
 
-import Header from "./Header";
 import { Landing } from "./(1)LandingPage";
-import { AboutCucai } from "./(2)VideoAndAboutCucai";
 import { PastSpeakers } from "./(3)AIExpertsOnStage";
 import { StudentPartners } from "./(4)StudentPartners";
-import { ContactUs } from "./(5)TransformTomorrowTogether";
 import { CUCAITeamShowcase } from "./(6)LeadersBehindTheVision";
 import { Footer } from "./Footer";
 import { useState, useEffect } from "react";
 import { About } from "@/components/About";
+import { WhyCUCAI } from "./(2.5)WhyCUCAI";
+import { PowerhousesBehindCUCAI } from "./(3.5)Powerhouses";
 
 // TODO: Add other Uni's website and instagram links
 
@@ -24,6 +23,12 @@ const icons = [
   { src: "/email.png", link: "/" },
   { src: "/instagram.png", link: "/" },
   { src: "/linkedin.png", link: "/" },
+];
+
+const achievements = [
+  { number: "340+", category: "DELEGATES" },
+  { number: "10+", category: "INDUSTRY PARTNERS" },
+  { number: "19", category: "SCHOOLS REPRESENTED" },
 ];
 
 export default function Home() {
@@ -49,11 +54,11 @@ export default function Home() {
 
   return (
     <div className={`w-[${windowWidth}px] overflow-x-hidden m-auto`}>
-      <Header isDark={isDark} setDark={setDark} />
-
-      <Landing windowWidth={windowWidth} isDark={isDark} />
+      <Landing windowWidth={windowWidth} isDark={isDark} setDark={setDark} />
       
       <About isDark={isDark} />
+
+      <WhyCUCAI achievements={achievements} isDark={isDark}/>
 
       <div
         id="speakers"
@@ -61,6 +66,7 @@ export default function Home() {
       >
         <PastSpeakers isLargeScreen={windowWidth >= 768} isDark={isDark}/>
       </div>
+      <PowerhousesBehindCUCAI windowWidth={windowWidth} isDark={isDark}/>
 
       <StudentPartners windowWidth={windowWidth} isDark={isDark} />
 

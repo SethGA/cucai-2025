@@ -19,12 +19,6 @@ const IBMPlexSans = IBM_Plex_Sans({
   style: ["normal", "italic"],
 });
 
-export const achievements = [
-  { number: "340+", category: "DELEGATES" },
-  { number: "10+", category: "INDUSTRY PARTNERS" },
-  { number: "19", category: "SCHOOLS REPRESENTED" },
-];
-
 /* This component should go first on smaller screens. Otherwise, should go second. */
 const TeamImage = () => (
   /* Looks good when JUST the wrapper is used, for some reason. Strange. */

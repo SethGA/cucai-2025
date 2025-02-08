@@ -2,14 +2,8 @@ export const leaders = [
   {
     name: "Seth Grief-Albert",
     headshot: "/headshots/sethga_processed.jpg",
-    title: "Co-Chair",
+    title: "Chair",
     linkedin: "https://www.linkedin.com/in/sethgriefalbert/",
-  },
-  {
-    name: "Lejla Sain",
-    headshot: "/headshots/lejla-sain.png",
-    title: "Co-Chair",
-    linkedin: "https://www.linkedin.com/in/lejla-s/",
   },
   {
     name: "Mercy Doan",
@@ -28,18 +22,6 @@ export const leaders = [
     headshot: "/headshots/rowan-mcdonald_processed.jpg",
     title: "Director of Finance",
     linkedin: "https://www.linkedin.com/in/rowan-m",
-  },
-  {
-    name: "Aiya Farhan",
-    headshot: "/headshots/aiya-farhan.png",
-    title: "Director of Marketing / Illustrator",
-    linkedin: "https://www.linkedin.com/in/aiya-farhan-94243b233/",
-  },
-  {
-    name: "Jessica Lee",
-    headshot: "/headshots/jessica-lee.png",
-    title: "UX/UI Designer",
-    linkedin: "https://www.linkedin.com/in/jessicamlee-/",
   },
   {
     name: "Skyye Lambert",
