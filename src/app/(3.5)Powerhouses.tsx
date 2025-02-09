@@ -120,7 +120,7 @@ export function PowerhousesBehindCUCAI({
                             src="./linkedin.png"
                             alt="Linkedin"
                             className={`w-[24px] h-[24px] ${
-                              isDark && "invert"
+                              !isDark && "invert"
                             }`}
                           />
                         </a>
