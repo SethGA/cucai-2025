@@ -50,21 +50,19 @@ export function PowerhousesBehindCUCAI({
           showThumbs={false}
           showStatus={false}
           autoPlay
-          interval={5000}
+          interval={15000}
           infiniteLoop
-          // Change interval to 5000 when done
         >
           {/* All sponsor booth svg files should be 897px by 730 px */}
           {sponsors.map((sponsor) => (
             <div className="flex flex-col md:flex-row p-8" key={sponsor.name}>
+
               {/* Booth component */}
-              <div className="relative w-[40vw] sm:min-h-[35vh] flex justify-end mx-auto md:mx-none">
-                <img src={sponsor.booth} />
-              </div>
+              <img src={sponsor.booth} className="max-w-[35vw] h-full flex justify-start mx-auto md:mx-none"/>
 
               {/* Text component */}
-              <div className="relative flex items-end min-h-[35vh] mx-auto md:mx-none">
-                <div className="pixel-corners--wrapper mt-[3vh] md:mt-none">
+              <div className="relative flex items-end min-h-[35vh] mx-auto mt-3 sm:mt-none">
+                <div className="pixel-corners--wrapper mb-[6vh] md:mt-none">
                   <div
                     className="pixel-corners bg-red-200 p-2 w-[60vw] md:w-[30vw]"
                     style={{
@@ -79,17 +77,17 @@ export function PowerhousesBehindCUCAI({
                     </p>
 
                     {/* Links */}
-                    <div className="flex flex-row justify-center mt-2">
+                    <div className="flex flex-row justify-center mt-2 text-sm lg:text-lg underline ">
                       <div
                         className={`flex ${
-                          windowWidth >= 500 ? "flex-row gap-6" : "flex-col"
+                          windowWidth >= 810 ? "flex-row gap-2" : "flex-col"
                         }`}
                       >
                         <a
                           href={sponsor.website}
                           className="flex flex-row items-center"
                         >
-                          <p className="text-2xl underline gap-1">Website</p>
+                          <p className="gap-1">Website</p>
                           <img
                             src="./Link.png"
                             alt="Website"
@@ -103,11 +101,11 @@ export function PowerhousesBehindCUCAI({
                             href={sponsor.insta}
                             className="flex flex-row items-center gap-1"
                           >
-                            <p className="text-2xl underline">Insta</p>
+                            <p className="">Insta</p>
                             <img
                               src="./insta.png"
                               alt="Instagram"
-                              className={`w-[24px] h-[24px] ${
+                              className={`max-w-[24px] max-h-[24px] ${
                                 isDark && "invert"
                               }`}
                             />
@@ -117,7 +115,7 @@ export function PowerhousesBehindCUCAI({
                           href={sponsor.linkedin}
                           className="flex flex-row items-center gap-1"
                         >
-                          <p className="text-2xl underline">Linkedin</p>
+                          <p className="">Linkedin</p>
                           <img
                             src="./linkedin.png"
                             alt="Linkedin"
