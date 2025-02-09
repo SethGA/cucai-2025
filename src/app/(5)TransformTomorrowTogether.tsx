@@ -5,7 +5,7 @@
 import Image from "next/image";
 import { Pixelify_Sans } from "next/font/google";
 import { IBM_Plex_Sans } from "next/font/google";
-
+// import { ConferenceStatistics } from "./ConferenceStatistics";
 
 export const PixelifySans = Pixelify_Sans({
   subsets: ["cyrillic", "latin", "latin-ext"],
@@ -39,6 +39,9 @@ export function ContactUs({ windowWidth, isDark }: { windowWidth:number, isDark:
 
     <div
       className={`fifth-section flex flex-row justify-center`}>
+        {/* <div>
+          <ConferenceStatistics />
+        </div> */}
       <div className={`flex flex-col gap-8 md:flex-row my-8 px-8`}>
         
         {windowWidth < 768 && <TeamImage />}
