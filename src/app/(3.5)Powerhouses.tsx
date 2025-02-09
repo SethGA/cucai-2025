@@ -85,13 +85,13 @@ export function PowerhousesBehindCUCAI({
                       >
                         <a
                           href={sponsor.website}
-                          className="flex flex-row items-center"
+                          className="flex flex-row items-center mx-auto"
                         >
                           <p className="gap-1">Website</p>
                           <img
                             src="./Link.png"
                             alt="Website"
-                            className={`w-[24px] h-[24px] ${
+                            className={`max-w-[24px] max-h-[24px] ${
                               isDark && "invert"
                             }`}
                           />
@@ -99,7 +99,7 @@ export function PowerhousesBehindCUCAI({
                         {sponsor.insta && (
                           <a
                             href={sponsor.insta}
-                            className="flex flex-row items-center gap-1"
+                            className="flex flex-row items-center gap-1 mx-auto"
                           >
                             <p className="">Insta</p>
                             <img
@@ -113,7 +113,7 @@ export function PowerhousesBehindCUCAI({
                         )}
                         <a
                           href={sponsor.linkedin}
-                          className="flex flex-row items-center gap-1"
+                          className="flex flex-row items-center gap-1 mx-auto"
                         >
                           <p className="">Linkedin</p>
                           <img
