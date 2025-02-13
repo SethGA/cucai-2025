@@ -31,7 +31,7 @@ export function About({ isDark }: { isDark: boolean }) {
             Where Tomorrow&apos;s AI Innovators Meet
           </p>
           <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
-            CUCAI is a not-for-profit conference that unites over 320 of Canada's brightest AI minds.
+            CUCAI is a not-for-profit conference that unites over 320 of Canada&apos;s brightest AI minds.
             Run entirely by passionate undergraduate volunteers, we provide a platform for students to learn, collaborate, and connect with industry leaders.
           </p>
           <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
