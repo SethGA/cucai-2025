@@ -43,7 +43,7 @@ export function Landing({
               CUCAI 2025!
             </h1>
             <Countdown 
-              font="PixeloidSansBold" 
+              className="font-[PixeloidSansBold]" 
               isDark={isDark} 
             />
           </div>
