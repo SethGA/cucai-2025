@@ -29,7 +29,7 @@ function SpeakerCarousel({ speakers }:{ speakers:Speaker[] }) {
     <div className={`carousel-inner flex flex-row items-center h-[65vh] overflow-scroll no-scrollbar divide-x-[1px] divide-[#55E0FF]/50  ${PixelifySans.className}`}>
       {speakers.map((speaker, i) => (
         <div
-          className="flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[5vw] hover:scale-110 transition-all"
+          className="flex flex-col justify-center items-center content-center py-8 px-16 gap-4 min-w-[5vw] hover:scale-100 transition-all"
           key={i}
         >
           <div className="pixel-corners--wrapper">
@@ -89,7 +89,7 @@ export function PastSpeakers({isLargeScreen, isDark}:{isLargeScreen:boolean, isD
         */}
 
         <div className={"title px-[80px] py-[40px] sm:py-[80px] " + PixelifySans.className}>
-          <p className={`${isDark ? "text-[#a2d8d7]" : "text-[#4705d2]"} text-xl sm:text-3xl font-[600]`}>OUR 2024 SPEAKERS</p>
+          <p className={`${isDark ? "text-[#a2d8d7]" : "text-[#4705d2]"} text-xl sm:text-3xl font-[600]`}>OUR 2025 SPEAKERS</p>
           <h1 className={`${isDark ? "text-white" : "text-[#171456]"} text-4xl sm:text-5xl font-[700] w-[70%] sm:w-full h-auto`}>
             AI Experts On Stage
           </h1>

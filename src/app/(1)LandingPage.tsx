@@ -36,14 +36,14 @@ export function Landing({
         <div className="flex flex-col items-center gap-8 w-full sm:hover:scale-110 transition-all">
 
           <div className="text-center pt-[10%]">
-            <h1 className={`text-[9vw] leading-tight max-w-[89vw] sm:text-[48px] ${PixelifySans.className} ${isDark ? 'text-white' : 'text-[#171456]'}`}>
+            <h1 className={`text-[9vw] leading-tight max-w-[89vw] sm:text-[48px] font-[PixeloidSansBold] ${isDark ? 'text-white' : 'text-[#171456]'}`}>
               March 8-9, Toronto, Ontario
             </h1>
-            <h1 className={`title text-[9vw] leading-tight max-w-[89vw] sm:text-[148px] ${PixelifySans.className} ${isDark ? 'text-white' : 'text-[#171456]'}`}>
+            <h1 className={`title text-[9vw] leading-tight max-w-[89vw] sm:text-[148px] font-[PixeloidSansBold] ${isDark ? 'text-white' : 'text-[#171456]'}`}>
               CUCAI 2025!
             </h1>
             <Countdown 
-              font={PixelifySans} 
+              font="PixeloidSansBold" 
               isDark={isDark} 
             />
           </div>
@@ -53,6 +53,7 @@ export function Landing({
     </div>
   );
 }
+
 
 /*
 Fixes:

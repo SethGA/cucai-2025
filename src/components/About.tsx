@@ -31,16 +31,15 @@ export function About({ isDark }: { isDark: boolean }) {
             Where Tomorrow&apos;s AI Innovators Meet
           </p>
           <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
-            We are a not-for-profit conference that brings together over 320 of the brightest minds in AI from across the country.
-            100% run by undergraduate volunteers, out of passion.
+            CUCAI is a not-for-profit conference that unites over 320 of Canada's brightest AI minds.
+            Run entirely by passionate undergraduate volunteers, we provide a platform for students to learn, collaborate, and connect with industry leaders.
           </p>
           <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
-            Since our inception in 2018, CUCAI has served as a platform for top Canadian undergraduates in AI to learn, share their passion, and connect with industry leaders.
-            Our main event is the AI project showcase where student teams from across Canada demo their project and paper in front of
-            recruiters, sponsors, speakers, & their fellow delegates.
+            Since 2018, CUCAI has been at the forefront of fostering AI talent, offering students the opportunity to showcase their projects and research.
+            Our flagship event, the AI Project Showcase, brings together top student teams from across Canada to present their work to recruiters, sponsors, speakers, and peers.
           </p>
           <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
-            CUCAI 2025 will be held in Toronto, Ontario on March 8-9.
+            Join us for CUCAI 2025, happening in <strong>Toronto, Ontario, on March 8-9</strong>.
           </p>
         </div>
         <p className={`font-[400] mt-[30px] text-[22px] `}>

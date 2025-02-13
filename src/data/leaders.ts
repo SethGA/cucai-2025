@@ -14,7 +14,7 @@ export const leaders = [
   {
     name: "Leonardo Montes Quiliche",
     headshot: "/headshots/leo-montes_processed.png",
-    title: "Director of Strategic Partnerships",
+    title: "Director of Sponsorships",
     linkedin: "https://www.linkedin.com/in/leo-mont",
   },
   {
@@ -52,5 +52,23 @@ export const leaders = [
     headshot: "/headshots/sara-laker_a.png",
     title: "Director of Logistics",
     linkedin: "https://www.linkedin.com/in/sara-laker",
+  },
+  {
+    name: "Rabab Azeem",
+    headshot: "/headshots/rabab-azeem.png",
+    title: "Advisor",
+    linkedin: "https://www.linkedin.com/in/rabab-azeem",
+  },
+  {
+    name: "Rodrigo Del Aguila",
+    headshot: "/headshots/rodrigo.png",
+    title: "Advisor",
+    linkedin: "https://www.linkedin.com/in/rodrigo-delaguila",
+  },
+  {
+    name: "Matthew Tamura",
+    headshot: "/headshots/matthew-tamura.png",
+    title: "Advisor",
+    linkedin: "https://www.linkedin.com/in/matthew-tamura",
   },
 ];
