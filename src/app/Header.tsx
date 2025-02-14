@@ -15,7 +15,7 @@ const PixelifySans = Pixelify_Sans({
 const buttons = [
   { name: "About", link: "#about" },
   { name: "Speakers", link: "#speakers" },
-  { name: "Sponsors (Soon)", link: "/" },
+  // { name: "Sponsors (Soon)", link: "/" },
   { name: "Register", link: "https://tally.so/r/mZ1MAz" },
 ];
 

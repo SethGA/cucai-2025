@@ -43,7 +43,7 @@ export function About({ isDark }: { isDark: boolean }) {
           </p>
         </div>
         <p className={`font-[400] mt-[30px] text-[22px] `}>
-          <a href="mailto:chair@cucai.ca">
+          <a href="https://tally.so/r/mZ1MAz">
             <img
               src="apply.png"
               alt="Apply to CUCAI"
