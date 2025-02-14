@@ -61,7 +61,7 @@ export function AboutCucai({windowWidth, isDark}:{windowWidth:number, isDark:boo
             CUCAI 2025 will be held in Toronto, Ontario on March 8-9, 2025.
           </p>
           <p className={`font-[400] mt-[30px] text-[22px] ${windowWidth < border && "flex flex-row justify-center"}`}>
-            <a href="mailto:chair@cucai.ca">
+            <a href="https://tally.so/r/mZ1MAz">
               <img
                 src="apply.png"
                 alt="Apply to CUCAI"

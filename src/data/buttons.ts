@@ -1,5 +1,4 @@
 export const buttons = [
-  { name: "Speakers (Soon)", link: "#speakers" },
-  { name: "Programming (Soon)", link: "#schedule" },
+  { name: "Speakers", link: "#speakers" },
   { name: "Student Partners", link: "#student-partners" },
 ];
