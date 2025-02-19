@@ -11,6 +11,12 @@ export const speakers = [{
     company: "/logos/meta-logo.png",
   },
   {
+    name: "Laleh Seyyed-Kalantari",
+    position: "Affiliate Professor",
+    img: "/headshots/laleh_seyyed-kalantari.png",
+    company: "/logos/vector-logo.png",
+  },
+  {
     name: "Paul Grouchy",
     position: "Director of AI",
     img: "/headshots/paul-grouchy.png",

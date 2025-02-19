@@ -71,4 +71,10 @@ export const leaders = [
     title: "Advisor",
     linkedin: "https://www.linkedin.com/in/matthew-tamura",
   },
+  {
+    name: "Dr. Laleh Seyyed-Kalantari",
+    headshot: "/headshots/laleh_seyyed-kalantari.png",
+    title: "Co-organizer",
+    linkedin: "https://www.linkedin.com/in/laleh-638a495a/",
+  },
 ];
