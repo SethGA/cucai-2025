@@ -34,6 +34,7 @@ function SpeakerCarousel({ speakers }:{ speakers:Speaker[] }) {
         >
           <div className="pixel-corners--wrapper">
             <img
+              loading="lazy"
               src={speaker.img}
               alt={"Headshot of " + speaker.name}
               className="pixel-corners h-[250px] object-cover bg-gradient-to-t from-[#547192]/0 to-[#002b5c]/50"
@@ -60,6 +61,7 @@ function SpeakerList({ speakers }:{ speakers:Speaker[] }) {
     >
       <div className="pixel-corners--wrapper">
         <img
+          loading="lazy"
           src={speaker.img}
           alt={"Headshot of " + speaker.name}
           className="pixel-corners h-[250px] object-cover bg-gradient-to-t from-[#547192]/0 to-[#002b5c]/50"

@@ -37,7 +37,7 @@ export function AboutCucai({windowWidth, isDark}:{windowWidth:number, isDark:boo
           {/* Video of CUCAI - Should scale naturally with website 
               Phones are smaller than this video, causing bugs - fix this!
           */}
-          <div className={`max-w-[401px] sm:w-[401px] h-[701px] bg-[#171456] rounded-3xl p-2 aspect-[9/16] hover:scale-110 transition-all`}>
+          <div className={`max-w-[401px] sm:w-[401px] h-[701px] bg-[#171456] rounded-3xl p-2 aspect-[9/16]`}>
             <iframe
               className="rounded-2xl w-full h-full min-w-full min-h-full"
               src="https://www.youtube.com/embed/D9mYUk5Tji4?controls=0?quality=auto"
@@ -47,7 +47,7 @@ export function AboutCucai({windowWidth, isDark}:{windowWidth:number, isDark:boo
         </div>
 
         {/* This body works */}
-        <div className={`${PixelifySans.className} max-w-[565px] hover:scale-110 transition-all ${textColor} ${windowWidth >= border ? "ml-[7vw]" : "mt-[5vh]"}`}>
+        <div className={`${PixelifySans.className} max-w-[565px] ${textColor} ${windowWidth >= border ? "ml-[7vw]" : "mt-[5vh]"}`}>
           <p className={`text-[24px] ${textColor}`}>ABOUT CUCAI</p>
           <p className={`text-4xl sm:text-5xl leading-[62.4px] font-[700] ${isDark ? "text-white" : "text-[#171456]"}`}>Where Tomorrow&apos;s AI Innovators Meet</p>
           <p className={`font-[400] mt-[30px] text-[22px] ${textColor}`}>
