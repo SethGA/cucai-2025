@@ -189,7 +189,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
                               // className={`w-[${partner.width}px]`}
                             />
                           </div>
-                          <p className={`${PixelifySans.className} ${textColor} text-center mt-4`}>
+                          <div className={`${PixelifySans.className} ${textColor} text-center mt-4`}>
                             <p className={`lg:mt-[3vh] text-4xl sm:text-5xl font-[700]`}>
                               {partner.name}
                             </p>
@@ -222,7 +222,7 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
                                 </a>
                               </div>
                             </div>
-                          </p>
+                          </div>
                         </div>
                       </div>
                     </div>

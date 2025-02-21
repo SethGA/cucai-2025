@@ -8,7 +8,7 @@ import { Footer } from "./Footer";
 import { useState, useEffect } from "react";
 import { About } from "@/components/About";
 import { WhyCUCAI } from "./(2.5)WhyCUCAI";
-// import { PowerhousesBehindCUCAI } from "./(3.5)Powerhouses";
+import { PowerhousesBehindCUCAI } from "./(3.5)Powerhouses";
 
 // TODO: Add other Uni's website and instagram links
 
@@ -66,7 +66,7 @@ export default function Home() {
       >
         <PastSpeakers isLargeScreen={windowWidth >= 768} isDark={isDark}/>
       </div>
-      {/* <PowerhousesBehindCUCAI windowWidth={windowWidth} isDark={isDark}/> */}
+      <PowerhousesBehindCUCAI windowWidth={windowWidth} isDark={isDark}/>
 
       <StudentPartners windowWidth={windowWidth} isDark={isDark} />
 
