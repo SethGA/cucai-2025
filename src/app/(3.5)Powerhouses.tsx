@@ -35,7 +35,7 @@ export function PowerhousesBehindCUCAI({
             isDark ? "text-[#a2d8d7]" : "text-[#4705d2]"
           } text-xl sm:text-3xl font-[600]`}
         >
-          OUR 2024 SPONSORS
+          OUR SPONSORS
         </p>
         <h1
           className={`${
