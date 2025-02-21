@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import { leaders } from "@/data/leaders";
 import { useState, useEffect } from "react";
 import { IBM_Plex_Sans } from "next/font/google";
@@ -47,7 +47,7 @@ function StaffImage({person}:{person:Staff}) {
         alt={`Headshot of ${person.name}`}
         className="pixel-corners3 h-[150px] object-cover bg-gradient-to-t from-[#55E0FF]/50 to-[#55E0FF]/0"
       />
-    );
+    )
   }else{
     return (
       <img 

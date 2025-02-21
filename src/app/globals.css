@@ -109,7 +109,7 @@ body {
   align-items: center;
   padding-top: 85px;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: top;
   background-size: cover;
   box-sizing: border-box;
 }
