@@ -33,15 +33,22 @@ export function Landing({
 
         {/* <Header isDark={isDark} setDark={setDark} /> */}
 
-        <div className="flex flex-col items-center gap-8 w-full sm:hover:scale-110 transition-all">
+        <div className={`flex flex-col items-center gap-8 w-full sm:hover:scale-110 transition-all  ${isDark ? 'text-white' : 'text-black'} font-[PixeloidSansBold]`}>
 
           <div className="text-center pt-[10%]">
-            <h1 className={`text-[9vw] leading-tight max-w-[89vw] sm:text-[48px] font-[PixeloidSansBold] ${isDark ? 'text-white' : 'text-[#171456]'}`}>
+            <h1 className={`text-[9vw] leading-tight max-w-[89vw] sm:text-[48px]`}>
               March 8-9, Toronto, Ontario
             </h1>
-            <h1 className={`title text-[9vw] leading-tight max-w-[89vw] sm:text-[148px] font-[PixeloidSansBold] ${isDark ? 'text-white' : 'text-[#171456]'}`}>
+            <h1 className={`title text-[9vw] leading-tight max-w-[89vw] sm:text-[148px]`}>
               CUCAI 2025!
             </h1>
+            <div className="flex flex-col sm:flex-row justify-center items-baseline pb-4">
+              <p className="text-xl sm:text-4xl font-[700] mx-auto sm:mx-0 sm:mr-2">Powered by</p>
+              <img 
+                src={isDark ? "./logos/accenture-logo.png" : "./logos/accenture-logo-dark.png"}
+                className={`h-12 w-auto mx-auto sm:mx-0`}
+              />
+            </div>
             <Countdown 
               className="font-[PixeloidSansBold]" 
               isDark={isDark} 
