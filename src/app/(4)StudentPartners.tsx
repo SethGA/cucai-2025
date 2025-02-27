@@ -74,8 +74,8 @@ export function StudentPartners({windowWidth, isDark}:{windowWidth:number, isDar
   // for(let i = 0; i < gradients.length; i++){
   //   console.log(i + " " + gradients[i].from + ", " + gradients[i].to);
   // }
-  console.log(chunked_partners[0]);
-  console.log(chunked_partners[1]);
+  // console.log(chunked_partners[0]);
+  // console.log(chunked_partners[1]);
 
   return (
     <div className="fourth-section flex flex-row justify-center p-8">

@@ -7,6 +7,7 @@ export const sponsors = [
     website: "https://www.accenture.com/ca-en",
     insta: "https://www.instagram.com/accenture/?hl=en",
     linkedin: "https://ca.linkedin.com/company/accenture",
+    logo: "logos/accenture-logo.png"
   },
   {
     name: "Connected Minds",
@@ -16,6 +17,7 @@ export const sponsors = [
     website: "https://www.yorku.ca/research/connected-minds/",
     insta: null,
     linkedin: "https://ca.linkedin.com/company/cfref-connected-minds",
+    logo: "logos/connected-minds-landing.png"
   },
   {
     name: "Cohere",
@@ -25,6 +27,7 @@ export const sponsors = [
     website: "https://cohere.com/",
     insta: null,
     linkedin: "https://ca.linkedin.com/company/cohere-ai",
+    logo: "logos/cohere-logo.png"
   },
   {
     name: "EY Canada",
@@ -34,6 +37,7 @@ export const sponsors = [
     website: "https://www.ey.com/en_ca/services/strategy/parthenon",
     insta: "https://www.instagram.com/ey_parthenon/",
     linkedin: "https://ca.linkedin.com/company/ey-parthenon",
+    logo: "logos/ey-parth-logo.png"
   },
   {
     name: "REDBIT",
@@ -43,6 +47,7 @@ export const sponsors = [
     website: "https://www.redbitdev.com/",
     insta: null,
     linkedin: "https://ca.linkedin.com/company/redbit-development",
+    logo: "logos/redbit-logo.png"
   },
   {
     name: "RSG International",
@@ -52,6 +57,7 @@ export const sponsors = [
     website: "https://www.rsgint.com/",
     insta: "https://www.instagram.com/rsg.international/",
     linkedin: "https://ca.linkedin.com/company/rsg-international-ca",
+    logo: "logos/rsg-logo.png"
   },
   {
     name: "School of Queen's Computing",
@@ -61,6 +67,7 @@ export const sponsors = [
     website: "https://www.cs.queensu.ca/",
     insta: "https://www.instagram.com/queenscomputing/",
     linkedin: "https://ca.linkedin.com/company/queenscomputing",
+    logo: "logos/queens-computing-logo.png"
   },
   {
     name: "University of Waterloo",
@@ -70,6 +77,7 @@ export const sponsors = [
     website: "https://uwaterloo.ca/",
     insta: "https://www.instagram.com/uofwaterloo/",
     linkedin: "https://ca.linkedin.com/school/uwaterloo/",
+    logo: "logos/u-waterloo-logo.png"
   },
   {
     name: "Waterloo.AI",
@@ -79,6 +87,7 @@ export const sponsors = [
     website: "https://uwaterloo.ca/artificial-intelligence-institute/",
     insta: "https://www.instagram.com/waterloo.ai/",
     linkedin: "https://ca.linkedin.com/company/waterloo-artificial-intelligence-institute",
+    logo: "logos/waterloo-ai-institute-logo.png"
   },
   {
     name: "Smith Engineering Queen's University",
@@ -88,6 +97,7 @@ export const sponsors = [
     website: "https://smithengineering.queensu.ca/",
     insta: "https://www.instagram.com/smithengineeringqueens/?hl=fr",
     linkedin: "https://ca.linkedin.com/school/smithengineeringqueens/",
+    logo: "logos/smith-engineering-logo.png"
   },
   {
     name: "Université de Montréal",
@@ -97,5 +107,6 @@ export const sponsors = [
     website: "https://www.umontreal.ca/en/",
     insta: "https://www.instagram.com/umontreal/",
     linkedin: "https://ca.linkedin.com/school/universite-de-montreal/",
+    logo: "logos/u-de-m-logo.png"
   },
 ];
