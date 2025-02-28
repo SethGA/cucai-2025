@@ -10,7 +10,7 @@ const PixelifySans = Pixelify_Sans({
 
 const SponsorCarousel = ({isDark}:{isDark:boolean}) => {
   return (
-  <div className="carousel-inner">
+  <div className="carousel-inner-landing">
     {sponsors.map((company, i) => (
       <a
         className={`h-full w-[100vw] sm:w-[40vw] px-16 mt-16 mb-8 flex items-center border-2 border-solid border-white`}

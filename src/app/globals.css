@@ -196,17 +196,11 @@ body {
   font-size: 18px;
 }
 
-.carousel-inner {
-  animation: scroll 25s linear infinite; /* Adjust timing for speed */
+.carousel-inner-landing {
+  animation: scroll 50s linear infinite; /* Adjust timing for speed */
   width: max-content;
   display: flex;
 }
-.r-carousel-inner {
-  animation: rscroll 25s linear infinite; /* Adjust timing for speed */
-  width: max-content;
-  display: flex;
-}
-
 
 .second-section {
   /* background: black; */
