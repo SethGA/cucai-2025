@@ -20,6 +20,26 @@ export const sponsors = [
     logo: "logos/connected-minds-landing.png"
   },
   {
+    name: "SPUR",
+    booth: "sponsorbooths/sponsorbooth-spur.png",
+    desc: "SPUR Innovation Center, located in the heart of the Canadian Silicon Valley, is transforming the way people think about IT, Technology, AI, and is inspired by other innovative, like-minded companies pushing the boundaries in their areas of expertise.",
+    tier_color: "#E49A09",
+    website: "https://spuric.com/",
+    insta: null,
+    linkedin: "https://ca.linkedin.com/company/spur-innovation-center",
+    logo: "logos/spur-logo.png"
+  },
+  {
+    name: "Rootly",
+    booth: "sponsorbooths/sponsorbooth-rootly.png",
+    desc: "AI-powered on-call and incident response. Trusted by leading companies like NVIDIA, Squarespace, Canva, Figma, and more.",
+    tier_color: "#E49A09",
+    website: "https://rootly.com/",
+    insta: null,
+    linkedin: "https://www.linkedin.com/company/rootlyhq/",
+    logo: "logos/rootly-logo.png"
+  },
+  {
     name: "Cohere",
     booth: "sponsorbooths/sponsorbooth-cohere.png",
     desc: "Cohere is an AI company specializing in large language models (LLMs) for enterprises and developers. It offers powerful NLP tools for tasks like text generation, classification, and search.",
