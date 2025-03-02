@@ -54,6 +54,18 @@ export const leaders = [
     linkedin: "https://www.linkedin.com/in/sara-laker",
   },
   {
+    name: "Jake Feldman",
+    headshot: "/headshots/jake-feldman.png",
+    title: "Director of Showcase",
+    linkedin: "https://www.linkedin.com/in/jake-feldman-starosta-a43857296",
+  },
+  {
+    name: "Zara Smith",
+    headshot: "/headshots/zara-smith_a.png",
+    title: "Director of Marketing",
+    linkedin: "https://www.linkedin.com/in/zara-smith-535180245",
+  },
+  {
     name: "Rabab Azeem",
     headshot: "/headshots/rabab-azeem.png",
     title: "Advisor",
