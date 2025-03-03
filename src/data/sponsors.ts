@@ -2,7 +2,7 @@ export const sponsors = [
   {
     name: "Accenture",
     booth: "sponsorbooths/sponsorbooth-accenture.png",
-    desc: "Accenture is a global professional services company specializing in IT consulting, strategy, digital transformation, and operations.",
+    desc: "Accenture is a global consulting and tech firm with over 700,000 experts in 120 countries, specializing in using AI and cloud to help the world's largest companies solve complex challenges and drive innovation.",
     tier_color: "#4FCCFF",
     website: "https://www.accenture.com/ca-en",
     insta: "https://www.instagram.com/accenture/?hl=en",
