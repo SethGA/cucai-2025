@@ -43,7 +43,7 @@ export function Countdown({ className, isDark }: { className?: string; isDark: b
     return (
         <div className={`text-[4vw] font-[700] sm:text-base md:text-2xl lg:text-2xl ${className} ${isDark ? "text-white" : "text-black"}`}>
             {(CUCAIDate - new Date().getTime() > 0)
-                ? `${diff.days} Days, ${diff.hours} Hours, ${diff.minutes} Minutes, and ${diff.seconds} Seconds`
+                ? `${diff.days} ${diff.days != 1 ? "days" : "day"}, ${diff.hours} Hours, ${diff.minutes} Minutes, and ${diff.seconds} Seconds`
                 : "COUNTDOWN HAS ENDED"}
         </div>
     );
